@@ -1,0 +1,56 @@
+﻿@page "/superlessons"
+@using BlazorApp1.Models
+
+<h1 class=" text-center mb-3">Список уроков</h1>
+
+
+@if (superlessons == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class=" table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Курс</th>
+                <th>Урок</th>
+                <th>Описание урока </th>
+                
+                <th>Контент</th>
+                <th>Количество уроков</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var LessonWithTRewDTO in superlessons)
+            {
+                <tr>
+                    
+                    <td> @LessonWithTRewDTO.Id</td>
+                    <td>@LessonWithTRewDTO.Course</td>
+                    <td>@LessonWithTRewDTO.lessonname</td>
+                    <td>@LessonWithTRewDTO.lessondescription </td>
+
+                    <td>@LessonWithTRewDTO.lessoncontent</td>
+                    <td>@LessonWithTRewDTO.quantity</td>
+
+                    <td style="white-space:nowrap">
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@inject HttpClient Http
+
+@code {
+    private List<LessonWithTRewDTO>? superlessons;
+
+    protected override async Task OnInitializedAsync()
+    {
+        superlessons = await Http.GetFromJsonAsync<List<LessonWithTRewDTO>>("http://localhost:5199/api/lessons");
+    }
+}

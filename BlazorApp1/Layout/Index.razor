@@ -1,0 +1,176 @@
+﻿@page "/"
+@page "/register"
+@layout NoLayout
+@using Microsoft.AspNetCore.Components.Forms
+@using System.ComponentModel.DataAnnotations
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+<link href="css/register.css" rel="stylesheet" />
+
+<div class="container">
+    <!-- Логотип в левом углу -->
+    <div class="logo-container">
+        <img class="logo" src="/images/image1.png" alt="Логотип" />
+    </div>
+
+    <!-- Декоративные элементы -->
+    <div class="decor-element decor-1"></div>
+    <div class="decor-element decor-2"></div>
+
+    <!-- Центральный блок с формой -->
+    <div class="form-section">
+        <div class="form-container">
+            <h1 class="form-title">Регистрация</h1>
+            <p class="form-subtitle">Станьте частью нашего сообщества<br>Заполните данные для создания аккаунта</p>
+
+            <EditForm Model="@newUser" OnValidSubmit="@RegisterUser" Context="formContext">
+                <DataAnnotationsValidator />
+
+                <!-- Фамилия -->
+                <!-- Фамилия -->
+                <div class="form-group">
+                    <label class="input-label">
+                        Фамилия: <span class="required-star">*</span>
+                    </label>
+                    <div class="input-container">
+                        <span class="input-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </span>
+                        <InputText @bind-Value="@newUser.surname" class="input-field" placeholder="Введите фамилию" />
+                    </div>
+                    <ValidationMessage For="@(() => newUser.surname)" class="validation-message" />
+                </div>
+
+                <!-- Имя -->
+                <div class="form-group">
+                    <label class="input-label">
+                        Имя: <span class="required-star">*</span>
+                    </label>
+                    <div class="input-container">
+                        <span class="input-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </span>
+                        <InputText @bind-Value="@newUser.name" class="input-field" placeholder="Введите имя" />
+                    </div>
+                    <ValidationMessage For="@(() => newUser.name)" class="validation-message" />
+                </div>
+
+                <!-- Отчество -->
+                <div class="form-group">
+                    <label class="input-label">Отчество:</label>
+                    <div class="input-container">
+                        <span class="input-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </span>
+                        <InputText @bind-Value="@newUser.patronymic" class="input-field" placeholder="Введите отчество" />
+                    </div>
+                    <ValidationMessage For="@(() => newUser.patronymic)" class="validation-message" />
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label class="input-label">
+                        Email: <span class="required-star">*</span>
+                    </label>
+                    <div class="input-container">
+                        <span class="input-icon">✉️</span>
+                        <InputText @bind-Value="@newUser.email" class="input-field" placeholder="Введите email" />
+                    </div>
+                    <ValidationMessage For="@(() => newUser.email)" class="validation-message" />
+                </div>
+
+                <!-- Пароль -->
+                <div class="form-group">
+                    <label class="input-label">
+                        Пароль: <span class="required-star">*</span>
+                    </label>
+                    <div class="input-container">
+                        <span class="input-icon">🔒</span>
+                        <InputText type="password" @bind-Value="@newUser.password" class="input-field" placeholder="Введите пароль" />
+                    </div>
+                    <ValidationMessage For="@(() => newUser.password)" class="validation-message" />
+                    <div class="password-requirements">
+                        Пароль должен содержать:
+                        <ul>
+                            <li>Минимум 8 символов</li>
+                            <li>Цифры</li>
+                            <li>Заглавные и строчные буквы</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Зарегистрироваться</button>
+            </EditForm>
+
+            @if (!string.IsNullOrEmpty(apiErrorMessage))
+            {
+                <div class="api-error">@apiErrorMessage</div>
+            }
+
+            <div class="login-link">
+                Уже есть аккаунт? <a href="/login">Войти</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private superuserdt newUser = new superuserdt();
+    private string apiErrorMessage = string.Empty;
+
+    private async Task RegisterUser()
+    {
+        apiErrorMessage = string.Empty;
+
+        try
+        {
+            var response = await Http.PostAsJsonAsync("http://localhost:5199/api/User/register", newUser);
+
+            if (response.IsSuccessStatusCode)
+            {
+                NavigationManager.NavigateTo("/login");
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+
+                // Парсим ответ сервера для получения деталей ошибки
+                try
+                {
+                    var errorResponse = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, object>>(errorContent);
+                    if (errorResponse.ContainsKey("errors"))
+                    {
+                        var errors = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, List<string>>>(errorResponse["errors"].ToString());
+                        apiErrorMessage = string.Join(". ", errors.Values.SelectMany(v => v));
+                    }
+                    else if (errorResponse.ContainsKey("message"))
+                    {
+                        apiErrorMessage = errorResponse["message"].ToString();
+                    }
+                    else
+                    {
+                        apiErrorMessage = "Ошибка регистрации: " + errorContent;
+                    }
+                }
+                catch
+                {
+                    apiErrorMessage = "Ошибка регистрации: " + errorContent;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            apiErrorMessage = "Ошибка подключения: " + ex.Message;
+        }
+    }
+}

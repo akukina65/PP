@@ -1,0 +1,52 @@
+﻿@page "/superprogress"
+@using BlazorApp1.Models
+
+<h1 class=" text-center mb-3">Прогресс</h1>
+
+
+@if (superprogress == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class=" table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Пользователь</th>
+                <th>Прогресс</th>
+                <th>Урок</th>
+                
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ProgressWithTRewDTO in superprogress)
+            {
+                <tr>
+                    <td>@ProgressWithTRewDTO.Id</td>
+                    <td>@ProgressWithTRewDTO.UserFIO</td>
+                    <td>@ProgressWithTRewDTO.name</td>
+                    <td>@ProgressWithTRewDTO.lesson </td>
+
+                    
+
+                    <td style="white-space:nowrap">
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@inject HttpClient Http
+
+@code {
+    private List<ProgressWithTRewDTO>? superprogress;
+
+    protected override async Task OnInitializedAsync()
+    {
+        superprogress = await Http.GetFromJsonAsync<List<ProgressWithTRewDTO>>("http://localhost:5199/api/progress");
+    }
+}

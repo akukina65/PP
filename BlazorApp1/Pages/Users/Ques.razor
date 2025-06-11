@@ -1,0 +1,49 @@
+﻿@page "/superquizzes"
+@using BlazorApp1.Models
+
+<h1 class=" text-center mb-3">Тесты</h1>
+
+
+@if (superquizzes == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class=" table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Наименование</th>
+                <th>Тема</th>
+                
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var quizzesP in superquizzes)
+            {
+                <tr>
+                    <td>@quizzesP.Id</td>
+                    <td>@quizzesP.name</td>
+                    <td>@quizzesP.the_survey</td>
+                    
+
+                    <td style="white-space:nowrap">
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@inject HttpClient Http
+
+@code {
+    private List<quizzesP>? superquizzes;
+
+    protected override async Task OnInitializedAsync()
+    {
+        superquizzes = await Http.GetFromJsonAsync<List<quizzesP>>("http://localhost:5199/api/quizzes");
+    }
+}

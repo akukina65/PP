@@ -1,0 +1,22 @@
+﻿@page "/superusers/Delete/{Id:int}"
+
+<h1 class=" mb-3">Удаление пользователя</h1>
+<p>Вы действительно хотите удалить пользователя с Id @Id?</p>
+<button class=" btn btn-danger" @onclick="DeleteUsers">Удалить</button>
+<a class=" btn btn-secondary" href= "/superusers">Отмена</a>
+
+@inject HttpClient Http
+@inject NavigationManager NavManager
+@code {
+    [Parameter]
+    public int Id { set; get; }
+
+
+
+    protected async Task DeleteUsers()
+    {
+        var response = await Http.DeleteAsync("http://localhost:5199/api/User/" + Id);
+        NavManager.NavigateTo("/superusers");
+
+    }
+}

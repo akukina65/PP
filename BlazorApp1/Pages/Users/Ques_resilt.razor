@@ -1,0 +1,52 @@
+﻿@page "/superquiz_results"
+@using BlazorApp1.Models
+
+<h1 class=" text-center mb-3">Результаты тестов</h1>
+
+
+@if (superquiz_results == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class=" table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Тест</th>
+                <th>Пользователь</th>
+                <th>Дата теста</th>
+                <th>Сумма баллов</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ResultWithTRewDTO in superquiz_results)
+            {
+                <tr>
+                    <td>@ResultWithTRewDTO.Id</td>
+                    <td>@ResultWithTRewDTO.Test</td>
+                    <td>@ResultWithTRewDTO.UserFIO</td>
+                    <td>@ResultWithTRewDTO.completeddate </td>
+
+                    <td>@ResultWithTRewDTO.totalscore</td>
+
+                    <td style="white-space:nowrap">
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@inject HttpClient Http
+
+@code {
+    private List<ResultWithTRewDTO>? superquiz_results;
+
+    protected override async Task OnInitializedAsync()
+    {
+        superquiz_results = await Http.GetFromJsonAsync<List<ResultWithTRewDTO>>("http://localhost:5199/api/quiz_results");
+    }
+}

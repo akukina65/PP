@@ -1,0 +1,23 @@
+﻿@page "/glav"
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+<AuthorizeView>
+    <Authorized>
+        <h1>Добро пожаловать!</h1>
+        @* <p>Вы вошли как: @context.User.Identity?.Name</p> *@
+        <button @onclick="Logout" class="btn btn-danger">Выйти</button>
+    </Authorized>
+    <NotAuthorized>
+        <h1>Доступ запрещен</h1>
+        <a href="/login" class="btn btn-primary">Войти</a>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    private async Task Logout()
+    {
+        await Http.PostAsync("api/User/logout", null);
+        NavManager.NavigateTo("/", forceLoad: true);
+    }
+}

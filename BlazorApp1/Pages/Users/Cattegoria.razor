@@ -1,0 +1,49 @@
+﻿@page "/supercourse_categoriesc"
+@using BlazorApp1.Models
+
+<h1 class=" text-center mb-3">Информация</h1>
+
+
+@if (supercourse_categoriesc == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class=" table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Курс</th>
+                <th>Категория курса</th>
+                
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var CoursecategoriatWithTRewDTO in supercourse_categoriesc)
+            {
+                <tr>
+                    <td>@CoursecategoriatWithTRewDTO.Id</td>
+                    <td>@CoursecategoriatWithTRewDTO.Course</td>
+                    <td>@CoursecategoriatWithTRewDTO.Categoria </td>
+
+                    
+                    <td style="white-space:nowrap">
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@inject HttpClient Http
+
+@code {
+    private List<CoursecategoriatWithTRewDTO>? supercourse_categoriesc;
+
+    protected override async Task OnInitializedAsync()
+    {
+        supercourse_categoriesc = await Http.GetFromJsonAsync<List<CoursecategoriatWithTRewDTO>>("http://localhost:5199/api/course_categoriesc");
+    }
+}

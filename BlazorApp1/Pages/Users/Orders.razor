@@ -1,0 +1,52 @@
+﻿@page "/superorders"
+@using BlazorApp1.Models
+
+<h1 class=" text-center mb-3">Заказы</h1>
+
+
+@if (superorders == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class=" table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Клиент</th>
+                <th>Дата заказа</th>
+                <th>Цена</th>
+                
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var OrdertWithTRewDTO in superorders)
+            {
+                <tr>
+                    <td>@OrdertWithTRewDTO.Id</td>
+                    <td>@OrdertWithTRewDTO.UserFIO</td>
+                    <td>@OrdertWithTRewDTO.order_date</td>
+                    <td>@OrdertWithTRewDTO.price рублей</td>
+
+                    
+
+                    <td style="white-space:nowrap">
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@inject HttpClient Http
+
+@code {
+    private List<OrdertWithTRewDTO>? superorders;
+
+    protected override async Task OnInitializedAsync()
+    {
+        superorders = await Http.GetFromJsonAsync<List<OrdertWithTRewDTO>>("http://localhost:5199/api/orders");
+    }
+}

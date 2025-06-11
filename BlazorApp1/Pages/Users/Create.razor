@@ -1,0 +1,106 @@
+﻿@* @page "/superusers/Create"
+@using BlazorApp1.Models
+
+<div class=" row">
+    <div class=" col-lg-8">
+        <h1 class=" mb-5">Новый пользователь</h1>
+        <div class=" row mb-3">
+            <label class=" col-md-4 col-form-label">Фамилия</label>
+            <div class=" col-md-8">
+                <input class=" form-control" @bind="superusersdata.surname">
+                <span class=" text-danger">@Errors["surname"]?[0]</span>
+            </div>
+        </div>
+
+        <div class=" row mb-3">
+
+            <label class=" col-md-4 col-form-label">Имя</label>
+            <div class=" col-md-8">
+                <input class=" form-control" @bind="superusersdata.name">
+                <span class=" text-danger">@Errors["name"]?[0]</span>
+            </div>
+        </div>
+        <div class=" row mb-3">
+
+            <label class=" col-md-4 col-form-label">Отчество</label>
+            <div class=" col-md-8">
+                <input class=" form-control" @bind="superusersdata.patronymic">
+                <span class=" text-danger">@Errors["patronymic"]?[0]</span>
+            </div>
+
+
+        </div>
+        <div class=" row mb-3">
+            <label class=" col-md-4 col-form-label">Пароль</label>
+            <div class=" col-md-8">
+                <input class=" form-control" @bind="superusersdata.password">
+                <span class=" text-danger">@Errors["password"]?[0]</span>
+            </div>
+
+        </div>
+        <div class=" row mb-3">
+            <label class=" col-md-4 col-form-label">Почта</label>
+            <div class=" col-md-8">
+                <input class=" form-control" @bind="superusersdata.email">
+                <span class=" text-danger">@Errors["email"]?[0]</span>
+            </div> 
+
+
+
+
+        <div class=" row">
+                <div class="  offset-md-4  col-md-4 d-grid"
+                    style="padding-top: 10px;">
+                    <button class=" btn btn-primary" @onclick="SaveUsers">Отправить</button>
+                    
+                </div>
+                <div class=" col-md-4 d-grid"
+                    style="padding-top: 10px;">
+                    <a class=" btn btn-outline-primary" href= "/superusers">Отмена</a>
+                    
+                </div>
+        </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+@inject HttpClient http
+@inject NavigationManager NavManager
+@using System.Text.Json.Nodes
+@code {
+    public superuserdt superusersdata { set; get; } = new();
+    public JsonNode Errors { set; get; } = new JsonObject();
+
+    protected async Task SaveUsers()
+    {
+        var response = await http.PostAsJsonAsync("http://localhost:5199/api/User", superusersdata);
+        if (response.IsSuccessStatusCode)
+        {
+            NavManager.NavigateTo("/superusers");
+
+        }
+        else
+        {
+            var strresponse = await response.Content.ReadAsStringAsync();
+            Console.WriteLine("Json Responce: \n" + strresponse);
+
+            try
+            {
+                var jsonresponse = JsonNode.Parse(strresponse);
+                Errors = jsonresponse?["errors"] ?? new JsonObject();
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+    }
+
+
+
+}
+ *@

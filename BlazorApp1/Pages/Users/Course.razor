@@ -1,0 +1,53 @@
+﻿@page "/supercourse"
+@using BlazorApp1.Models
+
+<h1 class=" text-center mb-3">Список курсов</h1>
+
+
+@if (supercourse == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class=" table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Наименование</th>
+                <th>Описание</th>
+                <th>Продолжительность</th>
+                <th>Учитель</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var CourseWithTeacherDTO in supercourse)
+            {
+                <tr>
+                    <td>@CourseWithTeacherDTO.Id</td>
+                    <td>@CourseWithTeacherDTO.Title</td>
+                    <td>@CourseWithTeacherDTO.Description</td>
+                    <td>@CourseWithTeacherDTO.Duration месяца</td>
+
+                    <td>@CourseWithTeacherDTO.TeacherFIO</td>
+                    
+                    <td style="white-space:nowrap">
+                        
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@inject HttpClient Http
+
+@code {
+    private List<CourseWithTeacherDTO>? supercourse;
+
+    protected override async Task OnInitializedAsync()
+    {
+        supercourse = await Http.GetFromJsonAsync<List<CourseWithTeacherDTO>>("http://localhost:5199/api/Course");
+    }
+}

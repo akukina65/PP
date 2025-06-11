@@ -1,0 +1,49 @@
+﻿@page "/superpurchases"
+@using BlazorApp1.Models
+
+<h1 class=" text-center mb-3">Покупки</h1>
+
+
+@if (superpurchases == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class=" table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Курс</th>
+                <th>Заказ</th>
+                
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var PuchestWithTRewDTO in superpurchases)
+            {
+                <tr>
+                    <td>@PuchestWithTRewDTO.Id</td>
+                    <td>@PuchestWithTRewDTO.Course</td>
+                    <td>@PuchestWithTRewDTO.id_orders</td>
+                   
+
+                    <td style="white-space:nowrap">
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@inject HttpClient Http
+
+@code {
+    private List<PuchestWithTRewDTO>? superpurchases;
+
+    protected override async Task OnInitializedAsync()
+    {
+        superpurchases = await Http.GetFromJsonAsync<List<PuchestWithTRewDTO>>("http://localhost:5199/api/purchases");
+    }
+}
