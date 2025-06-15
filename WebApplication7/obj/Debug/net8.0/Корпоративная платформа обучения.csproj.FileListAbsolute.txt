@@ -704,3 +704,4 @@ C:\Users\Nastya\Desktop\новы1\WebApplication7\obj\Debug\net8.0\Корпор�
 C:\Users\Nastya\Desktop\новы1\WebApplication7\obj\Debug\net8.0\ref\Корпоративная платформа обучения.dll
 C:\Users\Nastya\Desktop\новы1\WebApplication7\bin\Debug\net8.0\DevOne.Security.Cryptography.BCrypt.dll
 C:\Users\Nastya\Desktop\новы1\WebApplication7\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\Nastya\Desktop\новы1\WebApplication7\obj\Debug\net8.0\Корпоративная платформа обучения.sourcelink.json

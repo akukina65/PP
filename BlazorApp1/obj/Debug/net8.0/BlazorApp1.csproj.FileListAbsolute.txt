@@ -2128,6 +2128,7 @@ C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\b4yqwci
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\ztoj16lkoi-zq4kbb4re5.gz
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\jpbssm0771-nw26ksz9z1.gz
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\y389yrr2x0-p4t7562us4.gz
-C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\mpnezo3ggr-ot4rwtzogg.gz
-C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\kyjy2iuvp1-341g8mlxjp.gz
-C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\5jzqasczcu-1o4dyerb1d.gz
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\BlazorApp1.sourcelink.json
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\mpnezo3ggr-0yt2x8o4i9.gz
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\kyjy2iuvp1-mj5n3uxnqo.gz
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\5jzqasczcu-u8joubnqte.gz

@@ -13,9 +13,8 @@ public class superuserdt
     [RegularExpression(@"^[а-яА-ЯёЁa-zA-Z\s\-]+$", ErrorMessage = "Имя может содержать только буквы, пробелы и дефисы")]
     public string name { get; set; }
 
-    [StringLength(50, ErrorMessage = "Отчество не может превышать 50 символов")]
-    [RegularExpression(@"^[а-яА-ЯёЁa-zA-Z\s\-]*$", ErrorMessage = "Отчество может содержать только буквы, пробелы и дефисы")]
-    public string patronymic { get; set; }
+    
+    public string? patronymic { get; set; }
 
     [Required(ErrorMessage = "Email обязателен")]
     [EmailAddress(ErrorMessage = "Некорректный формат email")]

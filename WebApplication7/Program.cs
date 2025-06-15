@@ -1,10 +1,10 @@
-using Microsoft.AspNetCore.Authentication.Cookies;
+п»їusing Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using WebApplication7.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Добавляем сервисы ДО builder.Build()
+// Г„Г®ГЎГ ГўГ«ГїГҐГ¬ Г±ГҐГ°ГўГЁГ±Г» Г„ГЋ builder.Build()
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddRazorPages();
@@ -12,7 +12,7 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient();
 
-// Настройка CORS (добавляем политику)
+// ГЌГ Г±ГІГ°Г®Г©ГЄГ  CORS (Г¤Г®ГЎГ ГўГ«ГїГҐГ¬ ГЇГ®Г«ГЁГІГЁГЄГі)
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin", policy =>
@@ -23,13 +23,13 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Настройка БД (убрал дублирование)
+// ГЌГ Г±ГІГ°Г®Г©ГЄГ  ГЃГ„ (ГіГЎГ°Г Г« Г¤ГіГЎГ«ГЁГ°Г®ГўГ Г­ГЁГҐ)
 builder.Services.AddDbContext<DataContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-// Аутентификация и сессии
+// ГЂГіГІГҐГ­ГІГЁГґГЁГЄГ Г¶ГЁГї ГЁ Г±ГҐГ±Г±ГЁГЁ
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
@@ -39,14 +39,14 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.LogoutPath = "/logout";
     });
 
-builder.Services.AddSession(); // Добавляем поддержку сессий
+builder.Services.AddSession(); // Г„Г®ГЎГ ГўГ«ГїГҐГ¬ ГЇГ®Г¤Г¤ГҐГ°Г¦ГЄГі Г±ГҐГ±Г±ГЁГ©
 
 // =====================================================
-var app = builder.Build(); // ВСЕ сервисы должны быть зарегистрированы ДО этой строки
+var app = builder.Build(); // Г‚Г‘Г… Г±ГҐГ°ГўГЁГ±Г» Г¤Г®Г«Г¦Г­Г» ГЎГ»ГІГј Г§Г Г°ГҐГЈГЁГ±ГІГ°ГЁГ°Г®ГўГ Г­Г» Г„ГЋ ГЅГІГ®Г© Г±ГІГ°Г®ГЄГЁ
 // =====================================================
 
-// Порядок middleware КРИТИЧЕН!
-app.UseCors("AllowSpecificOrigin"); // Используем зарегистрированную политику
+// ГЏГ®Г°ГїГ¤Г®ГЄ middleware ГЉГђГ€Г’Г€Г—Г…ГЌ!
+app.UseCors("AllowSpecificOrigin"); // Г€Г±ГЇГ®Г«ГјГ§ГіГҐГ¬ Г§Г Г°ГҐГЈГЁГ±ГІГ°ГЁГ°Г®ГўГ Г­Г­ГіГѕ ГЇГ®Г«ГЁГІГЁГЄГі
 
 if (app.Environment.IsDevelopment())
 {
@@ -58,10 +58,10 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
-// ВАЖНЫЙ ПОРЯДОК:
-app.UseSession();       // 1. Сессии
-app.UseAuthentication(); // 2. Аутентификация
-app.UseAuthorization();  // 3. Авторизация
+// Г‚ГЂГ†ГЌГ›Г‰ ГЏГЋГђГџГ„ГЋГЉ:
+app.UseSession();       // 1. Г‘ГҐГ±Г±ГЁГЁ
+app.UseAuthentication(); // 2. ГЂГіГІГҐГ­ГІГЁГґГЁГЄГ Г¶ГЁГї
+app.UseAuthorization();  // 3. ГЂГўГІГ®Г°ГЁГ§Г Г¶ГЁГї
 
 app.MapRazorPages();
 app.MapControllers();

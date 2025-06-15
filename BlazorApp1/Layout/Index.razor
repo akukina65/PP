@@ -6,19 +6,16 @@
 @inject HttpClient Http
 @inject NavigationManager NavigationManager
 
-<link href="css/register.css" rel="stylesheet" />
+<link href="css/register.css?v=3.0" rel="stylesheet" />
 
 <div class="container">
-    <!-- Логотип в левом углу -->
     <div class="logo-container">
         <img class="logo" src="/images/image1.png" alt="Логотип" />
     </div>
 
-    <!-- Декоративные элементы -->
     <div class="decor-element decor-1"></div>
     <div class="decor-element decor-2"></div>
 
-    <!-- Центральный блок с формой -->
     <div class="form-section">
         <div class="form-container">
             <h1 class="form-title">Регистрация</h1>
@@ -28,18 +25,17 @@
                 <DataAnnotationsValidator />
 
                 <!-- Фамилия -->
-                <!-- Фамилия -->
                 <div class="form-group">
                     <label class="input-label">
                         Фамилия: <span class="required-star">*</span>
                     </label>
                     <div class="input-container">
-                        <span class="input-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <div class="input-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="12" cy="7" r="4"></circle>
                             </svg>
-                        </span>
+                        </div>
                         <InputText @bind-Value="@newUser.surname" class="input-field" placeholder="Введите фамилию" />
                     </div>
                     <ValidationMessage For="@(() => newUser.surname)" class="validation-message" />
@@ -51,30 +47,32 @@
                         Имя: <span class="required-star">*</span>
                     </label>
                     <div class="input-container">
-                        <span class="input-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <div class="input-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="12" cy="7" r="4"></circle>
                             </svg>
-                        </span>
+                        </div>
                         <InputText @bind-Value="@newUser.name" class="input-field" placeholder="Введите имя" />
                     </div>
                     <ValidationMessage For="@(() => newUser.name)" class="validation-message" />
                 </div>
 
-                <!-- Отчество -->
+                <!-- Отчество (необязательное) -->
                 <div class="form-group">
                     <label class="input-label">Отчество:</label>
                     <div class="input-container">
-                        <span class="input-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <div class="input-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="12" cy="7" r="4"></circle>
                             </svg>
-                        </span>
-                        <InputText @bind-Value="@newUser.patronymic" class="input-field" placeholder="Введите отчество" />
+                        </div>
+                        <InputText @bind-Value="@patronymic"
+                                   class="input-field"
+                                   placeholder="Введите отчество (необязательно)"
+                                   @oninput="UpdatePatronymic" />
                     </div>
-                    <ValidationMessage For="@(() => newUser.patronymic)" class="validation-message" />
                 </div>
 
                 <!-- Email -->
@@ -83,7 +81,12 @@
                         Email: <span class="required-star">*</span>
                     </label>
                     <div class="input-container">
-                        <span class="input-icon">✉️</span>
+                        <div class="input-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
                         <InputText @bind-Value="@newUser.email" class="input-field" placeholder="Введите email" />
                     </div>
                     <ValidationMessage For="@(() => newUser.email)" class="validation-message" />
@@ -95,8 +98,32 @@
                         Пароль: <span class="required-star">*</span>
                     </label>
                     <div class="input-container">
-                        <span class="input-icon">🔒</span>
-                        <InputText type="password" @bind-Value="@newUser.password" class="input-field" placeholder="Введите пароль" />
+                        <div class="input-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <InputText type="@passwordFieldType"
+                                   @bind-Value="@newUser.password"
+                                   class="input-field"
+                                   placeholder="Введите пароль" />
+                        <div class="password-toggle" @onclick="TogglePasswordVisibility">
+                            @if (showPassword)
+                            {
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            }
+                            else
+                            {
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                                </svg>
+                            }
+                        </div>
                     </div>
                     <ValidationMessage For="@(() => newUser.password)" class="validation-message" />
                     <div class="password-requirements">
@@ -126,11 +153,32 @@
 
 @code {
     private superuserdt newUser = new superuserdt();
+    private string patronymic = string.Empty;
     private string apiErrorMessage = string.Empty;
+    private bool showPassword = false;
+    private string passwordFieldType = "password";
+
+    private void UpdatePatronymic(ChangeEventArgs e)
+    {
+        patronymic = e.Value?.ToString();
+        // Устанавливаем null если поле пустое
+       
+    }
+
+    private void TogglePasswordVisibility()
+    {
+        showPassword = !showPassword;
+        passwordFieldType = showPassword ? "text" : "password";
+    }
 
     private async Task RegisterUser()
     {
         apiErrorMessage = string.Empty;
+
+        // Очистка и нормализация отчества
+        newUser.patronymic = string.IsNullOrWhiteSpace(patronymic)
+            ? null
+            : patronymic.Trim();
 
         try
         {
@@ -143,34 +191,37 @@
             else
             {
                 var errorContent = await response.Content.ReadAsStringAsync();
-
-                // Парсим ответ сервера для получения деталей ошибки
-                try
-                {
-                    var errorResponse = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, object>>(errorContent);
-                    if (errorResponse.ContainsKey("errors"))
-                    {
-                        var errors = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, List<string>>>(errorResponse["errors"].ToString());
-                        apiErrorMessage = string.Join(". ", errors.Values.SelectMany(v => v));
-                    }
-                    else if (errorResponse.ContainsKey("message"))
-                    {
-                        apiErrorMessage = errorResponse["message"].ToString();
-                    }
-                    else
-                    {
-                        apiErrorMessage = "Ошибка регистрации: " + errorContent;
-                    }
-                }
-                catch
-                {
-                    apiErrorMessage = "Ошибка регистрации: " + errorContent;
-                }
+                apiErrorMessage = ParseErrorMessage(errorContent);
             }
         }
         catch (Exception ex)
         {
             apiErrorMessage = "Ошибка подключения: " + ex.Message;
         }
+    }
+
+    private string ParseErrorMessage(string errorContent)
+    {
+        try
+        {
+            var errorResponse = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, object>>(errorContent);
+
+            if (errorResponse.ContainsKey("errors"))
+            {
+                var errors = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, List<string>>>(errorResponse["errors"].ToString());
+                return string.Join(". ", errors.Values.SelectMany(v => v));
+            }
+
+            if (errorResponse.ContainsKey("message"))
+            {
+                return errorResponse["message"].ToString();
+            }
+        }
+        catch
+        {
+            // В случае ошибки парсинга вернем оригинальное сообщение
+        }
+
+        return "Ошибка регистрации: " + errorContent;
     }
 }

@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\BlazorApp1.styles.css"
     },
     {
+      "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\css\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login.css"
+    },
+    {
       "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
