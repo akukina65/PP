@@ -9,10 +9,10 @@ using WebApplication7.Models;
 
 #nullable disable
 
-namespace WebApplication7.Migrations
+namespace Корпоративная_платформа_обучения.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20241218000616_InitialCreate")]
+    [Migration("20250616201910_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -20,10 +20,46 @@ namespace WebApplication7.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.0")
+                .HasAnnotation("ProductVersion", "9.0.6")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
+
+            modelBuilder.Entity("WebApplication7.Models.Superuser", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("password")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("patronymic")
+                        .HasColumnType("text");
+
+                    b.Property<string>("surname")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("superusers");
+                });
 
             modelBuilder.Entity("WebApplication7.Models.course_categoriesP", b =>
                 {
@@ -59,86 +95,6 @@ namespace WebApplication7.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("supercourse_categoriesc");
-                });
-
-            modelBuilder.Entity("WebApplication7.Models.coursesP", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("description")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("duration")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("id_teacher")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("title")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("supercourse");
-                });
-
-            modelBuilder.Entity("WebApplication7.Models.lessonsP", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("id_courses")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("lessoncontent")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("lessondescription")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("lessonname")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("quantity")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("superlessons");
-                });
-
-            modelBuilder.Entity("WebApplication7.Models.ordersP", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("id_users")
-                        .HasColumnType("integer");
-
-                    b.Property<DateTime>("order_date")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<int>("price")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("superorders");
                 });
 
             modelBuilder.Entity("WebApplication7.Models.progressP", b =>
@@ -255,6 +211,86 @@ namespace WebApplication7.Migrations
                     b.ToTable("superreviews");
                 });
 
+            modelBuilder.Entity("WebApplication7.Models.supercourses", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("duration")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("id_teacher")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("title")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("supercourse");
+                });
+
+            modelBuilder.Entity("WebApplication7.Models.superlesson", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("id_courses")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("lessoncontent")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("lessondescription")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("lessonname")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("quantity")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("superlessons");
+                });
+
+            modelBuilder.Entity("WebApplication7.Models.superorder", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("id_users")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("order_date")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("price")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("superorders");
+                });
+
             modelBuilder.Entity("WebApplication7.Models.teacherP", b =>
                 {
                     b.Property<int>("Id")
@@ -282,39 +318,6 @@ namespace WebApplication7.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("superteacherP");
-                });
-
-            modelBuilder.Entity("WebApplication7.Models.usersP", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("email")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("password")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("patronymic")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("surname")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("superusers");
                 });
 
             modelBuilder.Entity("WebApplication7.Models.userscoursesP", b =>

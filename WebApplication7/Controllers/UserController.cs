@@ -74,7 +74,8 @@ namespace WebApplication7.Controllers
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Email, user.email),
-                new Claim(ClaimTypes.Name, $"{user.surname} {user.name}")
+                new Claim(ClaimTypes.Name, $"{user.surname} {user.name}"),
+                new Claim(ClaimTypes.Role, user.Role) // Добавляем роль!
             };
 
                 var identity = new ClaimsIdentity(claims,

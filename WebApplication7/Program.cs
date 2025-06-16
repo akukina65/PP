@@ -1,10 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.EntityFrameworkCore;
 using WebApplication7.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Äîáàâëÿåì ñåðâèñû ÄÎ builder.Build()
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddRazorPages();
@@ -12,7 +13,6 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient();
 
-// Íàñòðîéêà CORS (äîáàâëÿåì ïîëèòèêó)
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin", policy =>
@@ -23,13 +23,13 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Íàñòðîéêà ÁÄ (óáðàë äóáëèðîâàíèå)
+
 builder.Services.AddDbContext<DataContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-// Àóòåíòèôèêàöèÿ è ñåññèè
+
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
@@ -38,15 +38,24 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.LoginPath = "/login";
         options.LogoutPath = "/logout";
     });
+builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
+builder.Services.AddSession(); 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy =>
+        policy.RequireRole("admin"));
 
-builder.Services.AddSession(); // Äîáàâëÿåì ïîääåðæêó ñåññèé
+    options.AddPolicy("TeacherOnly", policy =>
+        policy.RequireRole("teacher"));
 
-// =====================================================
-var app = builder.Build(); // ÂÑÅ ñåðâèñû äîëæíû áûòü çàðåãèñòðèðîâàíû ÄÎ ýòîé ñòðîêè
-// =====================================================
+    options.AddPolicy("StudentOnly", policy =>
+        policy.RequireRole("student"));
+});
 
-// Ïîðÿäîê middleware ÊÐÈÒÈ×ÅÍ!
-app.UseCors("AllowSpecificOrigin"); // Èñïîëüçóåì çàðåãèñòðèðîâàííóþ ïîëèòèêó
+var app = builder.Build();
+
+
+app.UseCors("AllowSpecificOrigin"); 
 
 if (app.Environment.IsDevelopment())
 {
@@ -58,10 +67,10 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
-// ÂÀÆÍÛÉ ÏÎÐßÄÎÊ:
-app.UseSession();       // 1. Ñåññèè
-app.UseAuthentication(); // 2. Àóòåíòèôèêàöèÿ
-app.UseAuthorization();  // 3. Àâòîðèçàöèÿ
+
+app.UseSession();       
+app.UseAuthentication(); 
+app.UseAuthorization(); 
 
 app.MapRazorPages();
 app.MapControllers();

@@ -25,4 +25,8 @@ public class superuserdt
     [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$",
         ErrorMessage = "Пароль должен содержать цифры, буквы в верхнем и нижнем регистре, и спецсимволы")]
     public string password { get; set; }
+
+    [Required(ErrorMessage = "Роль обязательна")]
+    [RegularExpression("^(admin|teacher|student)$", ErrorMessage = "Недопустимая роль")]
+    public string Role { get; set; } = "student";
 }

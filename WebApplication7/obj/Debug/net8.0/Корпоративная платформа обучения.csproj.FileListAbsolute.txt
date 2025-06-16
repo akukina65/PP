@@ -536,6 +536,8 @@ C:\Users\Nastya\Desktop\новы1\WebApplication7\bin\Debug\net8.0\Корпор�
 C:\Users\Nastya\Desktop\новы1\WebApplication7\bin\Debug\net8.0\Корпоративная платформа обучения.pdb
 C:\Users\Nastya\Desktop\новы1\WebApplication7\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\Nastya\Desktop\новы1\WebApplication7\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\Nastya\Desktop\новы1\WebApplication7\bin\Debug\net8.0\DevOne.Security.Cryptography.BCrypt.dll
+C:\Users\Nastya\Desktop\новы1\WebApplication7\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\Nastya\Desktop\новы1\WebApplication7\bin\Debug\net8.0\Humanizer.dll
 C:\Users\Nastya\Desktop\новы1\WebApplication7\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Nastya\Desktop\новы1\WebApplication7\bin\Debug\net8.0\Microsoft.Build.Locator.dll
@@ -685,6 +687,7 @@ C:\Users\Nastya\Desktop\новы1\WebApplication7\obj\Debug\net8.0\Корпор�
 C:\Users\Nastya\Desktop\новы1\WebApplication7\obj\Debug\net8.0\Корпоративная платформа обучения.csproj.CoreCompileInputs.cache
 C:\Users\Nastya\Desktop\новы1\WebApplication7\obj\Debug\net8.0\Корпоративная платформа обучения.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Nastya\Desktop\новы1\WebApplication7\obj\Debug\net8.0\Корпоративная платформа обучения.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Nastya\Desktop\новы1\WebApplication7\obj\Debug\net8.0\Корпоративная платформа обучения.sourcelink.json
 C:\Users\Nastya\Desktop\новы1\WebApplication7\obj\Debug\net8.0\scopedcss\bundle\Корпоративная платформа обучения.styles.css
 C:\Users\Nastya\Desktop\новы1\WebApplication7\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Nastya\Desktop\новы1\WebApplication7\obj\Debug\net8.0\staticwebassets.development.json
@@ -702,6 +705,3 @@ C:\Users\Nastya\Desktop\новы1\WebApplication7\obj\Debug\net8.0\refint\Кор
 C:\Users\Nastya\Desktop\новы1\WebApplication7\obj\Debug\net8.0\Корпоративная платформа обучения.pdb
 C:\Users\Nastya\Desktop\новы1\WebApplication7\obj\Debug\net8.0\Корпоративная платформа обучения.genruntimeconfig.cache
 C:\Users\Nastya\Desktop\новы1\WebApplication7\obj\Debug\net8.0\ref\Корпоративная платформа обучения.dll
-C:\Users\Nastya\Desktop\новы1\WebApplication7\bin\Debug\net8.0\DevOne.Security.Cryptography.BCrypt.dll
-C:\Users\Nastya\Desktop\новы1\WebApplication7\bin\Debug\net8.0\BCrypt.Net-Next.dll
-C:\Users\Nastya\Desktop\новы1\WebApplication7\obj\Debug\net8.0\Корпоративная платформа обучения.sourcelink.json
