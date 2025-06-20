@@ -1,0 +1,286 @@
+﻿<style >
+:root {
+    --primary-color: #5D54A4; /* Темно-фиолетовый основной */
+    --secondary-color: #4A4175; /* Еще более темный фиолетовый */
+    --text-color: #2D3748; /* Текст остается темным */
+    --light-gray: #F8F9FA; /* Светлый фон */
+    --border-color: #E2E8F0; /* Границы */
+    --error-color: #E53E3E; /* Ошибки */
+    --icon-color: #5D54A4; /* Иконки */
+    --background-color: #7E76B9; /* Фон страницы - фиолетовый */
+    --card-bg: #FFFFFF; /* Фон карточек - белый */
+    --accent-color: #6C63FF; /* Акцентный цвет для некоторых элементов */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #7E76B9 0%, #5D54A4 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    background: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 50px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+    .logo span {
+        color: #2D3748;
+    }
+
+.nav {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+    .nav-link:hover {
+        color: var(--primary-color);
+    }
+
+    .nav-link.active {
+        color: var(--primary-color);
+        font-weight: 600;
+    }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+    color: var(--text-color);
+}
+
+    .hero-title strong {
+        font-weight: 900;
+        color: var(--primary-color);
+    }
+
+.hero-subtitle {
+    font-size: 1.6rem;
+    color: #555;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.categories-section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+}
+
+.category-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .category-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(93, 84, 164, 0.3);
+        border-color: var(--primary-color);
+    }
+
+.category-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(93, 84, 164, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.category-card:hover .category-icon {
+    transform: scale(1.1);
+    background: rgba(93, 84, 164, 0.2);
+}
+
+.category-icon svg {
+    width: 40px;
+    height: 40px;
+    stroke: var(--primary-color);
+    stroke-width: 1.5;
+}
+
+.category-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+/* Декоративные элементы */
+.decor-circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+    opacity: 0.1;
+}
+
+.circle-1 {
+    width: 300px;
+    height: 300px;
+    background: var(--primary-color);
+    top: -150px;
+    right: -150px;
+}
+
+.circle-2 {
+    width: 200px;
+    height: 200px;
+    background: var(--primary-color);
+    bottom: -100px;
+    left: -100px;
+}
+
+/* Кнопки в темно-фиолетовом стиле */
+.btn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+}
+
+    .btn-outline:hover {
+        background: rgba(93, 84, 164, 0.1);
+    }
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+}
+
+    .btn-primary:hover {
+        background: var(--secondary-color);
+        border-color: var(--secondary-color);
+    }
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
+
+</style >

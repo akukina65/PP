@@ -39,6 +39,8 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.LogoutPath = "/logout";
     });
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
+builder.Services.AddHttpContextAccessor();
+
 builder.Services.AddSession(); 
 builder.Services.AddAuthorization(options =>
 {

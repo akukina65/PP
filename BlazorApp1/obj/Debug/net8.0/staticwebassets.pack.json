@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
+      "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\css\\glav.css",
+      "PackagePath": "staticwebassets\\css\\glav.css"
+    },
+    {
       "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\css\\register.css",
       "PackagePath": "staticwebassets\\css\\register.css"
     },
@@ -47,6 +51,10 @@
     {
       "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\images\\image1.png",
       "PackagePath": "staticwebassets\\images\\image1.png"
+    },
+    {
+      "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\images\\student.png",
+      "PackagePath": "staticwebassets\\images\\student.png"
     },
     {
       "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\index.html",

@@ -9,6 +9,7 @@
         public string password { get; set; } = string.Empty;
         public string email { get; set; } = string.Empty;
         public string Role { get; set; } = "student"; // Новое поле для роли
+        public string? AvatarUrl { get; set; } // Добавляем URL аватара
     }
     public class supercourses
     {

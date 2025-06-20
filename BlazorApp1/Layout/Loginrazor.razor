@@ -4,6 +4,10 @@
 @using System.ComponentModel.DataAnnotations
 @inject HttpClient Http
 @inject NavigationManager NavigationManager
+@using Microsoft.AspNetCore.Components.Authorization
+@using System.Security.Claims
+@inject AuthenticationStateProvider AuthStateProvider
+@using BlazorApp1.Services  
 
 <link href="css/Login.css?v=3.0" rel="stylesheet" />
 
@@ -139,11 +143,18 @@
 
             if (response.IsSuccessStatusCode)
             {
-                NavigationManager.NavigateTo("/glav", forceLoad: true);
-            }
-            else
-            {
-                apiErrorMessage = $"Ошибка: {response.StatusCode}";
+                var result = await response.Content.ReadFromJsonAsync<LoginResult>();
+                Console.WriteLine($"Login success: {result.user.name} {result.user.surname}");
+
+                var authProvider = (ClientAuthState)AuthStateProvider;
+                authProvider.SetAuthenticatedUser(
+                    result.user.email,
+                    result.user.name,
+                    result.user.surname, // Передаем фамилию
+                    result.user.avatarUrl // Если есть аватар
+                );
+
+                NavigationManager.NavigateTo("/glav");
             }
         }
         catch (Exception ex)
@@ -152,9 +163,17 @@
         }
     }
 
-    public class LoginRequest
+    public class LoginResult
     {
-        public string Email { get; set; } = string.Empty;
-        public string Password { get; set; } = string.Empty;
+        public string message { get; set; }
+        public UserData user { get; set; } // Изменили структуру
+    }
+
+    public class UserData
+    {
+        public string email { get; set; }
+        public string name { get; set; }
+        public string surname { get; set; }
+        public string avatarUrl { get; set; }
     }
 }

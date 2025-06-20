@@ -94,7 +94,12 @@ namespace WebApplication7.Controllers
                 return Ok(new
                 {
                     message = "Вы успешно вошли",
-                    user = new { user.email, user.name } // Возвращаем данные пользователя
+                    user = new
+                    {
+                        user.email,
+                        user.name,
+                        user.surname // Добавьте фамилию
+                    }
                 });
             }
             catch (Exception ex)

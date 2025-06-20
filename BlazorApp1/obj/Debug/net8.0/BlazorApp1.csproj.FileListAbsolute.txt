@@ -2129,6 +2129,11 @@ C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\BlazorApp1.dll
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\refint\BlazorApp1.dll
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\BlazorApp1.pdb
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\ref\BlazorApp1.dll
-C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\mpnezo3ggr-a1l7tz83lr.gz
-C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\kyjy2iuvp1-n8ulpqeq3s.gz
-C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\5jzqasczcu-3enlz1o33e.gz
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.wasm
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.wasm.gz
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.Authorization.wasm
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\3dhpe4bm79-kvcvutmuvo.gz
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\mpnezo3ggr-c7680g39ko.gz
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\kyjy2iuvp1-xx1tfou7ny.gz
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\5jzqasczcu-62g5mx6iq9.gz
