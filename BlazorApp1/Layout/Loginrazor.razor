@@ -144,17 +144,20 @@
             if (response.IsSuccessStatusCode)
             {
                 var result = await response.Content.ReadFromJsonAsync<LoginResult>();
-                Console.WriteLine($"Login success: {result.user.name} {result.user.surname}");
 
-                var authProvider = (ClientAuthState)AuthStateProvider;
-                authProvider.SetAuthenticatedUser(
+                var authProvider = (CustomAuthStateProvider)AuthStateProvider;
+                await authProvider.SetUserAsync(
                     result.user.email,
                     result.user.name,
-                    result.user.surname, // Передаем фамилию
-                    result.user.avatarUrl // Если есть аватар
+                    result.user.surname,
+                    result.user.avatarUrl
                 );
 
                 NavigationManager.NavigateTo("/glav");
+            }
+            else
+            {
+                apiErrorMessage = "Ошибка авторизации: " + await response.Content.ReadAsStringAsync();
             }
         }
         catch (Exception ex)

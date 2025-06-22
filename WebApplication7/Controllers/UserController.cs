@@ -82,14 +82,14 @@ namespace WebApplication7.Controllers
                     CookieAuthenticationDefaults.AuthenticationScheme);
 
                 await HttpContext.SignInAsync(
-        CookieAuthenticationDefaults.AuthenticationScheme,
-        new ClaimsPrincipal(identity),
-        new AuthenticationProperties
-        {
-            IsPersistent = true,
-            ExpiresUtc = DateTime.UtcNow.AddHours(1),
-            AllowRefresh = true
-        });
+         CookieAuthenticationDefaults.AuthenticationScheme,
+         new ClaimsPrincipal(identity),
+         new AuthenticationProperties
+         {
+             IsPersistent = true,
+             ExpiresUtc = DateTime.UtcNow.AddDays(7),
+             AllowRefresh = true
+         });
 
                 return Ok(new
                 {
@@ -98,7 +98,8 @@ namespace WebApplication7.Controllers
                     {
                         user.email,
                         user.name,
-                        user.surname // Добавьте фамилию
+                        user.surname,
+                        avatarUrl = user.AvatarUrl
                     }
                 });
             }
@@ -107,5 +108,25 @@ namespace WebApplication7.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
+
+        [HttpPost("logout")]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return Ok();
+        }
+        //[HttpGet]
+        //public async Task<IActionResult> GetProfile()
+        //{
+        //    // Получение данных профиля из БД
+        //    return Ok(new ProfileData { /* ... */ });
+        //}
+
+        //[HttpPut("update")]
+        //public async Task<IActionResult> UpdateProfile([FromBody] ProfileUpdateRequest request)
+        //{
+        //    // Обновление профиля в БД
+        //    return Ok();
+        //}
     }
 }

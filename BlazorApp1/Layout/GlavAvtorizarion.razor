@@ -7,15 +7,13 @@
 @inject AuthenticationStateProvider AuthStateProvider
 @using System.Security.Claims;
 
-<link href="css/glav.css?v=3.0" rel="stylesheet" />
-
 <CascadingAuthenticationState>
     <AuthorizeView>
         <Authorized>
             <header class="header">
                 <div class="container">
                     <div class="logo">
-                        <img src="/images/image1.png" alt="УСТАВ" />
+                        <img src="/images/image1.png" alt="Логотип платформы" />
                     </div>
 
                     <nav class="nav">
@@ -25,19 +23,23 @@
                         <NavLink href="/cart" class="nav-link">Корзина</NavLink>
                     </nav>
 
-                   <div class="user-profile" @onclick="ToggleProfileMenu">
+                    <div class="user-profile" @onclick="ToggleProfileMenu">
                         <div class="avatar-placeholder">
                             @GetInitials(context.User.Identity.Name)
                         </div>
                         <span class="user-name">
                             @context.User.FindFirst(ClaimTypes.GivenName)?.Value
                         </span>
-                        
 
                         @if (showProfileMenu)
                         {
                             <div class="profile-menu">
                                 <div class="profile-header">
+                                    @{
+                                        var avatarUrl = context.User.FindFirst("AvatarUrl")?.Value;
+                                        var fullName = context.User.Identity.Name;
+                                        var email = context.User.FindFirst(ClaimTypes.Email)?.Value;
+                                    }
                                     @if (!string.IsNullOrEmpty(avatarUrl))
                                     {
                                         <img src="@avatarUrl"
@@ -57,20 +59,20 @@
                                 </div>
                                 <div class="menu-items">
                                     <div class="menu-item" @onclick="NavigateToProfile">
-                                        <i class="icon-user"></i>
+                                        <span class="icon">👤</span>
                                         <span>Мой профиль</span>
                                     </div>
                                     <div class="menu-item" @onclick="NavigateToAvatarSettings">
-                                        <i class="icon-camera"></i>
+                                        <span class="icon">📷</span>
                                         <span>Настройка аватара</span>
                                     </div>
                                     <div class="menu-item" @onclick="NavigateToGoals">
-                                        <i class="icon-trophy"></i>
+                                        <span class="icon">🏆</span>
                                         <span>Цели и достижения</span>
                                     </div>
                                     <div class="menu-divider"></div>
                                     <div class="menu-item logout" @onclick="Logout">
-                                        <i class="icon-logout"></i>
+                                        <span class="icon">🚪</span>
                                         <span>Выход</span>
                                     </div>
                                 </div>
@@ -79,11 +81,7 @@
                     </div>
 
                     <button class="mobile-menu-btn" @onclick="ToggleMobileMenu">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <line x1="3" y1="12" x2="21" y2="12"></line>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <line x1="3" y1="18" x2="21" y2="18"></line>
-                        </svg>
+                        <span class="icon">☰</span>
                     </button>
                 </div>
 
@@ -107,7 +105,7 @@
             <header class="header">
                 <div class="container">
                     <div class="logo">
-                        <img src="/images/image1.png" alt="УСТАВ" />
+                        <img src="/images/image1.png" alt="Логотип платформы" />
                     </div>
 
                     <nav class="nav">
@@ -123,11 +121,7 @@
                     </div>
 
                     <button class="mobile-menu-btn" @onclick="ToggleMobileMenu">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <line x1="3" y1="12" x2="21" y2="12"></line>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <line x1="3" y1="18" x2="21" y2="18"></line>
-                        </svg>
+                        <span class="icon">☰</span>
                     </button>
                 </div>
 
@@ -149,344 +143,482 @@
 
 <div class="hero-section">
     <div class="hero-content">
-        <h1>Осваивайте новые навыки онлайн с лучшими преподавателями</h1>
-        <div class="search-container">
-            <input type="text" placeholder="Найдите интересующий курс" />
-            <button class="search-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-            </button>
-        </div>
-    </div>
-    <div class="hero-image">
-        <img src="/images/student.png" alt="Студенты за обучением" />
-    </div>
-</div>
-
-<div class="categories-section">
-    <h2>Выбери любимый курс по категориям</h2>
-    <div class="categories-grid">
-        <div class="category-card" style="background-color: #E1F0FF;">
-            <div class="category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                    <line x1="12" y1="17" x2="12" y2="21"></line>
-                </svg>
+        <div class="hero-text">
+            <h1>Осваивайте новые навыки онлайн с лучшими преподавателями</h1>
+            <p>Выйдите на новый уровень с нашими профессиональными курсами</p>
+            <div class="search-container">
+                <input type="text" placeholder="Найдите интересующий курс" />
+                <button class="search-btn">
+                    <span class="icon">🔍</span>
+                </button>
             </div>
-            <h3>Дизайн</h3>
         </div>
-
-        <div class="category-card" style="background-color: #FFEDED;">
-            <div class="category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <polyline points="16 18 22 12 16 6"></polyline>
-                    <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
-            </div>
-            <h3>Разработка</h3>
-        </div>
-
-        <div class="category-card" style="background-color: #EDFFED;">
-            <div class="category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                    <path d="M2 17l10 5 10-5"></path>
-                    <path d="M2 12l10 5 10-5"></path>
-                </svg>
-            </div>
-            <h3>Бизнес</h3>
-        </div>
-
-        <div class="category-card" style="background-color: #FFF5E6;">
-            <div class="category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-            </div>
-            <h3>Маркетинг</h3>
-        </div>
-
-        <div class="category-card" style="background-color: #F0EDFF;">
-            <div class="category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                </svg>
-            </div>
-            <h3>Английский</h3>
+        <div class="hero-image">
+            <img src="/images/student.png" alt="Студенты за обучением" />
         </div>
     </div>
 </div>
 
-<div class="popular-courses">
-    <h2>Популярные курсы</h2>
-    <div class="courses-grid">
-        <div class="course-card">
-            <div class="course-image" style="background-color: #FFECE8;">
-                <img src="/images/web-dev.png" alt="Веб-разработка" />
-            </div>
-            <div class="course-info">
-                <h3>Веб-разработка</h3>
-                <p>Создание современных веб-приложений</p>
-                <div class="course-meta">
-                    <span>12 недель</span>
-                    <span>4.8 ★</span>
-                </div>
-            </div>
+<div class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Выбери любимый курс по категориям</h2>
+            <a href="/categories" class="link-more">Все категории <span class="icon">→</span></a>
         </div>
 
-        <div class="course-card">
-            <div class="course-image" style="background-color: #E8F4FF;">
-                <img src="/images/data-science.png" alt="Анализ данных" />
-            </div>
-            <div class="course-info">
-                <h3>Анализ данных</h3>
-                <p>Работа с большими данными и визуализация</p>
-                <div class="course-meta">
-                    <span>10 недель</span>
-                    <span>4.7 ★</span>
+        <div class="categories-grid">
+            <a href="/courses/design" class="category-card">
+                <div class="category-icon" style="background-color: #E1F0FF;">
+                    <span class="icon">🎨</span>
                 </div>
-            </div>
-        </div>
+                <h3>Дизайн</h3>
+                <p>24 курса</p>
+            </a>
 
-        <div class="course-card">
-            <div class="course-image" style="background-color: #E8FFEA;">
-                <img src="/images/design.png" alt="UI/UX Дизайн" />
-            </div>
-            <div class="course-info">
-                <h3>UI/UX Дизайн</h3>
-                <p>Создание удобных интерфейсов</p>
-                <div class="course-meta">
-                    <span>8 недель</span>
-                    <span>4.9 ★</span>
+            <a href="/courses/development" class="category-card">
+                <div class="category-icon" style="background-color: #FFEDED;">
+                    <span class="icon">💻</span>
                 </div>
-            </div>
+                <h3>Разработка</h3>
+                <p>32 курса</p>
+            </a>
+
+            <a href="/courses/business" class="category-card">
+                <div class="category-icon" style="background-color: #EDFFED;">
+                    <span class="icon">📊</span>
+                </div>
+                <h3>Бизнес</h3>
+                <p>18 курсов</p>
+            </a>
+
+            <a href="/courses/marketing" class="category-card">
+                <div class="category-icon" style="background-color: #FFF5E6;">
+                    <span class="icon">📢</span>
+                </div>
+                <h3>Маркетинг</h3>
+                <p>15 курсов</p>
+            </a>
+
+            <a href="/courses/languages" class="category-card">
+                <div class="category-icon" style="background-color: #F0EDFF;">
+                    <span class="icon">🌐</span>
+                </div>
+                <h3>Языки</h3>
+                <p>22 курса</p>
+            </a>
         </div>
     </div>
 </div>
-<!-- Новый раздел: Отзывы студентов -->
-<div class="testimonials-section">
-    <h2>Отзывы наших студентов</h2>
-    <div class="testimonials-grid">
-        <div class="testimonial-card">
-            <div class="testimonial-content">
-                <p>"Какой-то тестовый отзыв о курсе. Очень понравилась подача материала и практические задания."</p>
-            </div>
-            <div class="testimonial-author">
-                <div class="author-avatar"></div>
-                <div class="author-info">
-                    <h4>Иван Петров</h4>
-                    <p>Студент курса "Бизнес-анализ"</p>
-                </div>
-            </div>
+
+<div class="section bg-light">
+    <div class="container">
+        <div class="section-header">
+            <h2>Популярные курсы</h2>
+            <a href="/courses" class="link-more">Все курсы <span class="icon">→</span></a>
         </div>
 
-        <div class="testimonial-card">
-            <div class="testimonial-content">
-                <p>"Какой-то комментарий о курсе. Преподаватели объясняют сложные темы простым языком."</p>
-            </div>
-            <div class="testimonial-author">
-                <div class="author-avatar"></div>
-                <div class="author-info">
-                    <h4>Мария Сидорова</h4>
-                    <p>Студентка курса "Data Science"</p>
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-badge">Хит</div>
+                <div class="course-image">
+                    <img src="/images/web-dev.png" alt="Веб-разработка" />
+                </div>
+                <div class="course-info">
+                    <div class="course-meta">
+                        <span class="level">Начальный</span>
+                        <span class="rating">
+                            <span class="icon">★</span> 4.8
+                        </span>
+                    </div>
+                    <h3>Веб-разработка</h3>
+                    <p>Создание современных веб-приложений</p>
+                    <div class="course-footer">
+                        <span class="duration">12 недель</span>
+                        <span class="price">18 900 ₽</span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="testimonial-card">
-            <div class="testimonial-content">
-                <p>"Какой-то отзыв о платформе. Удобный интерфейс и отличная поддержка."</p>
+            <div class="course-card">
+                <div class="course-badge">Новинка</div>
+                <div class="course-image">
+                    <img src="/images/data-science.png" alt="Анализ данных" />
+                </div>
+                <div class="course-info">
+                    <div class="course-meta">
+                        <span class="level">Средний</span>
+                        <span class="rating">
+                            <span class="icon">★</span> 4.7
+                        </span>
+                    </div>
+                    <h3>Анализ данных</h3>
+                    <p>Работа с большими данными и визуализация</p>
+                    <div class="course-footer">
+                        <span class="duration">10 недель</span>
+                        <span class="price">21 500 ₽</span>
+                    </div>
+                </div>
             </div>
-            <div class="testimonial-author">
-                <div class="author-avatar"></div>
-                <div class="author-info">
-                    <h4>Алексей Иванов</h4>
-                    <p>Студент курса "AWS Certified"</p>
+
+            <div class="course-card">
+                <div class="course-badge">Рекомендуем</div>
+                <div class="course-image">
+                    <img src="/images/design.png" alt="UI/UX Дизайн" />
+                </div>
+                <div class="course-info">
+                    <div class="course-meta">
+                        <span class="level">Начальный</span>
+                        <span class="rating">
+                            <span class="icon">★</span> 4.9
+                        </span>
+                    </div>
+                    <h3>UI/UX Дизайн</h3>
+                    <p>Создание удобных интерфейсов</p>
+                    <div class="course-footer">
+                        <span class="duration">8 недель</span>
+                        <span class="price">16 800 ₽</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Новый раздел: Подвал сайта -->
+<div class="section">
+    <div class="container">
+        <div class="section-header centered">
+            <h2>Отзывы наших студентов</h2>
+            <p>Узнайте, что говорят наши выпускники</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="quote-icon">“</div>
+                    <p>"Курс по веб-разработке полностью изменил мою карьеру. Через 3 месяца после окончания получил оффер от крупной IT-компании."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">ИП</div>
+                    <div class="author-info">
+                        <h4>Иван Петров</h4>
+                        <p>Студент курса "Веб-разработка"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="quote-icon">“</div>
+                    <p>"Преподаватели объясняют сложные темы простым языком. Особенно ценна обратная связь по практическим заданиям."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">МС</div>
+                    <div class="author-info">
+                        <h4>Мария Сидорова</h4>
+                        <p>Студентка курса "Data Science"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="quote-icon">“</div>
+                    <p>"Удобная платформа, отличная поддержка. Всегда помогают решить технические вопросы в кратчайшие сроки."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">АИ</div>
+                    <div class="author-info">
+                        <h4>Алексей Иванов</h4>
+                        <p>Студент курса "UI/UX Дизайн"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Начните обучение сегодня!</h2>
+            <p>Присоединяйтесь к 10,000+ студентов, которые уже обучаются на платформе</p>
+            <button class="btn btn-light" @onclick="NavigateToRegister">Начать бесплатно</button>
+        </div>
+    </div>
+</div>
+
 <footer class="site-footer">
-    <div class="footer-container">
-        <div class="footer-column">
-            <h4>Компания</h4>
-            <ul>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Карьера</a></li>
-                <li><a href="#">Пресса</a></li>
-                <li><a href="#">Блог</a></li>
-                <li><a href="#">Партнеры</a></li>
-            </ul>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <div class="logo">
+                    <img src="/images/image1.png" alt="Логотип платформы" />
+                </div>
+                <p>Платформа профессионального онлайн-образования для корпоративного обучения</p>
+                <div class="social-links">
+                    <a href="#"><span class="icon">VK</span></a>
+                    <a href="#"><span class="icon">TG</span></a>
+                    <a href="#"><span class="icon">YT</span></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Обучающимся</h4>
+                <ul>
+                    <li><a href="/courses">Все курсы</a></li>
+                    <li><a href="/webinars">Вебинары</a></li>
+                    <li><a href="/career">Карьерный центр</a></li>
+                    <li><a href="/certificates">Сертификаты</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Компаниям</h4>
+                <ul>
+                    <li><a href="/corporate">Корпоративное обучение</a></li>
+                    <li><a href="/recruitment">Подбор специалистов</a></li>
+                    <li><a href="/partnership">Партнерская программа</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Поддержка</h4>
+                <ul>
+                    <li><a href="/help">Помощь</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/contacts">Контакты</a></li>
+                </ul>
+            </div>
         </div>
 
-        <div class="footer-column">
-            <h4>Сообщество</h4>
-            <ul>
-                <li><a href="#">Премиум</a></li>
-                <li><a href="#">Командные планы</a></li>
-                <li><a href="#">Подарочные карты</a></li>
-                <li><a href="#">Стипендии</a></li>
-                <li><a href="#">Бесплатные курсы</a></li>
-            </ul>
+        <div class="footer-bottom">
+            <p>© 2017-2023 Образовательная платформа. Все права защищены.</p>
         </div>
-
-        <div class="footer-column">
-            <h4>Преподавание</h4>
-            <ul>
-                <li><a href="#">Стать преподавателем</a></li>
-                <li><a href="#">Академия преподавателей</a></li>
-                <li><a href="#">Руководство преподавателя</a></li>
-                <li><a href="#">Партнерские программы</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-column">
-            <h4>Поддержка</h4>
-            <ul>
-                <li><a href="#">Поддержка</a></li>
-                <li><a href="#">Связаться с нами</a></li>
-                <li><a href="#">Системные требования</a></li>
-                <li><a href="#">Активация ключа</a></li>
-                <li><a href="#">Обратная связь</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>© 2017-2023 УБТАЙ Образовательная Платформа. Все права защищены.</p>
     </div>
 </footer>
 
+
+<script>
+    window.getCookie = function(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    };
+</script>
 <style>
-    /* Обновленные фиолетовые стили для значков */
+    /* Глобальные стили */
     :root {
-        --primary-color: #6C63FF;
-        --secondary-color: #5A52E0;
-        --icon-color: #6C63FF;
+        --primary: #6C63FF;
+        --primary-dark: #564FD8;
+        --secondary: #FF6584;
+        --dark: #2D3748;
+        --gray: #718096;
+        --light-gray: #F8FAFC;
+        --white: #FFFFFF;
+        --success: #48BB78;
+        --warning: #ECC94B;
+        --danger: #E53E3E;
+        --border-radius: 12px;
+        --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        --transition: all 0.3s ease;
     }
 
-    /* Иконки в категориях */
-    .category-icon svg {
-        stroke: var(--primary-color);
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
-    /* Иконки в профиле пользователя */
-    .menu-item i {
-        color: var(--primary-color);
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        color: var(--dark);
+        background-color: var(--white);
+        line-height: 1.6;
+        overflow-x: hidden;
     }
 
-    .menu-item:hover i {
-        color: var(--secondary-color);
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
     }
 
-    .logout i {
-        color: #e53935 !important;
+    .section {
+        padding: 80px 0;
     }
 
-    .menu-item.logout:hover i {
-        color: #c62828 !important;
+    .bg-light {
+        background-color: var(--light-gray);
     }
 
-    /* Иконка поиска */
-    .search-btn svg {
-        stroke: white;
+    .section-header {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
     }
 
-    .search-btn:hover svg {
-        stroke: white;
+        .section-header.centered {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: var(--gray);
+            margin-top: 10px;
+        }
+
+    .link-more {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: 600;
+        color: var(--primary);
+        font-size: 16px;
+        transition: var(--transition);
     }
 
-    /* Иконки в отзывах */
-    .testimonial-content::before {
-        color: var(--primary-color);
+        .link-more:hover {
+            gap: 10px;
+        }
+
+    /* Кнопки */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        transition: var(--transition);
+        border: none;
+        cursor: pointer;
     }
 
-    .author-avatar {
-        background: var(--primary-color);
+    .btn-outline {
+        background: transparent;
+        border: 2px solid var(--primary);
+        color: var(--primary);
     }
 
-    /* Иконки в футере */
-    .footer-column h4::after {
-        background: var(--primary-color);
+        .btn-outline:hover {
+            background: rgba(108, 99, 255, 0.1);
+        }
+
+    .btn-primary {
+        background: var(--primary);
+        color: var(--white);
     }
 
-    .footer-column ul li a:hover {
-        color: var(--primary-color);
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(108, 99, 255, 0.3);
+        }
+
+    .btn-light {
+        background: var(--white);
+        color: var(--primary);
+        box-shadow: var(--shadow);
     }
 
-    /* Мобильное меню */
-    .mobile-menu-btn svg {
-        stroke: var(--primary-color);
+        .btn-light:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+    /* Шапка */
+    .header {
+        background: var(--white);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
 
-    .mobile-nav-link.active {
-        color: var(--primary-color);
+        .header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
     }
 
-    .mobile-menu-item.logout {
-        color: #e53935;
+        .logo img {
+            height: 36px;
+        }
+
+    .nav {
+        display: flex;
+        gap: 32px;
+        margin-left: 40px;
     }
 
-    /* Остальные стили без изменений */
-    .search-container input {
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
-    }
-
-    .search-btn {
-        padding: 0 1rem;
-    }
-
-    .categories-section h2,
-    .featured-courses h2,
-    .testimonials-section h2 {
-        font-size: 1.5rem;
-    }
-
-    .footer-container {
-        grid-template-columns: 1fr;
-    }
-
-    .user-section {
+    .nav-link {
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--gray);
+        transition: var(--transition);
+        padding: 8px 0;
         position: relative;
     }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary);
+        }
+
+            .nav-link.active::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background: var(--primary);
+                border-radius: 2px;
+            }
 
     .user-profile {
         display: flex;
         align-items: center;
+        gap: 12px;
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: var(--transition);
         cursor: pointer;
+        position: relative;
     }
 
-    .user-avatar {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid #6C63FF;
-    }
+        .user-profile:hover {
+            background: var(--light-gray);
+        }
 
     .avatar-placeholder {
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background-color: #6C63FF;
-        color: white;
+        background: var(--primary);
+        color: var(--white);
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: bold;
-        font-size: 16px;
+        font-weight: 600;
+        flex-shrink: 0;
     }
 
         .avatar-placeholder.large {
@@ -495,47 +627,66 @@
             font-size: 24px;
         }
 
+    .user-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user-name {
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .user-role {
+        font-size: 12px;
+        color: var(--gray);
+    }
+
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: var(--dark);
+    }
+
+    /* Меню профиля */
     .profile-menu {
         position: absolute;
-        top: 50px;
+        top: 100%;
         right: 0;
-        width: 280px;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        z-index: 1000;
+        width: 300px;
+        background: var(--white);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
         overflow: hidden;
+        z-index: 1001;
+        margin-top: 10px;
     }
 
     .profile-header {
         display: flex;
-        align-items: center;
         padding: 20px;
-        background: linear-gradient(to right, #6C63FF, #5A52E0);
-        color: white;
-    }
-
-    .profile-avatar {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-right: 15px;
-        border: 2px solid white;
+        background: linear-gradient(to right, var(--primary), var(--primary-dark));
+        color: var(--white);
+        gap: 16px;
     }
 
     .profile-info {
         flex: 1;
     }
 
-    .user-name {
-        font-weight: 600;
-        font-size: 1.1rem;
-    }
+        .profile-info .user-name {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 4px;
+            color: var(--white);
+        }
 
     .user-email {
-        font-size: 0.85rem;
+        font-size: 14px;
         opacity: 0.9;
+        color: rgba(255, 255, 255, 0.8);
     }
 
     .menu-items {
@@ -545,239 +696,535 @@
     .menu-item {
         display: flex;
         align-items: center;
-        padding: 10px 20px;
-        cursor: pointer;
-        transition: background 0.2s;
+        gap: 12px;
+        padding: 12px 20px;
+        font-size: 14px;
+        transition: var(--transition);
     }
 
         .menu-item:hover {
-            background: #f5f5f5;
+            background: var(--light-gray);
         }
 
-        .menu-item i {
-            margin-right: 12px;
-            width: 24px;
-            text-align: center;
-            font-size: 18px;
+        .menu-item.logout {
+            color: var(--danger);
         }
 
     .menu-divider {
         height: 1px;
-        background: #eee;
+        background: var(--light-gray);
         margin: 8px 0;
     }
 
-    .logout {
-        color: #e53935;
+    /* Мобильное меню */
+    .mobile-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: var(--white);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
-    /* Иконки */
-    .icon-user:before {
-        content: "👤";
+        .mobile-menu.show {
+            transform: translateX(0);
+        }
+
+    .mobile-nav-link {
+        display: block;
+        padding: 16px 0;
+        font-weight: 500;
+        border-bottom: 1px solid var(--light-gray);
+        position: relative;
     }
 
-    .icon-camera:before {
-        content: "📷";
-    }
-
-    .icon-trophy:before {
-        content: "🏆";
-    }
-
-    .icon-logout:before {
-        content: "🚪";
-    }
-
-    /* Мобильное меню профиля */
     .mobile-profile-menu {
-        padding: 15px 0;
+        padding: 20px 0;
     }
 
     .mobile-menu-item {
-        padding: 12px 20px;
-        border-bottom: 1px solid #eee;
+        display: block;
+        padding: 14px 0;
+        font-weight: 500;
+        transition: var(--transition);
     }
 
-    .mobile-menu-divider {
-        height: 1px;
-        background: #eaeaea;
-        margin: 8px 0;
+        .mobile-menu-item.logout {
+            color: var(--danger);
+        }
+
+    /* Герой секция */
+    .hero-section {
+        background: linear-gradient(135deg, #F0F4FF 0%, #FFFFFF 100%);
+        padding: 100px 0 50px;
+        overflow: hidden;
+        position: relative;
     }
 
-    .mobile-menu-item.logout {
-        color: #e53935;
+    .hero-content {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .hero-text {
+        flex: 1;
+    }
+
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--dark);
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: var(--gray);
+            margin-bottom: 32px;
+            max-width: 600px;
+        }
+
+    .hero-image {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+    .search-container {
+        display: flex;
+        max-width: 500px;
+        box-shadow: var(--shadow);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+        .search-container input {
+            flex: 1;
+            border: none;
+            padding: 15px 20px;
+            font-size: 16px;
+            outline: none;
+        }
+
+    .search-btn {
+        background: var(--primary);
+        border: none;
+        padding: 0 25px;
+        color: var(--white);
+        font-size: 18px;
+        transition: var(--transition);
+    }
+
+        .search-btn:hover {
+            background: var(--primary-dark);
+        }
+
+    /* Категории */
+    .categories-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 24px;
+    }
+
+    .category-card {
+        background: var(--white);
+        border-radius: var(--border-radius);
+        padding: 24px 20px;
+        text-align: center;
+        transition: var(--transition);
+        box-shadow: var(--shadow);
+    }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+    .category-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 16px;
+        font-size: 28px;
+    }
+
+    .category-card h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .category-card p {
+        font-size: 14px;
+        color: var(--gray);
+    }
+
+    /* Курсы */
+    .courses-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+    }
+
+    .course-card {
+        background: var(--white);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        transition: var(--transition);
+        box-shadow: var(--shadow);
+        position: relative;
+    }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+
+    .course-badge {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        background: var(--primary);
+        color: var(--white);
+        font-size: 12px;
+        font-weight: 700;
+        padding: 4px 12px;
+        border-radius: 20px;
+        z-index: 2;
+    }
+
+    .course-image {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--light-gray);
+    }
+
+        .course-image img {
+            max-height: 160px;
+            width: auto;
+        }
+
+    .course-info {
+        padding: 20px;
+    }
+
+    .course-meta {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        font-size: 14px;
+    }
+
+    .level {
+        background: rgba(108, 99, 255, 0.1);
+        color: var(--primary);
+        padding: 4px 10px;
+        border-radius: 20px;
         font-weight: 500;
     }
-    /* Стили для раздела отзывов */
-    .testimonials-section {
-        padding: 4rem 1.5rem;
-        background-color: #f8f9ff;
-        border-radius: 20px;
-        margin: 4rem auto;
-        max-width: 1200px;
+
+    .rating {
+        color: var(--warning);
+        font-weight: 600;
     }
 
+    .course-info h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+        line-height: 1.4;
+    }
+
+    .course-info p {
+        color: var(--gray);
+        font-size: 15px;
+        margin-bottom: 20px;
+        min-height: 44px;
+    }
+
+    .course-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .duration {
+        font-size: 14px;
+        color: var(--gray);
+    }
+
+    .price {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--dark);
+    }
+
+    /* Отзывы */
     .testimonials-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
     }
 
     .testimonial-card {
-        background: var(--card-bg);
-        border-radius: 15px;
-        padding: 2rem;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
+        background: var(--white);
+        border-radius: var(--border-radius);
+        padding: 30px;
+        transition: var(--transition);
+        box-shadow: var(--shadow);
     }
 
         .testimonial-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(108, 99, 255, 0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
         }
 
     .testimonial-content {
         position: relative;
-        padding-left: 2rem;
-        margin-bottom: 1.5rem;
-        font-size: 1.05rem;
-        line-height: 1.6;
-        color: #4a5568;
+        padding-left: 30px;
+        margin-bottom: 30px;
     }
 
-        .testimonial-content::before {
-            content: """; position: absolute; left: 0;
-            top: -20px;
-            font-size: 4rem;
-            color: var(--primary-color);
-            opacity: 0.2;
-            font-family: Georgia, serif;
-        }
+    .quote-icon {
+        position: absolute;
+        left: 0;
+        top: -20px;
+        font-size: 60px;
+        color: var(--primary);
+        opacity: 0.2;
+    }
+
+    .testimonial-content p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: var(--dark);
+    }
 
     .testimonial-author {
         display: flex;
         align-items: center;
+        gap: 16px;
     }
 
     .author-avatar {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
-        background: var(--primary-color);
-        opacity: 0.8;
+        background: var(--primary);
+        color: var(--white);
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
-        font-weight: bold;
-        margin-right: 1rem;
+        font-weight: 700;
+        flex-shrink: 0;
     }
 
     .author-info h4 {
-        margin: 0;
-        font-size: 1.1rem;
-        color: var(--text-color);
+        font-size: 18px;
+        margin-bottom: 4px;
     }
 
     .author-info p {
-        margin: 0;
-        font-size: 0.9rem;
-        color: #718096;
+        font-size: 14px;
+        color: var(--gray);
     }
 
-    /* Стили для футера */
-    .site-footer {
-        background: #2D3748;
-        color: white;
-        padding: 4rem 1.5rem 2rem;
-        margin-top: 4rem;
+    /* CTA секция */
+    .cta-section {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        color: var(--white);
+        text-align: center;
+        padding: 100px 0;
     }
 
-    .footer-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 3rem;
-        max-width: 1200px;
+    .cta-content {
+        max-width: 700px;
         margin: 0 auto;
     }
 
-    .footer-column {
-        margin-bottom: 2rem;
+        .cta-content h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .cta-content p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+    /* Футер */
+    .site-footer {
+        background: #1A202C;
+        color: var(--white);
+        padding: 80px 0 0;
     }
 
-        .footer-column h4 {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.5rem;
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+
+    .footer-about {
+        max-width: 300px;
+    }
+
+        .footer-about p {
+            margin: 20px 0;
+            color: #A0AEC0;
+            line-height: 1.7;
         }
 
-            .footer-column h4::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 40px;
-                height: 2px;
-                background: var(--primary-color);
-            }
+    .social-links {
+        display: flex;
+        gap: 16px;
+    }
 
-        .footer-column ul {
-            list-style: none;
-            padding: 0;
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            transition: var(--transition);
         }
 
-            .footer-column ul li {
-                margin-bottom: 0.8rem;
+            .social-links a:hover {
+                background: var(--primary);
+                transform: translateY(-3px);
             }
 
-                .footer-column ul li a {
-                    color: #CBD5E0;
-                    text-decoration: none;
-                    transition: color 0.3s;
-                    font-size: 0.95rem;
-                }
+    .footer-links h4 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 12px;
+    }
 
-                    .footer-column ul li a:hover {
-                        color: var(--primary-color);
-                    }
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+    .footer-links ul li {
+        margin-bottom: 12px;
+    }
+
+        .footer-links ul li a {
+            color: #A0AEC0;
+            transition: var(--transition);
+            font-size: 15px;
+        }
+
+            .footer-links ul li a:hover {
+                color: var(--white);
+                padding-left: 5px;
+            }
 
     .footer-bottom {
+        border-top: 1px solid #2D3748;
+        padding: 30px 0;
         text-align: center;
-        padding-top: 3rem;
-        margin-top: 3rem;
-        border-top: 1px solid #4A5568;
-        max-width: 1200px;
-        margin: 3rem auto 0;
+        color: #718096;
+        font-size: 14px;
     }
 
-        .footer-bottom p {
-            color: #A0AEC0;
-            font-size: 0.9rem;
+    /* Адаптивность */
+    @@media (max-width: 1024px) {
+        .hero-content {
+            flex-direction: column;
+            text-align: center;
         }
 
-    /* Адаптивность */
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .search-container {
+            margin: 0 auto;
+        }
+    }
+
     @@media (max-width: 768px) {
-        .testimonials-grid {
+        .nav {
+            display: none;
+        }
+
+        .auth-buttons {
+            display: none;
+        }
+
+        .mobile-menu-btn {
+            display: block;
+        }
+
+        .section-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .courses-grid {
             grid-template-columns: 1fr;
         }
 
-        .footer-container {
-            grid-template-columns: repeat(2, 1fr);
+        .hero-text h1 {
+            font-size: 36px;
+        }
+
+        .cta-content h2 {
+            font-size: 32px;
         }
     }
 
     @@media (max-width: 576px) {
-        .testimonials-section {
-            padding: 2rem 1rem;
+        .section {
+            padding: 60px 0;
         }
 
-        .footer-container {
+        .section-header h2 {
+            font-size: 28px;
+        }
+
+        .hero-text h1 {
+            font-size: 28px;
+        }
+
+        .testimonials-grid {
             grid-template-columns: 1fr;
-        }
-
-        .footer-column {
-            margin-bottom: 1.5rem;
         }
     }
 </style>
@@ -789,19 +1236,25 @@
     private string fullName = "";
     private string email = "";
     private string avatarUrl = "";
+    private bool isLoaded = false; // Флаг загрузки данных
 
     protected override async Task OnInitializedAsync()
     {
+        // Загружаем состояние аутентификации
+        await AuthStateProvider.GetAuthenticationStateAsync();
+
         var authState = await AuthStateProvider.GetAuthenticationStateAsync();
         var user = authState.User;
 
         if (user.Identity?.IsAuthenticated == true)
         {
-            // Получаем полное имя из одного claim
             fullName = user.Identity.Name ?? "";
             email = user.FindFirst(ClaimTypes.Email)?.Value ?? "";
             avatarUrl = user.FindFirst("AvatarUrl")?.Value ?? "";
         }
+
+        isLoaded = true; // Помечаем данные как загруженные
+        StateHasChanged(); // Принудительно обновляем UI
     }
 
     private string GetInitials(string fullName)
@@ -831,49 +1284,60 @@
     private void NavigateToProfile()
     {
         NavManager.NavigateTo("/profile");
-        showProfileMenu = false;
-        showMobileMenu = false;
+        CloseMenus();
     }
 
     private void NavigateToAvatarSettings()
     {
         NavManager.NavigateTo("/profile/avatar");
-        showProfileMenu = false;
-        showMobileMenu = false;
+        CloseMenus();
     }
+    private string GetShortName(string fullName)
+    {
+        if (string.IsNullOrEmpty(fullName))
+            return "Гость";
 
+        var parts = fullName.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+        // Если есть и имя, и фамилия - показываем только имя
+        if (parts.Length >= 2)
+            return parts[0];
+
+        // Если только одно слово - показываем его полностью
+        return parts.Length > 0 ? parts[0] : "Гость";
+    }
     private void NavigateToGoals()
     {
         NavManager.NavigateTo("/profile/goals");
-        showProfileMenu = false;
-        showMobileMenu = false;
+        CloseMenus();
     }
 
     private void NavigateToLogin()
     {
         NavManager.NavigateTo("/login");
-        showMobileMenu = false;
+        CloseMenus();
     }
 
     private void NavigateToRegister()
     {
         NavManager.NavigateTo("/register");
+        CloseMenus();
+    }
+
+    private void CloseMenus()
+    {
+        showProfileMenu = false;
         showMobileMenu = false;
     }
 
     private async Task Logout()
     {
-        // Выполняем выход
-        await Http.PostAsync("api/User/logout", null);
+        await Http.PostAsync("http://localhost:5199/api/User/logout", null);
 
-        // Обновляем состояние аутентификации
-        await AuthStateProvider.GetAuthenticationStateAsync();
+        var authProvider = (CustomAuthStateProvider)AuthStateProvider;
+        await authProvider.ClearUserAsync();
 
-        // Закрываем меню
-        showProfileMenu = false;
-        showMobileMenu = false;
-
-        // Перенаправляем на главную
-        NavManager.NavigateTo("/", forceLoad: true);
+        CloseMenus();
+        NavManager.NavigateTo("/login", forceLoad: true);
     }
 }

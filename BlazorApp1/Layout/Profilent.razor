@@ -1,0 +1,396 @@
+﻿@* @page "/profile"
+@layout MainLayout
+@using Microsoft.AspNetCore.Components.Authorization
+@using System.ComponentModel.DataAnnotations
+@using Microsoft.AspNetCore.Components.Forms
+@using System.Security.Claims
+@inject AuthenticationStateProvider AuthStateProvider
+@inject HttpClient Http
+@inject NavigationManager NavManager
+@using YourProjectNamespace.Models
+
+<AuthorizeView>
+    <Authorized Context="authContext">
+        <!-- Исправлено -->
+        <div class="profile-container">
+            <!-- Заголовок -->
+            <div class="profile-header">
+                <h1>Настройки автора</h1>
+                <div class="back-link" @onclick="NavigateToHome">
+                    <span class="icon">←</span> Назад
+                </div>
+            </div>
+            @if (showNotification)
+            {
+                <div class="notification @(isSuccess ? "success" : "error")">
+                    @notificationMessage
+                </div>
+            }
+            <!-- Основной контент -->
+            <div class="profile-content">
+                <!-- Левая колонка - информация о пользователе -->
+                <div class="user-info-section">
+                    <div class="user-card">
+                        <div class="user-avatar">
+                            @if (!string.IsNullOrEmpty(avatarUrl))
+                            {
+                                <img src="@avatarUrl" alt="@fullName" />
+                            }
+                            else
+                            {
+                                <div class="avatar-placeholder">
+                                    @GetInitials(fullName)
+                                </div>
+                            }
+                        </div>
+                        <div class="user-details">
+                            <h2>@fullName</h2>
+                            <div class="user-meta">
+                                <div class="meta-item">
+                                    <span class="icon">🎓</span>
+                                    <span>Курс: <strong>@(course ?? "Не указан")</strong></span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="icon">🏙️</span>
+                                    <span>Город: <strong>@(city ?? "Не указан")</strong></span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="icon">✉️</span>
+                                    <span>Электронная почта: <strong>@email</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Настройки автора -->
+                    <div class="author-settings">
+                        <h3>Настройки автора</h3>
+                        <div class="settings-actions">
+                            <button class="btn-settings" @onclick="NavigateToCourses">
+                                <span class="icon">📚</span> Мои курсы
+                            </button>
+                            <button class="btn-settings" @onclick="NavigateToMaterials">
+                                <span class="icon">📝</span> Учебные материалы
+                            </button>
+                            <button class="btn-settings" @onclick="NavigateToStats">
+                                <span class="icon">📊</span> Статистика
+                            </button>
+                            <button class="btn-settings" @onclick="NavigateToPayments">
+                                <span class="icon">💳</span> Платежи
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Правая колонка - форма редактирования -->
+                <div class="edit-form-section">
+                    <h3>Редактировать профиль</h3>
+
+                    <EditForm Model="@profileModel" OnValidSubmit="@SaveProfile">
+                        <ChildContent Context="formContext">
+                            <!-- Исправлено -->
+                            <DataAnnotationsValidator />
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Имя</label>
+                                    <InputText @bind-Value="profileModel.FirstName" class="form-control" />
+                                    <ValidationMessage For="@(() => profileModel.FirstName)" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Фамилия</label>
+                                    <InputText @bind-Value="profileModel.LastName" class="form-control" />
+                                    <ValidationMessage For="@(() => profileModel.LastName)" />
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Курс</label>
+                                    <InputText @bind-Value="profileModel.Course" class="form-control" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Город</label>
+                                    <InputText @bind-Value="profileModel.City" class="form-control" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Электронная почта</label>
+                                <InputText @bind-Value="profileModel.Email" class="form-control" readonly />
+                            </div>
+
+                            <div class="form-group">
+                                <label>О себе</label>
+                                <InputTextArea @bind-Value="profileModel.Bio" class="form-control" rows="4" />
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn-primary">Сохранить изменения</button>
+                                <button type="button" class="btn-outline" @onclick="CancelEditing">Отмена</button>
+                            </div>
+                        </ChildContent>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </Authorized>
+</AuthorizeView>
+
+<style>
+   .notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    animation: fadeInOut 3s ease-in-out;
+}
+
+.success { background-color: var(--success); }
+.error { background-color: var(--danger); }
+
+@@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-20px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-20px); }
+}
+</style>
+
+@code {
+    private string fullName = "";
+    private string email = "";
+    private string avatarUrl = "";
+    private string? course = null;
+    private string? city = null;
+    private string? bio = null;
+    private string notificationMessage = "";
+    private bool showNotification = false;
+    private bool isSuccess = true;
+
+    private class ProfileModel
+    {
+        [Required(ErrorMessage = "Обязательное поле")]
+        [StringLength(50, ErrorMessage = "Макс. 50 символов")]
+        public string FirstName { get; set; } = "";
+
+        [Required(ErrorMessage = "Обязательное поле")]
+        [StringLength(50, ErrorMessage = "Макс. 50 символов")]
+        public string LastName { get; set; } = "";
+
+        [StringLength(100, ErrorMessage = "Макс. 100 символов")]
+        public string? Course { get; set; }
+
+        [StringLength(50, ErrorMessage = "Макс. 50 символов")]
+        public string? City { get; set; }
+
+        [Required(ErrorMessage = "Обязательное поле")]
+        [EmailAddress(ErrorMessage = "Некорректный email")]
+        public string Email { get; set; } = "";
+
+        [StringLength(500, ErrorMessage = "Макс. 500 символов")]
+        public string? Bio { get; set; }
+    }
+
+    private ProfileModel profileModel = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity?.IsAuthenticated == true)
+        {
+            var userId = user.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            // Загрузка данных профиля с сервера
+            var profileData = await Http.GetFromJsonAsync<ProfileData>(
+                $"api/profile/{userId}");
+
+            if (profileData != null)
+            {
+                fullName = profileData.FullName;
+                email = profileData.Email;
+                avatarUrl = profileData.AvatarUrl;
+                course = profileData.Course;
+                city = profileData.City;
+                bio = profileData.Bio;
+
+                profileModel = new ProfileModel
+                    {
+                        FirstName = profileData.FirstName,
+                        LastName = profileData.LastName,
+                        Course = course,
+                        City = city,
+                        Email = email,
+                        Bio = bio
+                    };
+            }
+        }
+    }
+
+    private async Task LoadUserData()
+    {
+        var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity?.IsAuthenticated == true)
+        {
+            fullName = user.Identity.Name ?? "";
+            email = user.FindFirst(ClaimTypes.Email)?.Value ?? "";
+            avatarUrl = user.FindFirst("AvatarUrl")?.Value ?? "";
+
+            // Разделяем полное имя на имя и фамилию
+            var nameParts = fullName.Split(' ', 2);
+            string firstName = nameParts.Length > 0 ? nameParts[0] : "";
+            string lastName = nameParts.Length > 1 ? nameParts[1] : "";
+
+            // Загрузка дополнительных данных профиля
+            await LoadProfileData(firstName, lastName);
+        }
+    }
+
+    private async Task LoadProfileData(string firstName, string lastName)
+    {
+        try
+        {
+            // Заглушки данных (в реальном приложении здесь будет запрос к API)
+            course = "Дизайн интерфейсов";
+            city = "Москва";
+            bio = "Преподаватель курса по дизайну с 5-летним опытом";
+
+            profileModel = new ProfileModel
+                {
+                    FirstName = firstName,
+                    LastName = lastName,
+                    Course = course,
+                    City = city,
+                    Email = email,
+                    Bio = bio
+                };
+        }
+        catch
+        {
+            // Обработка ошибок
+        }
+    }
+
+    private string GetInitials(string fullName)
+    {
+        if (string.IsNullOrEmpty(fullName)) return "??";
+
+        var parts = fullName.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        if (parts.Length == 0) return "??";
+
+        string first = parts[0][0].ToString();
+        string last = parts.Length > 1 ? parts[^1][0].ToString() : "";
+
+        return $"{first}{last}".ToUpper();
+    }
+
+    private async Task SaveProfile()
+    {
+        try
+        {
+            var authService = (CustomAuthStateProvider)AuthStateProvider;
+
+            var profileData = new ProfileData
+                {
+                    FirstName = profileModel.FirstName,
+                    LastName = profileModel.LastName,
+                    Email = profileModel.Email,
+                    AvatarUrl = avatarUrl,
+                    Course = profileModel.Course ?? "",
+                    City = profileModel.City ?? "",
+                    Bio = profileModel.Bio ?? ""
+                };
+
+            await authService.UpdateUserProfileAsync(profileData);
+
+            // Обновляем локальные данные
+            fullName = $"{profileModel.FirstName} {profileModel.LastName}";
+            course = profileModel.Course;
+            city = profileModel.City;
+            bio = profileModel.Bio;
+            if (response.IsSuccessStatusCode)
+            {
+                // Обновляем UI
+                fullName = $"{profileModel.FirstName} {profileModel.LastName}";
+                course = profileModel.Course;
+                city = profileModel.City;
+                bio = profileModel.Bio;
+
+                // Обновляем состояние аутентификации
+                var authProvider = (CustomAuthStateProvider)AuthStateProvider;
+                await authProvider.UpdateUserProfileAsync(
+                    profileModel.FirstName,
+                    profileModel.LastName);
+            }
+        }
+        catch (Exception ex)
+        {
+            // Обработка ошибок
+        }
+    }
+    private void ShowNotification(string message, bool success)
+    {
+        notificationMessage = message;
+        isSuccess = success;
+        showNotification = true;
+
+        // Автоматическое скрытие через 3 секунды
+        Task.Delay(3000).ContinueWith(_ =>
+        {
+            showNotification = false;
+            InvokeAsync(StateHasChanged);
+        });
+    }
+    private void CancelEditing()
+    {
+        // Восстанавливаем оригинальные значения
+        var nameParts = fullName.Split(' ', 2);
+        string firstName = nameParts.Length > 0 ? nameParts[0] : "";
+        string lastName = nameParts.Length > 1 ? nameParts[1] : "";
+
+        profileModel = new ProfileModel
+            {
+                FirstName = firstName,
+                LastName = lastName,
+                Course = course,
+                City = city,
+                Email = email,
+                Bio = bio
+            };
+    }
+
+    private void NavigateToHome()
+    {
+        NavManager.NavigateTo("/glav");
+    }
+
+    private void NavigateToCourses()
+    {
+        NavManager.NavigateTo("/profile/courses");
+    }
+
+    private void NavigateToMaterials()
+    {
+        NavManager.NavigateTo("/profile/materials");
+    }
+
+    private void NavigateToStats()
+    {
+        NavManager.NavigateTo("/profile/stats");
+    }
+
+    private void NavigateToPayments()
+    {
+        NavManager.NavigateTo("/profile/payments");
+    }
+} *@

@@ -1,15 +1,13 @@
-﻿<style >
-:root {
-    --primary-color: #5D54A4; /* Темно-фиолетовый основной */
-    --secondary-color: #4A4175; /* Еще более темный фиолетовый */
-    --text-color: #2D3748; /* Текст остается темным */
-    --light-gray: #F8F9FA; /* Светлый фон */
-    --border-color: #E2E8F0; /* Границы */
-    --error-color: #E53E3E; /* Ошибки */
-    --icon-color: #5D54A4; /* Иконки */
-    --background-color: #7E76B9; /* Фон страницы - фиолетовый */
-    --card-bg: #FFFFFF; /* Фон карточек - белый */
-    --accent-color: #6C63FF; /* Акцентный цвет для некоторых элементов */
+﻿:root {
+    --primary-color: #6C63FF;
+    --secondary-color: #5A52E0;
+    --text-color: #2D3748;
+    --light-gray: #F8F9FA;
+    --border-color: #E2E8F0;
+    --error-color: #E53E3E;
+    --icon-color: #6C63FF;
+    --background-color: #BFB1C8;
+    --card-bg: #FFFFFF;
 }
 
 * {
@@ -20,7 +18,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #7E76B9 0%, #5D54A4 100%);
+    background: linear-gradient(135deg, #BFB1C8 0%, #9C8DA9 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -113,7 +111,7 @@ body {
 
     .hero-title strong {
         font-weight: 900;
-        color: var(--primary-color);
+        color: var(--secondary-color);
     }
 
 .hero-subtitle {
@@ -150,14 +148,14 @@ body {
 
     .category-card:hover {
         transform: translateY(-8px);
-        box-shadow: 0 10px 25px rgba(93, 84, 164, 0.3);
+        box-shadow: 0 10px 25px rgba(108, 99, 255, 0.2);
         border-color: var(--primary-color);
     }
 
 .category-icon {
     width: 80px;
     height: 80px;
-    background: rgba(93, 84, 164, 0.1);
+    background: rgba(108, 99, 255, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -168,7 +166,7 @@ body {
 
 .category-card:hover .category-icon {
     transform: scale(1.1);
-    background: rgba(93, 84, 164, 0.2);
+    background: rgba(108, 99, 255, 0.2);
 }
 
 .category-icon svg {
@@ -207,38 +205,6 @@ body {
     bottom: -100px;
     left: -100px;
 }
-
-/* Кнопки в темно-фиолетовом стиле */
-.btn {
-    padding: 0.8rem 1.8rem;
-    border-radius: 8px;
-    font-weight: 500;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
-}
-
-.btn-outline {
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    background: transparent;
-}
-
-    .btn-outline:hover {
-        background: rgba(93, 84, 164, 0.1);
-    }
-
-.btn-primary {
-    background: var(--primary-color);
-    color: white;
-    border: 2px solid var(--primary-color);
-}
-
-    .btn-primary:hover {
-        background: var(--secondary-color);
-        border-color: var(--secondary-color);
-    }
 
 /* Адаптивность */
 @media (max-width: 992px) {
@@ -282,5 +248,3 @@ body {
         padding: 20px;
     }
 }
-
-</style >

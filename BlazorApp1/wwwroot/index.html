@@ -15,6 +15,16 @@
 <body>
     <div id="app">
         <svg class="loading-progress">
+            <script src="_framework/blazor.webassembly.js"></script>
+
+            <script>
+                // Функция для чтения кук (если все еще нужна)
+                function getCookie(name) {
+                    const value = `; ${document.cookie}`;
+                    const parts = value.split(`; ${name}=`);
+                    if (parts.length === 2) return parts.pop().split(';').shift();
+                }
+            </script>
             <circle r="40%" cx="50%" cy="50%" />
             <circle r="40%" cx="50%" cy="50%" />
         </svg>
