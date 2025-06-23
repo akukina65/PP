@@ -10,7 +10,11 @@
         public string email { get; set; } = string.Empty;
         public string Role { get; set; } = "student"; // Новое поле для роли
         public string? AvatarUrl { get; set; } // Добавляем URL аватара
+        public string? City { get; set; }
+        public string? Bio { get; set; }
     }
+
+    
     public class supercourses
     {
         public int Id { get; set; }

@@ -7,11 +7,14 @@ using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using WebApplication7.Models;
 
+
+
 namespace WebApplication7.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
     [AllowAnonymous]
+    [Authorize]
     public class UserController : ControllerBase
     {
         private readonly DataContext _context;
@@ -115,18 +118,86 @@ namespace WebApplication7.Controllers
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return Ok();
         }
-        //[HttpGet]
-        //public async Task<IActionResult> GetProfile()
-        //{
-        //    // Получение данных профиля из БД
-        //    return Ok(new ProfileData { /* ... */ });
-        //}
+        [HttpGet("profile")]
+        [Authorize]
+        public async Task<ActionResult<ProfileModel>> GetProfile()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-        //[HttpPut("update")]
-        //public async Task<IActionResult> UpdateProfile([FromBody] ProfileUpdateRequest request)
-        //{
-        //    // Обновление профиля в БД
-        //    return Ok();
-        //}
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized();
+
+            var user = await _context.superusers.FindAsync(int.Parse(userId));
+
+            if (user == null)
+                return NotFound();
+
+            return new ProfileModel
+            {
+                FirstName = user.name,
+                LastName = user.surname,
+                Email = user.email,
+               
+                City = user.City,
+                Bio = user.Bio,
+                AvatarUrl = user.AvatarUrl
+            };
+        }
+        [HttpPost("update-profile")]
+        [Authorize]
+        public async Task<IActionResult> UpdateProfile([FromBody] ProfileModel model)
+        {
+            try
+            {
+
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                Console.WriteLine($"Updating profile for user ID: {userId}");
+
+                if (string.IsNullOrEmpty(userId))
+                {
+                    Console.WriteLine("User ID not found in claims");
+                    return Unauthorized();
+                }
+
+                if (!int.TryParse(userId, out int id))
+                {
+                    Console.WriteLine($"Invalid user ID: {userId}");
+                    return BadRequest("Invalid user ID");
+                }
+
+                var user = await _context.superusers.FindAsync(id);
+                if (user == null)
+                {
+                    Console.WriteLine($"User not found: {id}");
+                    return NotFound("Пользователь не найден");
+                }
+
+                // Обновляем данные
+                Console.WriteLine($"Old data: {user.name} {user.surname} {user.email}");
+                Console.WriteLine($"New data: {model.FirstName} {model.LastName} {model.Email}");
+
+                user.name = model.FirstName;
+                user.surname = model.LastName;
+                user.email = model.Email;
+                user.City = model.City; // Добавьте это
+                user.Bio = model.Bio;   // Добавьте это
+
+                await _context.SaveChangesAsync();
+                Console.WriteLine("Profile updated successfully");
+
+                return Ok(new
+                {
+                    message = "Профиль обновлен",
+                    firstName = user.name,
+                    lastName = user.surname,
+                    email = user.email
+                });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error updating profile: {ex}");
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
     }
 }

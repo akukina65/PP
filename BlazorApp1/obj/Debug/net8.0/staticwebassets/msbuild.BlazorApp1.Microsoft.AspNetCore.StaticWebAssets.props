@@ -84,8 +84,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>vdv8avkcr2</Fingerprint>
-      <Integrity>47aLgOMuYqQvlvw/h/ZDa1/8xOmbVsFcrFnRMjgbnok=</Integrity>
+      <Fingerprint>jy0an9e932</Fingerprint>
+      <Integrity>W35i6RvFxeZuzMa9VttMrCmvqbYmOoFj7BY8Oj4EbSY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\glav.css'))</OriginalItemSpec>

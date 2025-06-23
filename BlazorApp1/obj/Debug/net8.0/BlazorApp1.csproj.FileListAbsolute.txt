@@ -1037,13 +1037,6 @@ C:\Users\Nastya\Desktop\новы\BlazorApp1\obj\Debug\net8.0\ref\BlazorApp1.dll
 C:\Users\Nastya\Desktop\новы\BlazorApp1\obj\Debug\net8.0\compressed\mpnezo3ggr-fcsksiq37f.gz
 C:\Users\Nastya\Desktop\новы\BlazorApp1\obj\Debug\net8.0\compressed\kyjy2iuvp1-wh6wp5vb4d.gz
 C:\Users\Nastya\Desktop\новы\BlazorApp1\obj\Debug\net8.0\compressed\5jzqasczcu-5dycj96fhv.gz
-C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\BlazorApp1.csproj.AssemblyReference.cache
-C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\BlazorApp1.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\BlazorApp1.AssemblyInfoInputs.cache
-C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\BlazorApp1.AssemblyInfo.cs
-C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\BlazorApp1.csproj.CoreCompileInputs.cache
-C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\BlazorApp1.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\BlazorApp1.sourcelink.json
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\bin\Debug\net8.0\wwwroot\_framework\BCrypt.Net-Next.wasm
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js
@@ -1743,6 +1736,13 @@ C:\Users\Nastya\Desktop\новы1\BlazorApp1\bin\Debug\net8.0\icudt_CJK.dat
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\bin\Debug\net8.0\icudt_EFIGS.dat
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\bin\Debug\net8.0\icudt_no_CJK.dat
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\bin\Debug\net8.0\emcc-props.json
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\BlazorApp1.csproj.AssemblyReference.cache
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\BlazorApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\BlazorApp1.AssemblyInfoInputs.cache
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\BlazorApp1.AssemblyInfo.cs
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\BlazorApp1.csproj.CoreCompileInputs.cache
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\BlazorApp1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\BlazorApp1.sourcelink.json
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\webcil\DevOne.Security.Cryptography.BCrypt.wasm
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\webcil\BCrypt.Net-Next.wasm
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Antiforgery.wasm
@@ -2199,9 +2199,6 @@ C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\wrnfiqc
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\m2waow3ayo-tptq2av103.gz
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\yvizlwgna6-lfu7j35m59.gz
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\fyixgo0u6y-oyz0vx2fzb.gz
-C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\mpnezo3ggr-9ltl3y98pk.gz
-C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\kyjy2iuvp1-xr8r4srf7x.gz
-C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\5jzqasczcu-valwlyi72s.gz
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\staticwebassets.build.endpoints.json
@@ -2217,3 +2214,6 @@ C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\BlazorApp1.dll
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\refint\BlazorApp1.dll
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\BlazorApp1.pdb
 C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\ref\BlazorApp1.dll
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\mpnezo3ggr-ya9m68t4bp.gz
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\kyjy2iuvp1-40fvrh1ofr.gz
+C:\Users\Nastya\Desktop\новы1\BlazorApp1\obj\Debug\net8.0\compressed\5jzqasczcu-g56qr6sbpl.gz

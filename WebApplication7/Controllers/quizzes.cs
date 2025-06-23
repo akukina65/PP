@@ -1,89 +1,31 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using WebApplication7.Models;
+﻿// WebApplication7/Models/ProfileModel.cs
+using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication7.Controllers
+namespace WebApplication7.Models
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class quizzes : ControllerBase
+    public class ProfileModel
     {
-        private readonly DataContext _context;
+        [Required(ErrorMessage = "Обязательное поле")]
+        [StringLength(50, ErrorMessage = "Макс. 50 символов")]
+        public string FirstName { get; set; } = "";
 
-        public quizzes(DataContext context)
-        {
-            _context = context;
-        }
-        [HttpGet]
-        public async Task<ActionResult<List<quizzesP>>> getAllquizzes()
-        {
+        [Required(ErrorMessage = "Обязательное поле")]
+        [StringLength(50, ErrorMessage = "Макс. 50 символов")]
+        public string LastName { get; set; } = "";
 
+        [Required(ErrorMessage = "Обязательное поле")]
+        [EmailAddress(ErrorMessage = "Некорректный email")]
+        public string Email { get; set; } = "";
 
-            var course = await _context.superquizzes.ToListAsync();
-            return Ok(course);
-        }
-        [HttpPost]
-        public async Task<ActionResult<List<quizzesP>>> CreateCourse(quizzesP course)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+        [StringLength(100, ErrorMessage = "Макс. 100 символов")]
+        public string? Course { get; set; }
 
-            try
-            {
-                _context.superquizzes.Add(course);
-                await _context.SaveChangesAsync();
+        [StringLength(50, ErrorMessage = "Макс. 50 символов")]
+        public string? City { get; set; }
 
-                return CreatedAtAction(nameof(GetLessonById), new { id = course.Id }, course);
-            }
-            catch (Exception ex)
-            {
-                // Log the exception (use a proper logging framework in production)
-                return StatusCode(500, "Внутренняя ошибка сервера");
-            }
-        }
-        [HttpGet("{id}")]
-        public async Task<ActionResult<quizzesP>> GetLessonById(int id)
-        {
-            var lesson = await _context.superquizzes.FindAsync(id);
+        [StringLength(500, ErrorMessage = "Макс. 500 символов")]
+        public string? Bio { get; set; }
 
-            if (lesson == null)
-            {
-                return NotFound();
-            }
-
-            return lesson;
-        }
-        [HttpPut]
-        public async Task<ActionResult<quizzesP>> Updatecourse(quizzesP updatedCourse)
-        {
-
-
-            var dbcourse = await _context.superquizzes.FindAsync(updatedCourse.Id);
-            if (dbcourse == null)
-                return NotFound("Тест не найден");
-            dbcourse.name = updatedCourse.name;
-            dbcourse.the_survey = updatedCourse.the_survey;
-            
-
-
-            await _context.SaveChangesAsync();
-            return NoContent();
-        }
-        [HttpDelete]
-        public async Task<ActionResult<quizzesP>> Deletecourse(int id)
-        {
-
-
-            var dbcourse = await _context.superquizzes.FindAsync(id);
-            if (dbcourse == null)
-                return NotFound("Прогресс не найден");
-
-            _context.superquizzes.Remove(dbcourse);
-            await _context.SaveChangesAsync();
-            return NoContent();
-        }
+        public string? AvatarUrl { get; set; }
     }
 }

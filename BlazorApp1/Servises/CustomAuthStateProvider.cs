@@ -105,17 +105,24 @@ public class CustomAuthStateProvider : AuthenticationStateProvider
             }
         }
     }
-    public async Task UpdateUserProfileAsync(ProfileData profileData)
+    public async Task UpdateUserProfileAsync(ProfileModel profile)
     {
         var claims = new List<Claim>
     {
-        new Claim(ClaimTypes.Name, $"{profileData.FirstName} {profileData.LastName}"),
-        new Claim(ClaimTypes.Email, profileData.Email),
-        new Claim("AvatarUrl", profileData.AvatarUrl ?? ""),
-        new Claim("Course", profileData.Course ?? ""),
-        new Claim("City", profileData.City ?? ""),
-        new Claim("Bio", profileData.Bio ?? "")
+        new Claim(ClaimTypes.Name, $"{profile.FirstName} {profile.LastName}"),
+        new Claim(ClaimTypes.Email, profile.Email),
+        new Claim("AvatarUrl", profile.AvatarUrl ?? ""),
+        
+        new Claim("City", profile.City ?? ""),
+        new Claim("Bio", profile.Bio ?? "")
     };
+
+        // Добавляем существующие роли
+        var currentAuthState = await GetAuthenticationStateAsync();
+        foreach (var roleClaim in currentAuthState.User.FindAll(ClaimTypes.Role))
+        {
+            claims.Add(roleClaim);
+        }
 
         var identity = new ClaimsIdentity(
             claims,
