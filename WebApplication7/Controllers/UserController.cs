@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 using WebApplication7.Models;
 
@@ -13,7 +14,7 @@ namespace WebApplication7.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [AllowAnonymous]
+    
     [Authorize]
     public class UserController : ControllerBase
     {
@@ -22,43 +23,50 @@ namespace WebApplication7.Controllers
         public UserController(DataContext context) => _context = context;
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register(Superuser user)
+        [AllowAnonymous]
+        public async Task<IActionResult> Register([FromBody] RegisterModel model)
         {
-            // Проверка обязательных полей
-            if (string.IsNullOrWhiteSpace(user.surname) ||
-                string.IsNullOrWhiteSpace(user.name) ||
-                string.IsNullOrWhiteSpace(user.email) ||
-                string.IsNullOrWhiteSpace(user.password))
+            if (string.IsNullOrWhiteSpace(model.Surname) ||
+                string.IsNullOrWhiteSpace(model.Name) ||
+                string.IsNullOrWhiteSpace(model.Email) ||
+                string.IsNullOrWhiteSpace(model.Password))
             {
                 return BadRequest("Заполните все обязательные поля");
             }
 
-            // Нормализация отчества (преобразование в null)
-            user.patronymic = string.IsNullOrWhiteSpace(user.patronymic)
-                ? null
-                : user.patronymic.Trim();
-
-            // Отключение валидации для patronymic
-            ModelState.Remove("patronymic");
-
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (await _context.superusers.AnyAsync(u => u.email == user.email))
+            if (await _context.superusers.AnyAsync(u => u.email == model.Email))
             {
                 return BadRequest("Пользователь с таким email уже существует");
             }
 
-            user.password = BCrypt.Net.BCrypt.HashPassword(user.password);
+            var user = new Superuser
+            {
+                surname = model.Surname,
+                name = model.Name,
+                patronymic = model.Patronymic,
+                email = model.Email,
+                password = BCrypt.Net.BCrypt.HashPassword(model.Password),
+                Role = model.Role
+            };
+
             _context.superusers.Add(user);
             await _context.SaveChangesAsync();
 
             return Ok("Регистрация успешна");
         }
 
+        public class RegisterModel
+        {
+            public string Surname { get; set; }
+            public string Name { get; set; }
+            public string? Patronymic { get; set; }
+            public string Email { get; set; }
+            public string Password { get; set; }
+            public string Role { get; set; }
+        }
+
         [HttpPost("login")]
+        [AllowAnonymous]
         public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
             if (!ModelState.IsValid)
@@ -115,8 +123,15 @@ namespace WebApplication7.Controllers
         [HttpPost("logout")]
         public async Task<IActionResult> Logout()
         {
+            Console.WriteLine("Запрос на выход получен!");
+
+            if (HttpContext.User.Identity.IsAuthenticated)
+            {
+                Console.WriteLine($"Пользователь {HttpContext.User.Identity.Name} выходит");
+            }
+
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return Ok();
+            return Ok(new { message = "Выход выполнен успешно" });
         }
         [HttpGet("profile")]
         [Authorize]
@@ -143,61 +158,58 @@ namespace WebApplication7.Controllers
                 AvatarUrl = user.AvatarUrl
             };
         }
-        [HttpPost("update-profile")]
-        [Authorize]
-        public async Task<IActionResult> UpdateProfile([FromBody] ProfileModel model)
+        [HttpPost("update-name")]
+       
+        public async Task<IActionResult> UpdateName([FromBody] UpdateNameRequest request)
         {
             try
             {
+                Console.WriteLine("--- UpdateName Request ---");
 
-                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                Console.WriteLine($"Updating profile for user ID: {userId}");
+                // Добавьте проверку аутентификации
+                // Добавьте эту проверку
+                if (!User.Identity.IsAuthenticated)
+                {
+                    return Unauthorized(new { message = "User not authenticated" });
+                }
 
+                Console.WriteLine($"User authenticated: {User.Identity.IsAuthenticated}");
+                Console.WriteLine($"User name: {User.Identity.Name}");
+                Console.WriteLine($"Claims: {string.Join(", ", User.Claims.Select(c => $"{c.Type}={c.Value}"))}");
+
+                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
                 if (string.IsNullOrEmpty(userId))
                 {
                     Console.WriteLine("User ID not found in claims");
                     return Unauthorized();
                 }
 
-                if (!int.TryParse(userId, out int id))
-                {
-                    Console.WriteLine($"Invalid user ID: {userId}");
-                    return BadRequest("Invalid user ID");
-                }
-
-                var user = await _context.superusers.FindAsync(id);
+                var user = await _context.superusers.FindAsync(int.Parse(userId));
                 if (user == null)
                 {
-                    Console.WriteLine($"User not found: {id}");
-                    return NotFound("Пользователь не найден");
+                    Console.WriteLine($"User not found: {userId}");
+                    return NotFound();
                 }
 
-                // Обновляем данные
-                Console.WriteLine($"Old data: {user.name} {user.surname} {user.email}");
-                Console.WriteLine($"New data: {model.FirstName} {model.LastName} {model.Email}");
+                Console.WriteLine($"Updating user: {user.email} from {user.name} to {request.FirstName}");
 
-                user.name = model.FirstName;
-                user.surname = model.LastName;
-                user.email = model.Email;
-                user.City = model.City; // Добавьте это
-                user.Bio = model.Bio;   // Добавьте это
-
+                user.name = request.FirstName;
                 await _context.SaveChangesAsync();
-                Console.WriteLine("Profile updated successfully");
 
-                return Ok(new
-                {
-                    message = "Профиль обновлен",
-                    firstName = user.name,
-                    lastName = user.surname,
-                    email = user.email
-                });
+                return Ok(new { message = "Имя успешно обновлено" });
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error updating profile: {ex}");
-                return StatusCode(500, $"Internal server error: {ex.Message}");
+                Console.WriteLine($"Error updating name: {ex}");
+                return StatusCode(500, $"Ошибка сервера: {ex.Message}");
             }
         }
+
+        public class UpdateNameRequest
+        {
+            public string FirstName { get; set; }
+        }
     }
+
+    
 }

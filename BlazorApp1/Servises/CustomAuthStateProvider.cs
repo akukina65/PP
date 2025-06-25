@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.JSInterop;
 using System.Text.Json;
-using YourProjectNamespace.Models;
 
 public class CustomAuthStateProvider : AuthenticationStateProvider
 {
@@ -16,49 +15,84 @@ public class CustomAuthStateProvider : AuthenticationStateProvider
 
     public override async Task<AuthenticationState> GetAuthenticationStateAsync()
     {
-        // Загружаем состояние при инициализации
         await LoadAuthenticationStateAsync();
         return new AuthenticationState(_currentUser);
     }
 
     public async Task SetUserAsync(string email, string name, string surname, string avatarUrl)
     {
-        var claims = new[]
-        {
-            new Claim(ClaimTypes.Email, email),
-            new Claim(ClaimTypes.Name, $"{surname} {name}"),
-            new Claim("AvatarUrl", avatarUrl ?? "")
-        };
+        string fullName = $"{surname} {name}";
+
+        var claims = new List<Claim>
+    {
+        new Claim(ClaimTypes.NameIdentifier, Guid.NewGuid().ToString()), // Важно!
+        new Claim(ClaimTypes.Name, fullName),
+        new Claim(ClaimTypes.GivenName, name),
+        new Claim(ClaimTypes.Surname, surname),
+        new Claim(ClaimTypes.Email, email),
+        new Claim("AvatarUrl", avatarUrl ?? ""),
+        new Claim(ClaimTypes.AuthenticationMethod, "cookie")
+    };
 
         var identity = new ClaimsIdentity(claims, "CustomAuth");
         _currentUser = new ClaimsPrincipal(identity);
 
-        // Сохраняем в localStorage
         await SaveAuthenticationStateAsync();
         NotifyAuthenticationStateChanged(GetAuthenticationStateAsync());
     }
 
     public async Task ClearUserAsync()
     {
-        _currentUser = new ClaimsPrincipal(new ClaimsIdentity());
-        await _jsRuntime.InvokeVoidAsync("localStorage.removeItem", "authState");
-        NotifyAuthenticationStateChanged(GetAuthenticationStateAsync());
+        try
+        {
+            _currentUser = new ClaimsPrincipal(new ClaimsIdentity());
+            await _jsRuntime.InvokeVoidAsync("localStorage.removeItem", "authState");
+            NotifyAuthenticationStateChanged(GetAuthenticationStateAsync());
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Ошибка при очистке пользователя: {ex.Message}");
+        }
     }
 
-    private async Task SaveAuthenticationStateAsync()
+    public async Task UpdateNameAsync(string newName)
     {
-        var state = new
+        if (_currentUser.Identity?.IsAuthenticated == true)
         {
-            Email = _currentUser.FindFirst(ClaimTypes.Email)?.Value,
-            Name = _currentUser.FindFirst(ClaimTypes.Name)?.Value,
-            AvatarUrl = _currentUser.FindFirst("AvatarUrl")?.Value
-        };
+            // Сохраняем все существующие claims
+            var claims = new List<Claim>();
+            foreach (var claim in _currentUser.Claims)
+            {
+                // Оставляем все claims кроме обновляемых
+                if (claim.Type != ClaimTypes.Name &&
+                    claim.Type != ClaimTypes.GivenName)
+                {
+                    claims.Add(claim);
+                }
+            }
 
-        await _jsRuntime.InvokeVoidAsync(
-            "localStorage.setItem",
-            "authState",
-            JsonSerializer.Serialize(state)
-        );
+            // Добавляем обновленные claims
+            var surname = claims.FirstOrDefault(c => c.Type == ClaimTypes.Surname)?.Value ?? "";
+            var email = claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value ?? "";
+            var avatarUrl = claims.FirstOrDefault(c => c.Type == "AvatarUrl")?.Value ?? "";
+            var role = claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value ?? "";
+            var userId = claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? "";
+
+            claims.Add(new Claim(ClaimTypes.Name, $"{surname} {newName}"));
+            claims.Add(new Claim(ClaimTypes.GivenName, newName));
+            claims.Add(new Claim(ClaimTypes.Surname, surname));
+            claims.Add(new Claim(ClaimTypes.Email, email));
+            claims.Add(new Claim("AvatarUrl", avatarUrl));
+            claims.Add(new Claim(ClaimTypes.Role, role));
+            claims.Add(new Claim(ClaimTypes.NameIdentifier, userId));
+            claims.Add(new Claim(ClaimTypes.AuthenticationMethod, "cookie"));
+
+            var identity = new ClaimsIdentity(claims, "CustomAuth");
+            _currentUser = new ClaimsPrincipal(identity);
+
+            await SaveAuthenticationStateAsync();
+            NotifyAuthenticationStateChanged(GetAuthenticationStateAsync());
+        }
     }
 
     private async Task LoadAuthenticationStateAsync()
@@ -69,77 +103,77 @@ public class CustomAuthStateProvider : AuthenticationStateProvider
             try
             {
                 var state = JsonSerializer.Deserialize<AuthState>(savedState);
-
                 var claims = new List<Claim>();
-                if (!string.IsNullOrEmpty(state.Email))
-                    claims.Add(new Claim(ClaimTypes.Email, state.Email));
 
-                // Важное изменение: правильно формируем имя
                 if (!string.IsNullOrEmpty(state.Name))
-                {
                     claims.Add(new Claim(ClaimTypes.Name, state.Name));
 
-                    // Добавляем признак аутентификации
-                    claims.Add(new Claim(ClaimTypes.AuthenticationMethod, "CustomAuth"));
-                }
+                if (!string.IsNullOrEmpty(state.GivenName))
+                    claims.Add(new Claim(ClaimTypes.GivenName, state.GivenName));
+
+                if (!string.IsNullOrEmpty(state.Surname))
+                    claims.Add(new Claim(ClaimTypes.Surname, state.Surname));
+
+                if (!string.IsNullOrEmpty(state.Email))
+                    claims.Add(new Claim(ClaimTypes.Email, state.Email));
 
                 if (!string.IsNullOrEmpty(state.AvatarUrl))
                     claims.Add(new Claim("AvatarUrl", state.AvatarUrl));
 
+                if (!string.IsNullOrEmpty(state.Role))
+                    claims.Add(new Claim(ClaimTypes.Role, state.Role));
+
                 if (claims.Count > 0)
                 {
-                    // Указываем тип аутентификации для корректной работы IsAuthenticated
+                    claims.Add(new Claim(ClaimTypes.AuthenticationMethod, "cookie"));
+
                     var identity = new ClaimsIdentity(
                         claims,
                         "CustomAuth",
                         ClaimTypes.Name,
                         ClaimTypes.Role
                     );
-
                     _currentUser = new ClaimsPrincipal(identity);
                 }
             }
-            catch (JsonException)
+            catch (JsonException ex)
             {
+                Console.WriteLine($"JSON deserialization error: {ex.Message}");
                 await ClearUserAsync();
             }
         }
     }
-    public async Task UpdateUserProfileAsync(ProfileModel profile)
-    {
-        var claims = new List<Claim>
-    {
-        new Claim(ClaimTypes.Name, $"{profile.FirstName} {profile.LastName}"),
-        new Claim(ClaimTypes.Email, profile.Email),
-        new Claim("AvatarUrl", profile.AvatarUrl ?? ""),
-        
-        new Claim("City", profile.City ?? ""),
-        new Claim("Bio", profile.Bio ?? "")
-    };
 
-        // Добавляем существующие роли
-        var currentAuthState = await GetAuthenticationStateAsync();
-        foreach (var roleClaim in currentAuthState.User.FindAll(ClaimTypes.Role))
+    private async Task SaveAuthenticationStateAsync()
+    {
+        var state = new AuthState
         {
-            claims.Add(roleClaim);
-        }
+            Name = _currentUser.FindFirst(ClaimTypes.Name)?.Value,
+            GivenName = _currentUser.FindFirst(ClaimTypes.GivenName)?.Value,
+            Surname = _currentUser.FindFirst(ClaimTypes.Surname)?.Value,
+            Email = _currentUser.FindFirst(ClaimTypes.Email)?.Value,
+            AvatarUrl = _currentUser.FindFirst("AvatarUrl")?.Value,
+            Role = _currentUser.FindFirst(ClaimTypes.Role)?.Value
+        };
 
-        var identity = new ClaimsIdentity(
-            claims,
-            "CustomAuth",
-            ClaimTypes.Name,
-            ClaimTypes.Role
+        await _jsRuntime.InvokeVoidAsync(
+            "localStorage.setItem",
+            "authState",
+            JsonSerializer.Serialize(state)
         );
-
-        _currentUser = new ClaimsPrincipal(identity);
-
-        await SaveAuthenticationStateAsync();
-        NotifyAuthenticationStateChanged(GetAuthenticationStateAsync());
     }
+
     private class AuthState
     {
-        public string Email { get; set; }
         public string Name { get; set; }
+        public string GivenName { get; set; }
+        public string Surname { get; set; }
+        public string Email { get; set; }
         public string AvatarUrl { get; set; }
+        public string Role { get; set; }
     }
+
+
+
+
 }

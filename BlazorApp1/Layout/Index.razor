@@ -195,14 +195,21 @@
     {
         apiErrorMessage = string.Empty;
 
-        // Очистка и нормализация отчества
-        newUser.patronymic = string.IsNullOrWhiteSpace(patronymic)
-            ? null
-            : patronymic.Trim();
-
         try
         {
-            var response = await Http.PostAsJsonAsync("http://localhost:5199/api/User/register", newUser);
+            // Формируем объект для регистрации
+            var registerData = new
+            {
+                Surname = newUser.surname,
+                Name = newUser.name,
+                Patronymic = string.IsNullOrWhiteSpace(patronymic) ? null : patronymic.Trim(),
+                Email = newUser.email,
+                Password = newUser.password,
+                Role = newUser.Role
+            };
+
+            // Используем относительный путь
+            var response = await Http.PostAsJsonAsync("api/User/register", registerData);
 
             if (response.IsSuccessStatusCode)
             {

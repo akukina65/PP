@@ -624,8 +624,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "WebApplication7.Models.Superuser",
+        "Name": "model",
+        "Type": "WebApplication7.Controllers.UserController\u002BRegisterModel",
         "IsRequired": true
       }
     ],
@@ -633,15 +633,15 @@
   },
   {
     "ContainingType": "WebApplication7.Controllers.UserController",
-    "Method": "UpdateProfile",
-    "RelativePath": "api/User/update-profile",
+    "Method": "UpdateName",
+    "RelativePath": "api/User/update-name",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "model",
-        "Type": "WebApplication7.Models.ProfileModel",
+        "Name": "request",
+        "Type": "WebApplication7.Controllers.UserController\u002BUpdateNameRequest",
         "IsRequired": true
       }
     ],

@@ -137,7 +137,7 @@
         try
         {
             var response = await Http.PostAsJsonAsync(
-                "http://localhost:5199/api/User/login",
+                "api/User/login",
                 new { loginModel.Email, loginModel.Password }
             );
 
@@ -165,7 +165,25 @@
             apiErrorMessage = $"Ошибка подключения: {ex.Message}";
         }
     }
+    // private async Task Logout()
+    // {
+    //     try
+    //     {
+    //         // Отправляем запрос на выход
+    //         await Http.PostAsync("api/User/logout", null);
 
+    //         // Очищаем локальное состояние
+    //         var authProvider = (CustomAuthStateProvider)AuthStateProvider;
+    //         await authProvider.ClearUserAsync();
+
+    //         // Принудительная перезагрузка страницы
+    //         NavigationManager.NavigateTo("/login", forceLoad: true);
+    //     }
+    //     catch (Exception ex)
+    //     {
+    //         Console.WriteLine($"Ошибка выхода: {ex.Message}");
+    //     }
+    // }
     public class LoginResult
     {
         public string message { get; set; }

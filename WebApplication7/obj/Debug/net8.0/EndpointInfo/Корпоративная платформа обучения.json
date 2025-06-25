@@ -979,17 +979,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Superuser"
+                "$ref": "#/components/schemas/RegisterModel"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Superuser"
+                "$ref": "#/components/schemas/RegisterModel"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Superuser"
+                "$ref": "#/components/schemas/RegisterModel"
               }
             }
           }
@@ -1073,7 +1073,7 @@
         }
       }
     },
-    "/api/User/update-profile": {
+    "/api/User/update-name": {
       "post": {
         "tags": [
           "User"
@@ -1082,17 +1082,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ProfileModel"
+                "$ref": "#/components/schemas/UpdateNameRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ProfileModel"
+                "$ref": "#/components/schemas/UpdateNameRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ProfileModel"
+                "$ref": "#/components/schemas/UpdateNameRequest"
               }
             }
           }
@@ -1312,16 +1312,9 @@
         },
         "additionalProperties": false
       },
-      "Superuser": {
-        "required": [
-          "surname"
-        ],
+      "RegisterModel": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "surname": {
             "type": "string",
             "nullable": true
@@ -1334,27 +1327,25 @@
             "type": "string",
             "nullable": true
           },
-          "password": {
+          "email": {
             "type": "string",
             "nullable": true
           },
-          "email": {
+          "password": {
             "type": "string",
             "nullable": true
           },
           "role": {
             "type": "string",
             "nullable": true
-          },
-          "avatarUrl": {
-            "type": "string",
-            "nullable": true
-          },
-          "city": {
-            "type": "string",
-            "nullable": true
-          },
-          "bio": {
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateNameRequest": {
+        "type": "object",
+        "properties": {
+          "firstName": {
             "type": "string",
             "nullable": true
           }

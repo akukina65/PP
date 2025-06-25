@@ -1,67 +1,67 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorApp1.styles.css",
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorApp1.styles.css",
       "PackagePath": "staticwebassets\\BlazorApp1.styles.css"
     },
     {
-      "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\css\\Login.css",
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\css\\Login.css",
       "PackagePath": "staticwebassets\\css\\Login.css"
     },
     {
-      "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\css\\app.css",
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\css\\glav.css",
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\css\\glav.css",
       "PackagePath": "staticwebassets\\css\\glav.css"
     },
     {
-      "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\css\\register.css",
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\css\\register.css",
       "PackagePath": "staticwebassets\\css\\register.css"
     },
     {
-      "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\favicon.png",
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\icon-192.png",
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
-      "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\images\\12.png",
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\12.png",
       "PackagePath": "staticwebassets\\images\\12.png"
     },
     {
-      "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\images\\13.png",
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\13.png",
       "PackagePath": "staticwebassets\\images\\13.png"
     },
     {
-      "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\images\\image1.png",
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\image1.png",
       "PackagePath": "staticwebassets\\images\\image1.png"
     },
     {
-      "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\images\\student.png",
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\student.png",
       "PackagePath": "staticwebassets\\images\\student.png"
     },
     {
-      "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\index.html",
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\Nastya\\Desktop\\новы1\\BlazorApp1\\wwwroot\\sample-data\\weather.json",
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {
