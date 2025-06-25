@@ -150,7 +150,10 @@
                     result.user.email,
                     result.user.name,
                     result.user.surname,
-                    result.user.avatarUrl
+                    result.user.patronymic, // Добавлено
+                    result.user.avatarUrl,
+                    result.user.City,      // Важно! Добавляем город
+                    result.user.Bio        // Важно! Добавляем био
                 );
 
                 NavigationManager.NavigateTo("/glav");
@@ -165,25 +168,7 @@
             apiErrorMessage = $"Ошибка подключения: {ex.Message}";
         }
     }
-    // private async Task Logout()
-    // {
-    //     try
-    //     {
-    //         // Отправляем запрос на выход
-    //         await Http.PostAsync("api/User/logout", null);
-
-    //         // Очищаем локальное состояние
-    //         var authProvider = (CustomAuthStateProvider)AuthStateProvider;
-    //         await authProvider.ClearUserAsync();
-
-    //         // Принудительная перезагрузка страницы
-    //         NavigationManager.NavigateTo("/login", forceLoad: true);
-    //     }
-    //     catch (Exception ex)
-    //     {
-    //         Console.WriteLine($"Ошибка выхода: {ex.Message}");
-    //     }
-    // }
+   
     public class LoginResult
     {
         public string message { get; set; }
@@ -195,6 +180,9 @@
         public string email { get; set; }
         public string name { get; set; }
         public string surname { get; set; }
+        public string patronymic { get; set; } // Добавлено
+        public string City { get; set; }       // Важно!
+        public string Bio { get; set; }        // Важно!
         public string avatarUrl { get; set; }
     }
 }

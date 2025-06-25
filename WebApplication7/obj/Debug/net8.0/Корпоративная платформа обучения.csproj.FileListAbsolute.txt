@@ -183,3 +183,4 @@ D:\проект еще раз\PP\WebApplication7\obj\Debug\net8.0\refint\Кор�
 D:\проект еще раз\PP\WebApplication7\obj\Debug\net8.0\Корпоративная платформа обучения.pdb
 D:\проект еще раз\PP\WebApplication7\obj\Debug\net8.0\Корпоративная платформа обучения.genruntimeconfig.cache
 D:\проект еще раз\PP\WebApplication7\obj\Debug\net8.0\ref\Корпоративная платформа обучения.dll
+D:\проект еще раз\PP\WebApplication7\bin\Debug\net8.0\Корпоративная платформа обучения.staticwebassets.runtime.json

@@ -85,8 +85,12 @@ namespace WebApplication7.Controllers
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Email, user.email),
-                new Claim(ClaimTypes.Name, $"{user.surname} {user.name}"),
-                new Claim(ClaimTypes.Role, user.Role) // Добавляем роль!
+               new Claim(ClaimTypes.Name, $"{user.surname} {user.name} {user.patronymic}".Trim()),
+                new Claim("Patronymic", user.patronymic ?? ""), // Добавлено
+                new Claim(ClaimTypes.Role, user.Role), // Добавляем роль!
+                new Claim("AvatarUrl", user.AvatarUrl ?? ""),
+                 new Claim("City", user.City ?? ""), // Добавляем
+                new Claim("Bio", user.Bio ?? "")    // Добавляем
             };
 
                 var identity = new ClaimsIdentity(claims,
@@ -151,63 +155,68 @@ namespace WebApplication7.Controllers
             {
                 FirstName = user.name,
                 LastName = user.surname,
+                Patronymic = user.patronymic, // Добавлено
                 Email = user.email,
-               
                 City = user.City,
                 Bio = user.Bio,
                 AvatarUrl = user.AvatarUrl
             };
         }
-        [HttpPost("update-name")]
-       
-        public async Task<IActionResult> UpdateName([FromBody] UpdateNameRequest request)
+        [HttpPost("update-profile")]
+        public async Task<IActionResult> UpdateProfile([FromBody] UpdateProfileRequest request)
         {
             try
             {
-                Console.WriteLine("--- UpdateName Request ---");
-
-                // Добавьте проверку аутентификации
-                // Добавьте эту проверку
                 if (!User.Identity.IsAuthenticated)
-                {
                     return Unauthorized(new { message = "User not authenticated" });
-                }
-
-                Console.WriteLine($"User authenticated: {User.Identity.IsAuthenticated}");
-                Console.WriteLine($"User name: {User.Identity.Name}");
-                Console.WriteLine($"Claims: {string.Join(", ", User.Claims.Select(c => $"{c.Type}={c.Value}"))}");
 
                 var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
                 if (string.IsNullOrEmpty(userId))
-                {
-                    Console.WriteLine("User ID not found in claims");
                     return Unauthorized();
-                }
 
                 var user = await _context.superusers.FindAsync(int.Parse(userId));
                 if (user == null)
-                {
-                    Console.WriteLine($"User not found: {userId}");
                     return NotFound();
-                }
 
-                Console.WriteLine($"Updating user: {user.email} from {user.name} to {request.FirstName}");
-
+                // Обновляем все поля
                 user.name = request.FirstName;
+                user.surname = request.LastName;
+                user.patronymic = request.Patronymic; // Добавлено отчество
+                user.email = request.Email;
+                user.City = request.City;
+                user.Bio = request.Bio;
+
                 await _context.SaveChangesAsync();
 
-                return Ok(new { message = "Имя успешно обновлено" });
+                return Ok(new
+                {
+                    message = "Профиль успешно обновлен",
+                    user = new
+                    {
+                        name = user.name,
+                        surname = user.surname,
+                        patronymic = user.patronymic,
+                        email = user.email,
+                        City = user.City,     // Важно: должно быть "City"
+                        Bio = user.Bio,       // Важно: должно быть "Bio"
+                        AvatarUrl = user.AvatarUrl
+                    }
+                });
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error updating name: {ex}");
                 return StatusCode(500, $"Ошибка сервера: {ex.Message}");
             }
         }
 
-        public class UpdateNameRequest
+        public class UpdateProfileRequest
         {
             public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public string Patronymic { get; set; } // Добавлено
+            public string Email { get; set; }
+            public string City { get; set; }
+            public string Bio { get; set; }
         }
     }
 

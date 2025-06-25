@@ -6,7 +6,7 @@
 @inject NavigationManager NavManager
 @inject AuthenticationStateProvider AuthStateProvider
 @using System.Security.Claims;
-
+@inject IJSRuntime JSRuntime
 <link href="css/glav.css?v=3.0" rel="stylesheet" />
 <CascadingAuthenticationState>
     <AuthorizeView>
@@ -511,10 +511,11 @@
 
     private async Task Logout()
     {
-        await Http.PostAsync("http://localhost:5199/api/User/logout", null);
-
         var authProvider = (CustomAuthStateProvider)AuthStateProvider;
         await authProvider.ClearUserAsync();
+
+        await JSRuntime.InvokeVoidAsync("eval",
+            "document.cookie = 'auth_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + window.location.hostname + ';'");
 
         CloseMenus();
         NavManager.NavigateTo("/login", forceLoad: true);

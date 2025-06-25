@@ -13,6 +13,11 @@ namespace WebApplication7.Models
         [StringLength(50, ErrorMessage = "Макс. 50 символов")]
         public string LastName { get; set; } = "";
 
+
+        [Required(ErrorMessage = "Обязательное поле")]
+        [StringLength(50, ErrorMessage = "Макс. 50 символов")]
+        public string Patronymic { get; set; } = "";
+
         [Required(ErrorMessage = "Обязательное поле")]
         [EmailAddress(ErrorMessage = "Некорректный email")]
         public string Email { get; set; } = "";

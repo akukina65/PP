@@ -633,15 +633,15 @@
   },
   {
     "ContainingType": "WebApplication7.Controllers.UserController",
-    "Method": "UpdateName",
-    "RelativePath": "api/User/update-name",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/User/update-profile",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "WebApplication7.Controllers.UserController\u002BUpdateNameRequest",
+        "Type": "WebApplication7.Controllers.UserController\u002BUpdateProfileRequest",
         "IsRequired": true
       }
     ],

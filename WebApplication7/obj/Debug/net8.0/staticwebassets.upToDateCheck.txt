@@ -1,0 +1,218 @@
+wwwroot\BlazorApp1.staticwebassets.endpoints.json
+wwwroot\emcc-props.json
+wwwroot\web.config
+wwwroot\wwwroot\_framework\BCrypt.Net-Next.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\BCrypt.Net-Next.wasm
+wwwroot\wwwroot\_framework\blazor.boot.json
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\blazor.boot.json
+wwwroot\wwwroot\_framework\blazor.webassembly.js
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\blazor.webassembly.js
+wwwroot\wwwroot\_framework\BlazorApp1.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\BlazorApp1.wasm
+wwwroot\wwwroot\_framework\DevOne.Security.Cryptography.BCrypt.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\DevOne.Security.Cryptography.BCrypt.wasm
+wwwroot\wwwroot\_framework\dotnet.js
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.js
+wwwroot\wwwroot\_framework\dotnet.native.js
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.native.js
+wwwroot\wwwroot\_framework\dotnet.native.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.native.wasm
+wwwroot\wwwroot\_framework\dotnet.runtime.js
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.runtime.js
+wwwroot\wwwroot\_framework\icudt_CJK.dat
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\icudt_CJK.dat
+wwwroot\wwwroot\_framework\icudt_EFIGS.dat
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\icudt_EFIGS.dat
+wwwroot\wwwroot\_framework\icudt_no_CJK.dat
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\icudt_no_CJK.dat
+wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Antiforgery.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Antiforgery.wasm
+wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Authorization.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Authorization.wasm
+wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.wasm
+wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.wasm
+wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.wasm
+wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.wasm
+wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.wasm
+wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Cryptography.Internal.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Cryptography.Internal.wasm
+wwwroot\wwwroot\_framework\Microsoft.AspNetCore.DataProtection.Abstractions.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.DataProtection.Abstractions.wasm
+wwwroot\wwwroot\_framework\Microsoft.AspNetCore.DataProtection.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.DataProtection.wasm
+wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Hosting.Abstractions.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Hosting.Abstractions.wasm
+wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Hosting.Server.Abstractions.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Hosting.Server.Abstractions.wasm
+wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Http.Abstractions.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Http.Abstractions.wasm
+wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Http.Extensions.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Http.Extensions.wasm
+wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Http.Features.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Http.Features.wasm
+wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Metadata.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Metadata.wasm
+wwwroot\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.wasm
+wwwroot\wwwroot\_framework\Microsoft.EntityFrameworkCore.Abstractions.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.EntityFrameworkCore.Abstractions.wasm
+wwwroot\wwwroot\_framework\Microsoft.EntityFrameworkCore.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.EntityFrameworkCore.wasm
+wwwroot\wwwroot\_framework\Microsoft.Extensions.Caching.Abstractions.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Caching.Abstractions.wasm
+wwwroot\wwwroot\_framework\Microsoft.Extensions.Caching.Memory.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Caching.Memory.wasm
+wwwroot\wwwroot\_framework\Microsoft.Extensions.Configuration.Abstractions.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Configuration.Abstractions.wasm
+wwwroot\wwwroot\_framework\Microsoft.Extensions.Configuration.Json.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Configuration.Json.wasm
+wwwroot\wwwroot\_framework\Microsoft.Extensions.Configuration.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Configuration.wasm
+wwwroot\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.Abstractions.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.Abstractions.wasm
+wwwroot\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.wasm
+wwwroot\wwwroot\_framework\Microsoft.Extensions.FileProviders.Abstractions.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.FileProviders.Abstractions.wasm
+wwwroot\wwwroot\_framework\Microsoft.Extensions.Logging.Abstractions.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Logging.Abstractions.wasm
+wwwroot\wwwroot\_framework\Microsoft.Extensions.Logging.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Logging.wasm
+wwwroot\wwwroot\_framework\Microsoft.Extensions.ObjectPool.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.ObjectPool.wasm
+wwwroot\wwwroot\_framework\Microsoft.Extensions.Options.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Options.wasm
+wwwroot\wwwroot\_framework\Microsoft.Extensions.Primitives.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Primitives.wasm
+wwwroot\wwwroot\_framework\Microsoft.JSInterop.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.JSInterop.wasm
+wwwroot\wwwroot\_framework\Microsoft.JSInterop.WebAssembly.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.JSInterop.WebAssembly.wasm
+wwwroot\wwwroot\_framework\Microsoft.Net.Http.Headers.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Net.Http.Headers.wasm
+wwwroot\wwwroot\_framework\Microsoft.Win32.Registry.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Win32.Registry.wasm
+wwwroot\wwwroot\_framework\mscorlib.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\mscorlib.wasm
+wwwroot\wwwroot\_framework\netstandard.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\netstandard.wasm
+wwwroot\wwwroot\_framework\System.Buffers.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Buffers.wasm
+wwwroot\wwwroot\_framework\System.Collections.Concurrent.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.Concurrent.wasm
+wwwroot\wwwroot\_framework\System.Collections.Immutable.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.Immutable.wasm
+wwwroot\wwwroot\_framework\System.Collections.NonGeneric.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.NonGeneric.wasm
+wwwroot\wwwroot\_framework\System.Collections.Specialized.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.Specialized.wasm
+wwwroot\wwwroot\_framework\System.Collections.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.wasm
+wwwroot\wwwroot\_framework\System.ComponentModel.Annotations.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.Annotations.wasm
+wwwroot\wwwroot\_framework\System.ComponentModel.Primitives.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.Primitives.wasm
+wwwroot\wwwroot\_framework\System.ComponentModel.TypeConverter.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.TypeConverter.wasm
+wwwroot\wwwroot\_framework\System.ComponentModel.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.wasm
+wwwroot\wwwroot\_framework\System.Console.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Console.wasm
+wwwroot\wwwroot\_framework\System.Diagnostics.DiagnosticSource.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Diagnostics.DiagnosticSource.wasm
+wwwroot\wwwroot\_framework\System.Diagnostics.Tracing.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Diagnostics.Tracing.wasm
+wwwroot\wwwroot\_framework\System.Formats.Asn1.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Formats.Asn1.wasm
+wwwroot\wwwroot\_framework\System.Linq.Expressions.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Linq.Expressions.wasm
+wwwroot\wwwroot\_framework\System.Linq.Queryable.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Linq.Queryable.wasm
+wwwroot\wwwroot\_framework\System.Linq.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Linq.wasm
+wwwroot\wwwroot\_framework\System.Memory.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Memory.wasm
+wwwroot\wwwroot\_framework\System.Net.Http.Json.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.Http.Json.wasm
+wwwroot\wwwroot\_framework\System.Net.Http.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.Http.wasm
+wwwroot\wwwroot\_framework\System.Net.NetworkInformation.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.NetworkInformation.wasm
+wwwroot\wwwroot\_framework\System.Net.Primitives.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.Primitives.wasm
+wwwroot\wwwroot\_framework\System.Net.WebSockets.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.WebSockets.wasm
+wwwroot\wwwroot\_framework\System.ObjectModel.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ObjectModel.wasm
+wwwroot\wwwroot\_framework\System.Private.CoreLib.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.CoreLib.wasm
+wwwroot\wwwroot\_framework\System.Private.Uri.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.Uri.wasm
+wwwroot\wwwroot\_framework\System.Private.Xml.Linq.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.Xml.Linq.wasm
+wwwroot\wwwroot\_framework\System.Private.Xml.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.Xml.wasm
+wwwroot\wwwroot\_framework\System.Runtime.InteropServices.JavaScript.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.InteropServices.JavaScript.wasm
+wwwroot\wwwroot\_framework\System.Runtime.InteropServices.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.InteropServices.wasm
+wwwroot\wwwroot\_framework\System.Runtime.Numerics.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.Numerics.wasm
+wwwroot\wwwroot\_framework\System.Runtime.Serialization.Primitives.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.Serialization.Primitives.wasm
+wwwroot\wwwroot\_framework\System.Runtime.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.wasm
+wwwroot\wwwroot\_framework\System.Security.AccessControl.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.AccessControl.wasm
+wwwroot\wwwroot\_framework\System.Security.Claims.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Claims.wasm
+wwwroot\wwwroot\_framework\System.Security.Cryptography.Algorithms.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Algorithms.wasm
+wwwroot\wwwroot\_framework\System.Security.Cryptography.Pkcs.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Pkcs.wasm
+wwwroot\wwwroot\_framework\System.Security.Cryptography.Primitives.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Primitives.wasm
+wwwroot\wwwroot\_framework\System.Security.Cryptography.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.wasm
+wwwroot\wwwroot\_framework\System.Security.Cryptography.Xml.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Xml.wasm
+wwwroot\wwwroot\_framework\System.Security.Principal.Windows.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Principal.Windows.wasm
+wwwroot\wwwroot\_framework\System.Text.Encoding.Extensions.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.Encoding.Extensions.wasm
+wwwroot\wwwroot\_framework\System.Text.Encodings.Web.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.Encodings.Web.wasm
+wwwroot\wwwroot\_framework\System.Text.Json.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.Json.wasm
+wwwroot\wwwroot\_framework\System.Text.RegularExpressions.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.RegularExpressions.wasm
+wwwroot\wwwroot\_framework\System.Threading.Thread.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Threading.Thread.wasm
+wwwroot\wwwroot\_framework\System.Threading.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Threading.wasm
+wwwroot\wwwroot\_framework\System.Transactions.Local.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Transactions.Local.wasm
+wwwroot\wwwroot\_framework\System.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.wasm
+wwwroot\wwwroot\_framework\System.Xml.Linq.wasm
+D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Xml.Linq.wasm
+wwwroot\wwwroot\BlazorApp1.styles.css
+wwwroot\wwwroot\css\app.css
+wwwroot\wwwroot\css\bootstrap\bootstrap.min.css
+wwwroot\wwwroot\css\bootstrap\bootstrap.min.css.map
+wwwroot\wwwroot\css\glav.css
+wwwroot\wwwroot\css\Login.css
+wwwroot\wwwroot\css\register.css
+wwwroot\wwwroot\favicon.png
+wwwroot\wwwroot\icon-192.png
+wwwroot\wwwroot\images\12.png
+wwwroot\wwwroot\images\13.png
+wwwroot\wwwroot\images\image1.png
+wwwroot\wwwroot\images\student.png
+wwwroot\wwwroot\index.html
+wwwroot\wwwroot\sample-data\weather.json

@@ -36,7 +36,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.Cookie.SameSite = SameSiteMode.None;
         options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
         options.Cookie.HttpOnly = true;
-        options.Cookie.Domain = "localhost"; // Явное указание домена
+        
         options.Events.OnRedirectToLogin = context =>
         {
             context.Response.StatusCode = 401;

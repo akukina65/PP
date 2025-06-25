@@ -1,0 +1,2 @@
+D:\проект еще раз\PP\WebApplication7\wwwroot\emcc-props.json
+D:\проект еще раз\PP\WebApplication7\wwwroot\web.config
