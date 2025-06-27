@@ -1,4 +1,6 @@
-﻿namespace WebApplication7.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace WebApplication7.Models
 {
     public class Superuser
     {
@@ -12,6 +14,8 @@
         public string? AvatarUrl { get; set; } // Добавляем URL аватара
         public string? City { get; set; }
         public string? Bio { get; set; }
+        [Column("avatarcolor")] // Явное указание имени столбца
+        public string AvatarColor { get; set; } = "";
     }
 
     

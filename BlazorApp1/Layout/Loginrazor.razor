@@ -150,10 +150,11 @@
                     result.user.email,
                     result.user.name,
                     result.user.surname,
-                    result.user.patronymic, // Добавлено
+                    result.user.patronymic,
                     result.user.avatarUrl,
-                    result.user.City,      // Важно! Добавляем город
-                    result.user.Bio        // Важно! Добавляем био
+                    result.user.City,
+                    result.user.Bio,
+                    result.user.avatarColor // Добавляем цвет
                 );
 
                 NavigationManager.NavigateTo("/glav");
@@ -169,10 +170,22 @@
         }
     }
    
-    public class LoginResult
+    private class LoginResult
     {
         public string message { get; set; }
-        public UserData user { get; set; } // Изменили структуру
+        public UserData user { get; set; }
+
+        public class UserData
+        {
+            public string email { get; set; }
+            public string name { get; set; }
+            public string surname { get; set; }
+            public string patronymic { get; set; }
+            public string City { get; set; }
+            public string Bio { get; set; }
+            public string avatarUrl { get; set; }
+            public string avatarColor { get; set; } // Добавляем цвет
+        }
     }
 
     public class UserData

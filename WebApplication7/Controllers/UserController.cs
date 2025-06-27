@@ -80,31 +80,37 @@ namespace WebApplication7.Controllers
                 {
                     return Unauthorized("Неверные учетные данные");
                 }
-
+                string avatarColor = !string.IsNullOrWhiteSpace(user.AvatarColor)
+            ? user.AvatarColor
+            : "#3498db";
+                // Добавьте загрузку ВСЕХ данных пользователя
                 var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Email, user.email),
-               new Claim(ClaimTypes.Name, $"{user.surname} {user.name} {user.patronymic}".Trim()),
-                new Claim("Patronymic", user.patronymic ?? ""), // Добавлено
-                new Claim(ClaimTypes.Role, user.Role), // Добавляем роль!
-                new Claim("AvatarUrl", user.AvatarUrl ?? ""),
-                 new Claim("City", user.City ?? ""), // Добавляем
-                new Claim("Bio", user.Bio ?? "")    // Добавляем
-            };
+        {
+            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+            new Claim(ClaimTypes.Email, user.email),
+            new Claim(ClaimTypes.Name, $"{user.surname} {user.name} {user.patronymic}".Trim()),
+            new Claim(ClaimTypes.GivenName, user.name),
+            new Claim(ClaimTypes.Surname, user.surname),
+            new Claim("Patronymic", user.patronymic ?? ""),
+            new Claim(ClaimTypes.Role, user.Role),
+            new Claim("AvatarUrl", user.AvatarUrl ?? ""),
+            new Claim("city", user.City ?? ""),
+            new Claim("bio", user.Bio ?? ""),
+           new Claim("AvatarColor", avatarColor) // Используем значение из БД
+        };
 
                 var identity = new ClaimsIdentity(claims,
                     CookieAuthenticationDefaults.AuthenticationScheme);
 
                 await HttpContext.SignInAsync(
-         CookieAuthenticationDefaults.AuthenticationScheme,
-         new ClaimsPrincipal(identity),
-         new AuthenticationProperties
-         {
-             IsPersistent = true,
-             ExpiresUtc = DateTime.UtcNow.AddDays(7),
-             AllowRefresh = true
-         });
+                    CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(identity),
+                    new AuthenticationProperties
+                    {
+                        IsPersistent = true,
+                        ExpiresUtc = DateTime.UtcNow.AddDays(7),
+                        AllowRefresh = true
+                    });
 
                 return Ok(new
                 {
@@ -114,7 +120,11 @@ namespace WebApplication7.Controllers
                         user.email,
                         user.name,
                         user.surname,
-                        avatarUrl = user.AvatarUrl
+                        user.patronymic,
+                        user.City,
+                        user.Bio,
+                        avatarUrl = user.AvatarUrl,
+                        avatarColor = avatarColor
                     }
                 });
             }
@@ -123,30 +133,35 @@ namespace WebApplication7.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
-
         [HttpPost("logout")]
         public async Task<IActionResult> Logout()
         {
-            Console.WriteLine("Запрос на выход получен!");
-
-            if (HttpContext.User.Identity.IsAuthenticated)
+            try
             {
-                Console.WriteLine($"Пользователь {HttpContext.User.Identity.Name} выходит");
-            }
+                Console.WriteLine("Запрос на выход получен!");
 
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return Ok(new { message = "Выход выполнен успешно" });
+                // Безопасный выход без сброса контекста пользователя
+                await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+                return Ok(new { message = "Выход выполнен успешно" });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка при выходе: {ex.Message}");
+                return StatusCode(500, new { message = "Ошибка при выходе" });
+            }
         }
         [HttpGet("profile")]
         [Authorize]
         public async Task<ActionResult<ProfileModel>> GetProfile()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
             if (string.IsNullOrEmpty(userId))
                 return Unauthorized();
 
-            var user = await _context.superusers.FindAsync(int.Parse(userId));
+            var user = await _context.superusers
+                .AsNoTracking() // Важно: отключаем кэширование
+                .FirstOrDefaultAsync(u => u.Id == int.Parse(userId));
 
             if (user == null)
                 return NotFound();
@@ -155,11 +170,12 @@ namespace WebApplication7.Controllers
             {
                 FirstName = user.name,
                 LastName = user.surname,
-                Patronymic = user.patronymic, // Добавлено
+                Patronymic = user.patronymic,
                 Email = user.email,
                 City = user.City,
                 Bio = user.Bio,
-                AvatarUrl = user.AvatarUrl
+                AvatarUrl = user.AvatarUrl,
+                AvatarColor = user.AvatarColor // Возвращаем цвет
             };
         }
         [HttpPost("update-profile")]
@@ -218,6 +234,63 @@ namespace WebApplication7.Controllers
             public string City { get; set; }
             public string Bio { get; set; }
         }
+
+        [HttpPost("update-avatar")]
+        public async Task<IActionResult> UpdateAvatar([FromBody] UpdateAvatarRequest request)
+        {
+            try
+            {
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (string.IsNullOrEmpty(userId))
+                    return Unauthorized();
+
+                var user = await _context.superusers.FindAsync(int.Parse(userId));
+                if (user == null)
+                    return NotFound();
+
+                // Обновляем оба свойства
+                user.AvatarUrl = request.AvatarUrl;
+                user.AvatarColor = request.AvatarColor; // Сохраняем цвет
+
+                await _context.SaveChangesAsync();
+                var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+            new Claim(ClaimTypes.Email, user.email),
+            new Claim(ClaimTypes.Name, $"{user.surname} {user.name} {user.patronymic}".Trim()),
+            new Claim(ClaimTypes.GivenName, user.name),
+            new Claim(ClaimTypes.Surname, user.surname),
+            new Claim("Patronymic", user.patronymic ?? ""),
+            new Claim(ClaimTypes.Role, user.Role),
+            new Claim("AvatarUrl", user.AvatarUrl ?? ""),
+            new Claim("city", user.City ?? ""),
+            new Claim("bio", user.Bio ?? ""),
+            new Claim("AvatarColor", user.AvatarColor ?? "#3498db") // Добавляем цвет
+        };
+                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(identity));
+
+                return Ok(new
+                {
+                    message = "Аватар успешно обновлен",
+                    avatarUrl = user.AvatarUrl,
+                    avatarColor = user.AvatarColor
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Ошибка сервера: {ex.Message}");
+            }
+        }
+
+        public class UpdateAvatarRequest
+        {
+            public string AvatarUrl { get; set; }
+            public string AvatarColor { get; set; }
+        }
+
+        
     }
 
     

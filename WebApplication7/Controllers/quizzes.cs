@@ -32,5 +32,6 @@ namespace WebApplication7.Models
         public string? Bio { get; set; }
 
         public string? AvatarUrl { get; set; }
+        public string AvatarColor { get; set; } = "";
     }
 }

@@ -633,6 +633,22 @@
   },
   {
     "ContainingType": "WebApplication7.Controllers.UserController",
+    "Method": "UpdateAvatar",
+    "RelativePath": "api/User/update-avatar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WebApplication7.Controllers.UserController\u002BUpdateAvatarRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication7.Controllers.UserController",
     "Method": "UpdateProfile",
     "RelativePath": "api/User/update-profile",
     "HttpMethod": "POST",

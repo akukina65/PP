@@ -25,11 +25,26 @@
                     </nav>
 
                     <div class="user-profile" @onclick="ToggleProfileMenu">
-                        <div class="avatar-placeholder">
-                            @GetInitials(context.User.Identity.Name)
+                        @{
+                            var avatarUrl = context.User.FindFirst("AvatarUrl")?.Value;
+                            var avatarColor = context.User.FindFirst("AvatarColor")?.Value ?? "#3498db";
+                        }
+                        <div class="avatar-placeholder" style="background: @avatarColor">
+                            @if (!string.IsNullOrEmpty(avatarUrl))
+                            {
+                                <!-- Добавляем префикс пути -->
+                                <img src="/images/avatars/@GetAvatarUrlWithCacheBuster(avatarUrl)"
+                                     alt="Аватар"
+                                     class="avatar-small"
+                                     onerror="this.onerror=null;this.src='/images/default-avatar.png';" />
+                            }
+                            else
+                            {
+                                @GetInitials(context.User.Identity.Name)
+                            }
                         </div>
                         <span class="user-name">
-                            @context.User.FindFirst(ClaimTypes.GivenName)?.Value
+                            @GetShortName(context.User.Identity.Name)
                         </span>
 
                         @if (showProfileMenu)
@@ -37,7 +52,6 @@
                             <div class="profile-menu">
                                 <div class="profile-header">
                                     @{
-                                        var avatarUrl = context.User.FindFirst("AvatarUrl")?.Value;
                                         var fullName = context.User.Identity.Name;
                                         var email = context.User.FindFirst(ClaimTypes.Email)?.Value;
                                     }
@@ -45,14 +59,13 @@
                                     {
                                         <img src="@avatarUrl"
                                              alt="@fullName"
-                                             class="profile-avatar" />
+                                             class="profile-avatar"
+                                             onerror="this.style.display='none'; this.parentElement.querySelector('.avatar-placeholder-large').style.display='flex';" />
                                     }
-                                    else
-                                    {
-                                        <div class="avatar-placeholder large">
-                                            @GetInitials(fullName)
-                                        </div>
-                                    }
+                                    <div class="avatar-placeholder large"
+                                         style="background: @avatarColor; @(!string.IsNullOrEmpty(avatarUrl) ? "display: none" : "")">
+                                        @GetInitials(fullName)
+                                    </div>
                                     <div class="profile-info">
                                         <div class="user-name">@fullName</div>
                                         <div class="user-email">@email</div>
@@ -93,6 +106,20 @@
                     <NavLink href="/shop" class="mobile-nav-link">Магазин</NavLink>
                     <NavLink href="/cart" class="mobile-nav-link">Корзина</NavLink>
                     <div class="mobile-profile-menu">
+                        <div class="mobile-user-info">
+                            @if (!string.IsNullOrEmpty(avatarUrl))
+                            {
+                                <img src="@avatarUrl"
+                                     alt="Аватар"
+                                     class="mobile-avatar"
+                                     onerror="this.style.display='none'; this.parentElement.querySelector('.mobile-avatar-placeholder').style.display='flex';" />
+                            }
+                            <div class="mobile-avatar-placeholder"
+                                 style="background: @avatarColor; @(!string.IsNullOrEmpty(avatarUrl) ? "display: none" : "")">
+                                @GetInitials(context.User.Identity.Name)
+                            </div>
+                            <div class="mobile-user-name">@GetShortName(context.User.Identity.Name)</div>
+                        </div>
                         <div class="mobile-menu-item" @onclick="NavigateToProfile">Мой профиль</div>
                         <div class="mobile-menu-item" @onclick="NavigateToAvatarSettings">Настройка аватара</div>
                         <div class="mobile-menu-item" @onclick="NavigateToGoals">Цели и достижения</div>
@@ -415,25 +442,29 @@
     private string fullName = "";
     private string email = "";
     private string avatarUrl = "";
+    private string avatarColor = "#3498db"; // Значение по умолчанию
     private bool isLoaded = false; // Флаг загрузки данных
+    @implements IDisposable
+
+    @inject AuthenticationStateProvider AuthStateProvider
 
     protected override async Task OnInitializedAsync()
     {
-        // Загружаем состояние аутентификации
-        await AuthStateProvider.GetAuthenticationStateAsync();
+        // Подписываемся на изменения состояния аутентификации
+        (AuthStateProvider as AuthenticationStateProvider)!.AuthenticationStateChanged += AuthStateChanged;
+        await LoadUserData();
+    }
 
-        var authState = await AuthStateProvider.GetAuthenticationStateAsync();
-        var user = authState.User;
+    private async void AuthStateChanged(Task<AuthenticationState> task)
+    {
+        await LoadUserData();
+        StateHasChanged();
+    }
 
-        if (user.Identity?.IsAuthenticated == true)
-        {
-            fullName = user.Identity.Name ?? "";
-            email = user.FindFirst(ClaimTypes.Email)?.Value ?? "";
-            avatarUrl = user.FindFirst("AvatarUrl")?.Value ?? "";
-        }
-
-        isLoaded = true; // Помечаем данные как загруженные
-        StateHasChanged(); // Принудительно обновляем UI
+    public void Dispose()
+    {
+        // Отписываемся от событий при уничтожении компонента
+        (AuthStateProvider as AuthenticationStateProvider)!.AuthenticationStateChanged -= AuthStateChanged;
     }
 
     private string GetInitials(string fullName)
@@ -448,7 +479,50 @@
 
         return $"{first}{last}".ToUpper();
     }
+    private string GetAvatarUrl(ClaimsPrincipal user)
+    {
+        return user?.FindFirst("AvatarUrl")?.Value ?? "";
+    }
+    private bool _isLoadingData = false; // Добавьте флаг загрузки
 
+    private async Task LoadUserData()
+    {
+        if (_isLoadingData) return;
+
+        try
+        {
+            _isLoadingData = true;
+            var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            if (user.Identity?.IsAuthenticated == true)
+            {
+                // УБРАТЬ ВЫЗОВ RefreshAuthenticationState
+                // var authProvider = (CustomAuthStateProvider)AuthStateProvider;
+                // await authProvider.RefreshAuthenticationState();
+
+                fullName = user.Identity.Name ?? "";
+                email = user.FindFirst(ClaimTypes.Email)?.Value ?? "";
+                avatarUrl = user.FindFirst("AvatarUrl")?.Value ?? "";
+                avatarColor = user.FindFirst("AvatarColor")?.Value ?? "#3498db";
+            }
+
+            isLoaded = true;
+            // StateHasChanged(); // Убрать - вызовется автоматически
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading user data: {ex.Message}");
+        }
+        finally
+        {
+            _isLoadingData = false;
+        }
+    }
+    private string GetAvatarColor(ClaimsPrincipal user)
+    {
+        return user?.FindFirst("AvatarColor")?.Value ?? "#3498db";
+    }
     private void ToggleMobileMenu()
     {
         showMobileMenu = !showMobileMenu;
@@ -465,24 +539,25 @@
         NavManager.NavigateTo("/profile");
         CloseMenus();
     }
+    private string GetAvatarUrlWithCacheBuster(string avatarUrl)
+    {
+        if (string.IsNullOrEmpty(avatarUrl))
+            return string.Empty;
 
+        return $"{avatarUrl}?v={DateTime.Now.Ticks}";
+    }
     private void NavigateToAvatarSettings()
     {
         NavManager.NavigateTo("/profile/avatar");
         CloseMenus();
     }
+
     private string GetShortName(string fullName)
     {
         if (string.IsNullOrEmpty(fullName))
             return "Гость";
 
         var parts = fullName.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-
-        // Если есть и имя, и фамилия - показываем только имя
-        if (parts.Length >= 2)
-            return parts[0];
-
-        // Если только одно слово - показываем его полностью
         return parts.Length > 0 ? parts[0] : "Гость";
     }
     private void NavigateToGoals()
@@ -511,13 +586,33 @@
 
     private async Task Logout()
     {
-        var authProvider = (CustomAuthStateProvider)AuthStateProvider;
-        await authProvider.ClearUserAsync();
+        try
+        {
+            // Отправляем запрос на выход на сервер
+            var response = await Http.PostAsync("api/User/logout", null);
 
-        await JSRuntime.InvokeVoidAsync("eval",
-            "document.cookie = 'auth_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + window.location.hostname + ';'");
+            if (response.IsSuccessStatusCode)
+            {
+                // Очищаем клиентское состояние
+                var authProvider = (CustomAuthStateProvider)AuthStateProvider;
+                await authProvider.ClearUserAsync();
 
-        CloseMenus();
-        NavManager.NavigateTo("/login", forceLoad: true);
+                // Перенаправляем на страницу входа
+                NavManager.NavigateTo("/login");
+            }
+            else
+            {
+                Console.WriteLine($"Ошибка выхода: {response.StatusCode}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Ошибка при выходе: {ex.Message}");
+        }
+        finally
+        {
+            CloseMenus();
+        }
+    }
     }
 }

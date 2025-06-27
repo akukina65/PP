@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\Login.css"
     },
     {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\css\\Profil.css",
+      "PackagePath": "staticwebassets\\css\\Profil.css"
+    },
+    {
       "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
@@ -47,6 +51,54 @@
     {
       "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\13.png",
       "PackagePath": "staticwebassets\\images\\13.png"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\avatar1.png",
+      "PackagePath": "staticwebassets\\images\\avatar1.png"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\avatar2.png",
+      "PackagePath": "staticwebassets\\images\\avatar2.png"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\avatar3.png",
+      "PackagePath": "staticwebassets\\images\\avatar3.png"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\avatar4.png",
+      "PackagePath": "staticwebassets\\images\\avatar4.png"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\avatar5.png",
+      "PackagePath": "staticwebassets\\images\\avatar5.png"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\avatar6.png",
+      "PackagePath": "staticwebassets\\images\\avatar6.png"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\avatars\\avatar1.png",
+      "PackagePath": "staticwebassets\\images\\avatars\\avatar1.png"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\avatars\\avatar2.png",
+      "PackagePath": "staticwebassets\\images\\avatars\\avatar2.png"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\avatars\\avatar3.png",
+      "PackagePath": "staticwebassets\\images\\avatars\\avatar3.png"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\avatars\\avatar4.png",
+      "PackagePath": "staticwebassets\\images\\avatars\\avatar4.png"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\avatars\\avatar5.png",
+      "PackagePath": "staticwebassets\\images\\avatars\\avatar5.png"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\avatars\\avatar6.png",
+      "PackagePath": "staticwebassets\\images\\avatars\\avatar6.png"
     },
     {
       "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\image1.png",
