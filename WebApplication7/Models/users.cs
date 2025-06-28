@@ -18,7 +18,7 @@ namespace WebApplication7.Models
         public string AvatarColor { get; set; } = "";
     }
 
-    
+
     public class supercourses
     {
         public int Id { get; set; }
@@ -26,7 +26,8 @@ namespace WebApplication7.Models
         public string description { get; set; } = string.Empty;
         public int duration { get; set; }
         public int id_teacher { get; set; }
-
+        public int price { get; set; }
+        public string? imageurl { get; set; } // Добавьте это свойство
     }
     public class teacherP
     {

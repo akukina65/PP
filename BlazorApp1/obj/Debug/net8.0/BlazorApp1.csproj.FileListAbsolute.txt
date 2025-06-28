@@ -3394,6 +3394,6 @@ D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\BlazorApp1.dll
 D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\refint\BlazorApp1.dll
 D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\BlazorApp1.pdb
 D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\ref\BlazorApp1.dll
-D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\mpnezo3ggr-kk8g54lbci.gz
-D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\kyjy2iuvp1-uqaab7w60w.gz
-D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\5jzqasczcu-wwuqpz367z.gz
+D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\mpnezo3ggr-rl63qoo9fr.gz
+D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\kyjy2iuvp1-subivqxbc1.gz
+D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\5jzqasczcu-jjr35zlg4u.gz

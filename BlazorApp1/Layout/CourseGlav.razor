@@ -1,0 +1,582 @@
+﻿@page "/courses"
+@page "/courses/category/{CategoryId:int}"
+@layout MainLayout
+@using Microsoft.AspNetCore.Components.Authorization
+@inject AuthenticationStateProvider AuthStateProvider
+@inject HttpClient Http
+@inject NavigationManager NavManager
+@inject IJSRuntime JSRuntime
+@using System.Security.Claims
+@using BlazorApp1.Models
+
+<link href="css/courses.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+<CascadingAuthenticationState>
+    <AuthorizeView>
+        <Authorized>
+            <div class="courses-container">
+                <div class="courses-header">
+                    <h1><i class="fas fa-graduation-cap"></i> Все курсы</h1>
+                    <p>Выберите курс для профессионального роста</p>
+                </div>
+
+                @if (isLoading)
+                {
+                    <div class="loading">
+                        <i class="fas fa-spinner fa-spin"></i> Загрузка курсов...
+                    </div>
+                }
+                else if (errorMessage != null)
+                {
+                    <div class="error-message">
+                        <i class="fas fa-exclamation-circle"></i> @errorMessage
+                    </div>
+                }
+                else if (courses == null || !courses.Any())
+                {
+                    <div class="no-courses">
+                        <img src="/images/empty-courses.png" alt="Нет курсов" />
+                        <h3>Курсы не найдены</h3>
+                        <p>Попробуйте обновить страницу позже</p>
+                    </div>
+                }
+                else
+                {
+                    <div class="courses-grid">
+                        @foreach (var course in courses)
+                        {
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <div class="image-overlay"></div>
+                                    <img src="@GetCourseImage(course.Id)" alt="@course.Title" />
+                                    @if (course.IsNew)
+                                    {
+                                        <div class="course-badge new">NEW</div>
+                                    }
+                                    @if (course.IsPopular)
+                                    {
+                                        <div class="course-badge popular">HOT</div>
+                                    }
+                                    <div class="course-price">
+                                        @if (course.DiscountedPrice > 0)
+                                        {
+                                            <span class="original-price">@course.Price.ToString("N0") ₽</span>
+                                            <span class="discounted-price">@course.DiscountedPrice.ToString("N0") ₽</span>
+                                        }
+                                        else
+                                        {
+                                            <span>@course.Price.ToString("N0") ₽</span>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="course-info">
+                                    <div class="course-meta">
+                                        <span><i class="fas fa-star"></i> @course.Rating.ToString("0.0")</span>
+                                        <span><i class="fas fa-user-graduate"></i> @course.EnrolledCount</span>
+                                        <span><i class="fas fa-clock"></i> @course.Duration недель</span>
+                                    </div>
+                                    <h3>@course.Title</h3>
+                                    <p>@course.Description</p>
+                                    <div class="course-category">
+                                        <i class="fas fa-tag"></i> @course.Category
+                                    </div>
+                                </div>
+                                <div class="course-actions">
+                                    <button class="btn-outline" @onclick="() => ViewCourseDetails(course.Id)">
+                                        <i class="fas fa-info-circle"></i> Подробнее
+                                    </button>
+                                    <button class="btn-primary" @onclick="() => AddToCart(course)">
+                                        <i class="fas fa-shopping-cart"></i> Купить
+                                    </button>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        </Authorized>
+        <NotAuthorized>
+            <div class="not-authorized">
+                <div class="auth-prompt">
+                    <img src="/images/auth-required.png" alt="Требуется авторизация" />
+                    <h3>Для просмотра курсов необходимо войти в систему</h3>
+                    <p>Зарегистрируйтесь, чтобы получить доступ ко всем возможностям платформы</p>
+                    <div class="auth-buttons">
+                        <button class="btn btn-outline" @onclick="NavigateToLogin">Войти</button>
+                        <button class="btn btn-primary" @onclick="NavigateToRegister">Регистрация</button>
+                    </div>
+                </div>
+            </div>
+        </NotAuthorized>
+    </AuthorizeView>
+</CascadingAuthenticationState>
+
+@code {
+    private List<CourseDto> courses = new();
+    private bool isLoading = true;
+    private string errorMessage;
+    [Parameter]
+    public int CategoryId { get; set; }
+    private static readonly Dictionary<int, string> courseImages = new()
+    {
+        { 1, "course-design.png" },
+        { 2, "course-dev.png" },
+        { 3, "course-marketing.png" },
+        { 4, "course-business.png" },
+        { 5, "course-science.png" },
+        { 6, "course-language.png" }
+    };
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            await LoadCourses();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Ошибка загрузки курсов: {ex.Message}";
+            isLoading = false;
+        }
+    }
+    protected override async Task OnParametersSetAsync()
+    {
+        if (CategoryId > 0)
+        {
+            await LoadCategoryCourses();
+        }
+        else
+        {
+            await LoadCourses();
+        }
+    }
+    private async Task LoadCategoryCourses()
+    {
+        try
+        {
+            isLoading = true;
+            courses = await Http.GetFromJsonAsync<List<CourseDto>>($"api/Courses/bycategory/{CategoryId}");
+            errorMessage = null;
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Ошибка загрузки курсов категории: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+    private async Task LoadCourses()
+    {
+        try
+        {
+            isLoading = true;
+            courses = await Http.GetFromJsonAsync<List<CourseDto>>("api/Courses/all");
+            errorMessage = null;
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Ошибка загрузки курсов: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+
+    private string GetCourseImage(int courseId)
+    {
+        // Находим курс по ID
+        var course = courses.FirstOrDefault(c => c.Id == courseId);
+
+        // Если у курса есть изображение - используем его
+        if (course != null && !string.IsNullOrEmpty(course.ImageUrl))
+        {
+            return course.ImageUrl;
+        }
+
+        // Иначе используем изображение по умолчанию
+        return "/images/courses/default-course.png";
+    }
+
+    private void ViewCourseDetails(int courseId)
+    {
+        NavManager.NavigateTo($"/course/{courseId}");
+    }
+
+    private void AddToCart(CourseDto course)
+    {
+        JSRuntime.InvokeVoidAsync("showToast",
+            $"Курс \"{course.Title}\" добавлен в корзину!");
+    }
+
+    private void NavigateToLogin()
+    {
+        NavManager.NavigateTo("/login");
+    }
+
+    private void NavigateToRegister()
+    {
+        NavManager.NavigateTo("/register");
+    }
+
+    public class CourseDto
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Category { get; set; }
+        public decimal Price { get; set; }
+        public decimal DiscountedPrice { get; set; }
+        public double Rating { get; set; }
+        public int EnrolledCount { get; set; }
+        public int Duration { get; set; }
+        public bool IsNew { get; set; }
+        public bool IsPopular { get; set; }
+        public string ImageUrl { get; set; }
+    }
+}
+
+<style>
+    /* Обновленные цвета для лавандовой темы */
+    :root {
+        --lavender-primary: #9678FF;
+        --lavender-hover: #7C6AFF;
+        --lavender-light: #e6e0ff;
+    }
+
+    .courses-container {
+        max-width: 1400px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    .courses-header {
+        margin-bottom: 2.5rem;
+        text-align: center;
+    }
+
+        .courses-header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #2d3748;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .courses-header p {
+            color: #718096;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+    .courses-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+    }
+
+    .course-card {
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .course-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+    .course-image {
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+    }
+
+        .course-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+    .course-card:hover .course-image img {
+        transform: scale(1.05);
+    }
+
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+        opacity: 0.6;
+        z-index: 1;
+    }
+
+    .course-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 700;
+        z-index: 2;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+        .course-badge.new {
+            background: #48BB78;
+            color: white;
+        }
+
+        .course-badge.popular {
+            background: #E53E3E;
+            color: white;
+        }
+
+    .course-price {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        background: rgba(255,255,255,0.9);
+        padding: 8px 15px;
+        border-radius: 30px;
+        font-weight: 700;
+        font-size: 18px;
+        color: #2d3748;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .original-price {
+        text-decoration: line-through;
+        color: #718096;
+        font-size: 14px;
+    }
+
+    .discounted-price {
+        color: #E53E3E;
+    }
+
+    .course-info {
+        padding: 1.8rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .course-info h3 {
+            margin: 0 0 1rem;
+            font-size: 1.4rem;
+            color: #2d3748;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .course-info p {
+            margin: 0 0 1.5rem;
+            color: #718096;
+            font-size: 1rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+    .course-meta {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+        color: #4a5568;
+        font-size: 0.95rem;
+        flex-wrap: wrap;
+    }
+
+        .course-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .course-meta i {
+            color: var(--lavender-primary);
+        }
+
+    .course-category {
+        background: var(--lavender-light);
+        color: var(--lavender-primary);
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: auto;
+    }
+
+    .course-actions {
+        padding: 0 1.8rem 1.8rem;
+        display: flex;
+        gap: 12px;
+    }
+
+        .course-actions button {
+            flex: 1;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+    .btn-outline {
+        background: transparent;
+        border: 2px solid var(--lavender-primary);
+        color: var(--lavender-primary);
+    }
+
+        .btn-outline:hover {
+            background: var(--lavender-light);
+            transform: translateY(-2px);
+        }
+
+    .btn-primary {
+        background: var(--lavender-primary);
+        color: white;
+        border: none;
+    }
+
+        .btn-primary:hover {
+            background: var(--lavender-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(150, 120, 255, 0.3);
+        }
+
+    .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem;
+        color: #4a5568;
+        gap: 1.5rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .error-message {
+        background: linear-gradient(90deg, #ffcdd2, #ffebee);
+        color: #c62828;
+        padding: 18px 25px;
+        border-radius: 12px;
+        margin: 25px 0;
+        border-left: 5px solid #d32f2f;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .no-courses {
+        text-align: center;
+        padding: 4rem 2rem;
+        background: #f8fafc;
+        border-radius: 16px;
+        margin: 2rem 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    }
+
+        .no-courses img {
+            max-width: 280px;
+            margin: 0 auto 1.8rem;
+        }
+
+    .not-authorized {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 70vh;
+        padding: 2rem;
+    }
+
+    .auth-prompt {
+        max-width: 600px;
+        text-align: center;
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+        .auth-prompt img {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .auth-prompt h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+
+        .auth-prompt p {
+            color: #718096;
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+
+    .auth-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .btn {
+        padding: 14px 32px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 16px;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+    .btn-outline {
+        background: transparent;
+        border: 2px solid var(--lavender-primary);
+        color: var(--lavender-primary);
+    }
+
+    .btn-primary {
+        background: var(--lavender-primary);
+        color: white;
+        border: none;
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+   
+</style>

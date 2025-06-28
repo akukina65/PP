@@ -1,6 +1,8 @@
 wwwroot\css\app.css
+wwwroot\css\Avatar.css
 wwwroot\css\bootstrap\bootstrap.min.css
 wwwroot\css\bootstrap\bootstrap.min.css.map
+wwwroot\css\courses.css
 wwwroot\css\glav.css
 wwwroot\css\Login.css
 wwwroot\css\Profil.css
@@ -21,6 +23,12 @@ wwwroot\images\avatars\avatar3.png
 wwwroot\images\avatars\avatar4.png
 wwwroot\images\avatars\avatar5.png
 wwwroot\images\avatars\avatar6.png
+wwwroot\images\courses\course-business.png
+wwwroot\images\courses\course-design.png
+wwwroot\images\courses\course-dev.png
+wwwroot\images\courses\course-language.png
+wwwroot\images\courses\course-marketing.png
+wwwroot\images\courses\course-science.png
 wwwroot\images\image1.png
 wwwroot\images\student.png
 wwwroot\index.html

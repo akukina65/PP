@@ -1,4 +1,4 @@
-﻿@page "/superlessons"
+﻿@* @page "/superlessons"
 @using BlazorApp1.Models
 
 <h1 class=" text-center mb-3">Список уроков</h1>
@@ -53,4 +53,4 @@ else
     {
         superlessons = await Http.GetFromJsonAsync<List<LessonWithTRewDTO>>("http://localhost:5199/api/lessons");
     }
-}
+} *@

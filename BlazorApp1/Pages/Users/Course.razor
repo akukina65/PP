@@ -1,4 +1,4 @@
-﻿@page "/supercourse"
+﻿@* @page "/supercourse"
 @using BlazorApp1.Models
 
 <h1 class=" text-center mb-3">Список курсов</h1>
@@ -50,4 +50,4 @@ else
     {
         supercourse = await Http.GetFromJsonAsync<List<CourseWithTeacherDTO>>("http://localhost:5199/api/Course");
     }
-}
+} *@

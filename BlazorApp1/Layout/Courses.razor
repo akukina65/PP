@@ -1,0 +1,147 @@
+﻿@page "/my-courses"
+@layout MainLayout
+@using Microsoft.AspNetCore.Components.Authorization
+@inject AuthenticationStateProvider AuthStateProvider
+@inject HttpClient Http
+@inject NavigationManager NavManager
+@using System.Security.Claims
+
+<link href="css/courses.css" rel="stylesheet" />
+
+<CascadingAuthenticationState>
+    <AuthorizeView>
+        <Authorized>
+            <div class="courses-container">
+                @if (errorMessage != null)
+                {
+                    <div class="error-message">
+                        <i class="fas fa-exclamation-circle"></i> @errorMessage
+                    </div>
+                }
+
+                <div class="courses-header">
+                    <h1><i class="fas fa-book"></i> Мои курсы</h1>
+                </div>
+
+                @if (isLoading)
+                {
+                    <div class="loading">
+                        <i class="fas fa-spinner fa-spin"></i> Загрузка курсов...
+                    </div>
+                }
+                else if (courses == null || !courses.Any())
+                {
+                    <div class="no-courses">
+                        <img src="/images/empty-courses.png" alt="Нет курсов" />
+                        <h3>У вас пока нет созданных курсов</h3>
+                        <p>Обратитесь к администратору, чтобы добавить курсы</p>
+                    </div>
+                }
+                else
+                {
+                    <div class="courses-grid">
+                        @foreach (var course in courses)
+                        {
+                            <div class="course-card">
+                                <div class="course-image">
+                                    <div class="image-overlay"></div>
+                                    <img src="@course.ImageUrl" alt="@course.Title" />
+                                    <div class="course-badge">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                </div>
+                                <div class="course-info">
+                                    <h3>@course.Title</h3>
+                                    <p>@course.Description</p>
+                                    <div class="course-meta">
+                                        <span><i class="fas fa-clock"></i> @course.Duration недель</span>
+                                        <span><i class="fas fa-user"></i> @(new Random().Next(15, 150)) студентов</span>
+                                    </div>
+                                </div>
+                                <div class="course-actions">
+                                    <button class="btn-outline" @onclick="() => OpenCourse(course.Id)">
+                                        <i class="fas fa-door-open"></i> Перейти к курсу
+                                    </button>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        </Authorized>
+        <NotAuthorized>
+            <div class="not-authorized">
+                <p>Для просмотра этой страницы необходимо войти в систему</p>
+                <button class="btn btn-primary" @onclick="NavigateToLogin">Войти</button>
+            </div>
+        </NotAuthorized>
+    </AuthorizeView>
+</CascadingAuthenticationState>
+
+@code {
+    private List<MyCourseDto> courses = new();
+    private bool isLoading = true;
+    private string errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            if (user.Identity?.IsAuthenticated == true)
+            {
+                await LoadCourses();
+            }
+            else
+            {
+                errorMessage = "Пользователь не аутентифицирован";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Ошибка инициализации: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task LoadCourses()
+    {
+        try
+        {
+            isLoading = true;
+            courses = await Http.GetFromJsonAsync<List<MyCourseDto>>("api/Courses/my-courses");
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Ошибка загрузки курсов: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private void NavigateToLogin()
+    {
+        NavManager.NavigateTo("/login");
+    }
+
+    private void OpenCourse(int courseId)
+    {
+        NavManager.NavigateTo($"/course/{courseId}");
+    }
+
+    public class MyCourseDto
+    {
+        public int Id { get; set; }
+        public string Title { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public int Duration { get; set; }
+        public string ImageUrl { get; set; } = string.Empty;
+    }
+}

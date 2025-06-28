@@ -5,125 +5,10 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Course": {
+    "/api/Categories/{id}": {
       "get": {
         "tags": [
-          "Course"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CourseWithTeacherDTO"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CourseWithTeacherDTO"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CourseWithTeacherDTO"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Course"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/supercourses"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/supercourses"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/supercourses"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/supercourses"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/supercourses"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/supercourses"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Course/course": {
-      "post": {
-        "tags": [
-          "Course"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/supercourses"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/supercourses"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/supercourses"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Course/course/{id}": {
-      "get": {
-        "tags": [
-          "Course"
+          "Categories"
         ],
         "parameters": [
           {
@@ -142,17 +27,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/supercourses"
+                  "$ref": "#/components/schemas/CourseCategory"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/supercourses"
+                  "$ref": "#/components/schemas/CourseCategory"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/supercourses"
+                  "$ref": "#/components/schemas/CourseCategory"
                 }
               }
             }
@@ -160,33 +45,10 @@
         }
       }
     },
-    "/api/Course/{id}": {
-      "delete": {
-        "tags": [
-          "Course"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/course_categories": {
+    "/api/Categories": {
       "get": {
         "tags": [
-          "course_categories"
+          "Categories"
         ],
         "responses": {
           "200": {
@@ -196,7 +58,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/course_categoriesP"
+                    "$ref": "#/components/schemas/CategoryWithCount"
                   }
                 }
               },
@@ -204,7 +66,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/course_categoriesP"
+                    "$ref": "#/components/schemas/CategoryWithCount"
                   }
                 }
               },
@@ -212,160 +74,8 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/course_categoriesP"
+                    "$ref": "#/components/schemas/CategoryWithCount"
                   }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "course_categories"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/course_categoriesP"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/course_categoriesP"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/course_categoriesP"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "course_categories"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/course_categoriesP"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/course_categoriesP"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/course_categoriesP"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/course_categoriesP"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/course_categoriesP"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/course_categoriesP"
-                }
-              }
-            }
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "course_categories"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/course_categoriesP"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/course_categoriesP"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/course_categoriesP"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/course_categories/{id}": {
-      "get": {
-        "tags": [
-          "course_categories"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/course_categoriesP"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/course_categoriesP"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/course_categoriesP"
                 }
               }
             }
@@ -556,6 +266,181 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/course_categoriescP"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Courses/my-courses": {
+      "get": {
+        "tags": [
+          "Courses"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MyCourseDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MyCourseDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MyCourseDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Courses/all": {
+      "get": {
+        "tags": [
+          "Courses"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourseDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourseDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourseDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Courses/category-course-ids/{categoryId}": {
+      "get": {
+        "tags": [
+          "Courses"
+        ],
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Courses/by-ids": {
+      "get": {
+        "tags": [
+          "Courses"
+        ],
+        "parameters": [
+          {
+            "name": "ids",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourseDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourseDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourseDto"
+                  }
                 }
               }
             }
@@ -1135,6 +1020,45 @@
         }
       }
     },
+    "/api/User/by-email-simple/{email}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -1177,7 +1101,39 @@
   },
   "components": {
     "schemas": {
-      "CourseWithTeacherDTO": {
+      "CategoryWithCount": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "courseCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CourseCategory": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CourseDto": {
         "type": "object",
         "properties": {
           "id": {
@@ -1192,11 +1148,37 @@
             "type": "string",
             "nullable": true
           },
+          "category": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "discountedPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "rating": {
+            "type": "number",
+            "format": "double"
+          },
+          "enrolledCount": {
+            "type": "integer",
+            "format": "int32"
+          },
           "duration": {
             "type": "integer",
             "format": "int32"
           },
-          "teacherFIO": {
+          "isNew": {
+            "type": "boolean"
+          },
+          "isPopular": {
+            "type": "boolean"
+          },
+          "imageUrl": {
             "type": "string",
             "nullable": true
           }
@@ -1271,6 +1253,32 @@
             "nullable": true
           },
           "twoFactorRecoveryCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MyCourseDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "duration": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "imageUrl": {
             "type": "string",
             "nullable": true
           }
@@ -1427,6 +1435,16 @@
         },
         "additionalProperties": false
       },
+      "UserInfo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "WeatherForecast": {
         "type": "object",
         "properties": {
@@ -1444,20 +1462,6 @@
             "readOnly": true
           },
           "summary": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "course_categoriesP": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
             "type": "string",
             "nullable": true
           }
@@ -1494,35 +1498,6 @@
             "format": "int32"
           },
           "id_orders": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "supercourses": {
-        "required": [
-          "title"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "duration": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "id_teacher": {
             "type": "integer",
             "format": "int32"
           }

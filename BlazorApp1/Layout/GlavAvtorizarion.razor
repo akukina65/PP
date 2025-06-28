@@ -7,6 +7,7 @@
 @inject AuthenticationStateProvider AuthStateProvider
 @using System.Security.Claims;
 @inject IJSRuntime JSRuntime
+
 <link href="css/glav.css?v=3.0" rel="stylesheet" />
 <CascadingAuthenticationState>
     <AuthorizeView>
@@ -195,45 +196,25 @@
         </div>
 
         <div class="categories-grid">
-            <a href="/courses/design" class="category-card">
-                <div class="category-icon" style="background-color: #E1F0FF;">
-                    <span class="icon">🎨</span>
+            @if (categories == null)
+            {
+                <div class="loading-categories">
+                    <i class="fas fa-spinner fa-spin"></i> Загрузка категорий...
                 </div>
-                <h3>Дизайн</h3>
-                <p>24 курса</p>
-            </a>
-
-            <a href="/courses/development" class="category-card">
-                <div class="category-icon" style="background-color: #FFEDED;">
-                    <span class="icon">💻</span>
-                </div>
-                <h3>Разработка</h3>
-                <p>32 курса</p>
-            </a>
-
-            <a href="/courses/business" class="category-card">
-                <div class="category-icon" style="background-color: #EDFFED;">
-                    <span class="icon">📊</span>
-                </div>
-                <h3>Бизнес</h3>
-                <p>18 курсов</p>
-            </a>
-
-            <a href="/courses/marketing" class="category-card">
-                <div class="category-icon" style="background-color: #FFF5E6;">
-                    <span class="icon">📢</span>
-                </div>
-                <h3>Маркетинг</h3>
-                <p>15 курсов</p>
-            </a>
-
-            <a href="/courses/languages" class="category-card">
-                <div class="category-icon" style="background-color: #F0EDFF;">
-                    <span class="icon">🌐</span>
-                </div>
-                <h3>Языки</h3>
-                <p>22 курса</p>
-            </a>
+            }
+            else
+            {
+                @foreach (var category in categories)
+                {
+                    <a href="/courses-by-category/@category.Id" class="category-card">
+                        <div class="category-icon" style="background-color: @GetCategoryColor(category.Id);">
+                            <span class="icon">@GetCategoryIcon(category.Id)</span>
+                        </div>
+                        <h3>@category.Name</h3>
+                        <p>@category.CourseCount @GetCourseCountText(category.CourseCount)</p>
+                    </a>
+                }
+            }
         </div>
     </div>
 </div>
@@ -445,16 +426,71 @@
     private string avatarColor = "#3498db"; // Значение по умолчанию
     private bool isLoaded = false; // Флаг загрузки данных
     @implements IDisposable
+    private List<CategoryWithCount> categories;
+
 
     @inject AuthenticationStateProvider AuthStateProvider
 
     protected override async Task OnInitializedAsync()
     {
-        // Подписываемся на изменения состояния аутентификации
         (AuthStateProvider as AuthenticationStateProvider)!.AuthenticationStateChanged += AuthStateChanged;
         await LoadUserData();
+        await LoadCategories();
+    }
+    private async Task LoadCategories()
+    {
+        try
+        {
+            categories = await Http.GetFromJsonAsync<List<CategoryWithCount>>("api/Categories");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Ошибка загрузки категорий: {ex.Message}");
+        }
     }
 
+    private string GetCourseCountText(int count)
+    {
+        return count switch
+        {
+            1 => "курс",
+            > 1 and < 5 => "курса",
+            _ => "курсов"
+        };
+    }
+
+    private string GetCategoryColor(int categoryId)
+    {
+        return categoryId switch
+        {
+            1 => "#E1F0FF", // Дизайн
+            2 => "#FFEDED", // Разработка
+            3 => "#FFF5E6", // Маркетинг
+            4 => "#EDFFED", // Бизнес
+            5 => "#F0EDFF", // Языки
+            _ => "#f0f7ff" // По умолчанию
+        };
+    }
+
+    private string GetCategoryIcon(int categoryId)
+    {
+        return categoryId switch
+        {
+            1 => "🎨", // Дизайн
+            2 => "💻", // Разработка
+            3 => "📢", // Маркетинг
+            4 => "📊", // Бизнес
+            5 => "🌐", // Языки
+            _ => "📚" // По умолчанию
+        };
+    }
+
+    public class CategoryWithCount
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int CourseCount { get; set; }
+    }
     private async void AuthStateChanged(Task<AuthenticationState> task)
     {
         await LoadUserData();

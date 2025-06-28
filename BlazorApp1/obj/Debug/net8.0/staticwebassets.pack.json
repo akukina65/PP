@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\BlazorApp1.styles.css"
     },
     {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\css\\Avatar.css",
+      "PackagePath": "staticwebassets\\css\\Avatar.css"
+    },
+    {
       "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\css\\Login.css",
       "PackagePath": "staticwebassets\\css\\Login.css"
     },
@@ -27,6 +31,10 @@
     {
       "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\css\\courses.css",
+      "PackagePath": "staticwebassets\\css\\courses.css"
     },
     {
       "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\css\\glav.css",
@@ -99,6 +107,30 @@
     {
       "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\avatars\\avatar6.png",
       "PackagePath": "staticwebassets\\images\\avatars\\avatar6.png"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\courses\\course-business.png",
+      "PackagePath": "staticwebassets\\images\\courses\\course-business.png"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\courses\\course-design.png",
+      "PackagePath": "staticwebassets\\images\\courses\\course-design.png"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\courses\\course-dev.png",
+      "PackagePath": "staticwebassets\\images\\courses\\course-dev.png"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\courses\\course-language.png",
+      "PackagePath": "staticwebassets\\images\\courses\\course-language.png"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\courses\\course-marketing.png",
+      "PackagePath": "staticwebassets\\images\\courses\\course-marketing.png"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\courses\\course-science.png",
+      "PackagePath": "staticwebassets\\images\\courses\\course-science.png"
     },
     {
       "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\image1.png",

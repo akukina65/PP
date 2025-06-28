@@ -289,9 +289,26 @@ namespace WebApplication7.Controllers
             public string AvatarUrl { get; set; }
             public string AvatarColor { get; set; }
         }
+        // UserController.cs
+        [HttpGet("by-email-simple/{email}")]
+        [AllowAnonymous]
+        public async Task<ActionResult<UserInfo>> GetUserByEmailSimple(string email)
+        {
+            var user = await _context.superusers
+                .FirstOrDefaultAsync(u => u.email == email);
 
-        
+            if (user == null) return NotFound();
+
+            return new UserInfo { Id = user.Id };
+        }
+
+        public class UserInfo
+        {
+            public int Id { get; set; }
+        }
+
     }
+
 
     
 }

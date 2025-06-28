@@ -1,12 +1,18 @@
-﻿namespace BlazorApp1.Models
+﻿// BlazorApp1/Models/Superuser.cs
+namespace BlazorApp1.Models
 {
-    public class LessonWithTRewDTO
+    public class Superuser
     {
         public int Id { get; set; }
-        public string Course { get; set; }
-        public string lessonname { get; set; }
-        public string lessondescription { get; set; } 
-        public string lessoncontent { get; set; } 
-        public int quantity { get; set; }
+        public string surname { get; set; }
+        public string name { get; set; }
+        public string patronymic { get; set; }
+        public string password { get; set; }
+        public string email { get; set; }
+        public string Role { get; set; }
+        public string AvatarUrl { get; set; }
+        public string City { get; set; }
+        public string Bio { get; set; }
+        public string AvatarColor { get; set; }
     }
 }

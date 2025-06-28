@@ -1,89 +1,65 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using WebApplication7.Models;
 
 namespace WebApplication7.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
-    public class course_categories : ControllerBase
+    [Route("api/[controller]")]
+    public class CategoriesController : ControllerBase
     {
         private readonly DataContext _context;
 
-        public course_categories(DataContext context)
+        public CategoriesController(DataContext context)
         {
             _context = context;
         }
-        [HttpGet]
-        public async Task<ActionResult<List<course_categoriesP>>> getAllquizzes()
-        {
 
-
-            var course = await _context.supercourse_categories.ToListAsync();
-            return Ok(course);
-        }
-        [HttpPost]
-        public async Task<IActionResult> CreateCourse(course_categoriesP course)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            try
-            {
-                _context.supercourse_categories.Add(course);
-                await _context.SaveChangesAsync();
-
-                return CreatedAtAction(nameof(GetLessonById), new { id = course.Id }, course);
-            }
-            catch (Exception ex)
-            {
-                // Log the exception (use a proper logging framework in production)
-                return StatusCode(500, "Внутренняя ошибка сервера");
-            }
-        }
         [HttpGet("{id}")]
-        public async Task<ActionResult<course_categoriesP>> GetLessonById(int id)
+        public async Task<ActionResult<CourseCategory>> GetCategory(int id)
         {
-            var lesson = await _context.supercourse_categories.FindAsync(id);
+            var category = await _context.supercourse_categories.FindAsync(id);
 
-            if (lesson == null)
-            {
+            if (category == null)
                 return NotFound();
-            }
 
-            return lesson;
+            return new CourseCategory
+            {
+                Id = category.Id,
+                name = category.name
+            };
         }
-        [HttpPut]
-        public async Task<ActionResult<course_categoriesP>> Updatecourse(course_categoriesP updatedCourse)
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<CategoryWithCount>>> GetCategoriesWithCourseCount()
         {
+            var categories = await _context.supercourse_categories
+                .Select(c => new CategoryWithCount
+                {
+                    Id = c.Id,
+                    Name = c.name,
+                    CourseCount = _context.supercourse_categoriesc
+                        .Count(cc => cc.id_course_categories == c.Id)
+                })
+                .ToListAsync();
 
-
-            var dbcourse = await _context.supercourse_categories.FindAsync(updatedCourse.Id);
-            if (dbcourse == null)
-                return NotFound("Категория курса не найден");
-            dbcourse.name = updatedCourse.name;
-           
-
-
-
-            await _context.SaveChangesAsync();
-            return NoContent();
+            return Ok(categories);
         }
-        [HttpDelete]
-        public async Task<ActionResult<course_categoriesP>> Deletecourse(int id)
-        {
+    }
 
+    public class CourseCategory
+    {
+        public int Id { get; set; }
+        public string name { get; set; } = string.Empty;
+    }
 
-            var dbcourse = await _context.supercourse_categories.FindAsync(id);
-            if (dbcourse == null)
-                return NotFound(" не найден");
-
-            _context.supercourse_categories.Remove(dbcourse);
-            await _context.SaveChangesAsync();
-            return NoContent();
-        }
+    public class CategoryWithCount
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int CourseCount { get; set; }
     }
 }
