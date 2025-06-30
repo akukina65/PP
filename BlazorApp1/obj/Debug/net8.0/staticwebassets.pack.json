@@ -13,6 +13,22 @@
       "PackagePath": "staticwebassets\\css\\Avatar.css"
     },
     {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\css\\CourseGlav.css",
+      "PackagePath": "staticwebassets\\css\\CourseGlav.css"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\css\\CoursesByCategory.css",
+      "PackagePath": "staticwebassets\\css\\CoursesByCategory.css"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\css\\LesonPage.css",
+      "PackagePath": "staticwebassets\\css\\LesonPage.css"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\css\\LessonContent.css",
+      "PackagePath": "staticwebassets\\css\\LessonContent.css"
+    },
+    {
       "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\css\\Login.css",
       "PackagePath": "staticwebassets\\css\\Login.css"
     },

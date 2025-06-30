@@ -83,197 +83,7 @@
         }
       }
     },
-    "/api/course_categoriesc": {
-      "get": {
-        "tags": [
-          "course_categoriesc"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CoursecategoriatWithTRewDTO"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CoursecategoriatWithTRewDTO"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CoursecategoriatWithTRewDTO"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "course_categoriesc"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/course_categoriescP"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/course_categoriescP"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/course_categoriescP"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "course_categoriesc"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/course_categoriescP"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/course_categoriescP"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/course_categoriescP"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/course_categoriescP"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/course_categoriescP"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/course_categoriescP"
-                }
-              }
-            }
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "course_categoriesc"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/course_categoriescP"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/course_categoriescP"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/course_categoriescP"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/course_categoriesc/{id}": {
-      "get": {
-        "tags": [
-          "course_categoriesc"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/course_categoriescP"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/course_categoriescP"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/course_categoriescP"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Courses/my-courses": {
+    "/api/Courses/my-teaching": {
       "get": {
         "tags": [
           "Courses"
@@ -286,7 +96,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/MyCourseDto"
+                    "$ref": "#/components/schemas/CourseDto"
                   }
                 }
               },
@@ -294,7 +104,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/MyCourseDto"
+                    "$ref": "#/components/schemas/CourseDto"
                   }
                 }
               },
@@ -302,7 +112,45 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/MyCourseDto"
+                    "$ref": "#/components/schemas/CourseDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Courses/my-purchased": {
+      "get": {
+        "tags": [
+          "Courses"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourseDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourseDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourseDto"
                   }
                 }
               }
@@ -312,6 +160,44 @@
       }
     },
     "/api/Courses/all": {
+      "get": {
+        "tags": [
+          "Courses"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourseDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourseDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourseDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Courses/my-courses": {
       "get": {
         "tags": [
           "Courses"
@@ -448,10 +334,21 @@
         }
       }
     },
-    "/api/lessons": {
+    "/api/Courses/{courseId}/lessons": {
       "get": {
         "tags": [
-          "lessons"
+          "Courses"
+        ],
+        "parameters": [
+          {
+            "name": "courseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -461,7 +358,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/LessonWithTRewDTO"
+                    "$ref": "#/components/schemas/SuperLesson"
                   }
                 }
               },
@@ -469,7 +366,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/LessonWithTRewDTO"
+                    "$ref": "#/components/schemas/SuperLesson"
                   }
                 }
               },
@@ -477,33 +374,251 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/LessonWithTRewDTO"
+                    "$ref": "#/components/schemas/SuperLesson"
                   }
                 }
               }
             }
           }
         }
-      },
-      "post": {
+      }
+    },
+    "/api/Courses/{id}": {
+      "get": {
         "tags": [
-          "lessons"
+          "Courses"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CourseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CourseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CourseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Courses/has-access/{courseId}": {
+      "get": {
+        "tags": [
+          "Courses"
+        ],
+        "parameters": [
+          {
+            "name": "courseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Courses/all-public": {
+      "get": {
+        "tags": [
+          "Courses"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourseDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourseDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourseDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Courses/bycategory/{categoryId}": {
+      "get": {
+        "tags": [
+          "Courses"
+        ],
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourseDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourseDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CourseDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Lessons/{id}": {
+      "get": {
+        "tags": [
+          "Lessons"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuperLesson"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuperLesson"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SuperLesson"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Lessons"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/superlesson"
+                "$ref": "#/components/schemas/SuperLesson"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/superlesson"
+                "$ref": "#/components/schemas/SuperLesson"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/superlesson"
+                "$ref": "#/components/schemas/SuperLesson"
               }
             }
           }
@@ -513,26 +628,28 @@
             "description": "OK"
           }
         }
-      },
-      "put": {
+      }
+    },
+    "/api/Lessons": {
+      "post": {
         "tags": [
-          "lessons"
+          "Lessons"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/superlesson"
+                "$ref": "#/components/schemas/SuperLesson"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/superlesson"
+                "$ref": "#/components/schemas/SuperLesson"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/superlesson"
+                "$ref": "#/components/schemas/SuperLesson"
               }
             }
           }
@@ -543,17 +660,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/superlesson"
+                  "$ref": "#/components/schemas/SuperLesson"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/superlesson"
+                  "$ref": "#/components/schemas/SuperLesson"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/superlesson"
+                  "$ref": "#/components/schemas/SuperLesson"
                 }
               }
             }
@@ -561,80 +678,155 @@
         }
       }
     },
-    "/api/lessons/{id}": {
-      "get": {
+    "/api/Lessons/upload/image": {
+      "post": {
         "tags": [
-          "lessons"
+          "Lessons"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "OK",
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/superlesson"
+                  "type": "string"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/superlesson"
+                  "type": "string"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/superlesson"
+                  "type": "string"
                 }
               }
             }
           }
         }
-      },
-      "delete": {
+      }
+    },
+    "/api/Lessons/upload/video": {
+      "post": {
         "tags": [
-          "lessons"
+          "Lessons"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "OK",
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/superlesson"
+                  "type": "string"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/superlesson"
+                  "type": "string"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/superlesson"
+                  "type": "string"
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/Orders/create": {
+      "post": {
+        "tags": [
+          "Orders"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Orders/user-orders": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -851,6 +1043,70 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/Upload/image": {
+      "post": {
+        "tags": [
+          "Upload"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Upload/video": {
+      "post": {
+        "tags": [
+          "Upload"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -1181,54 +1437,26 @@
           "imageUrl": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CoursecategoriatWithTRewDTO": {
-        "type": "object",
-        "properties": {
-          "id": {
+          },
+          "studentsCount": {
             "type": "integer",
             "format": "int32"
           },
-          "course": {
-            "type": "string",
-            "nullable": true
-          },
-          "categoria": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "LessonWithTRewDTO": {
-        "type": "object",
-        "properties": {
-          "id": {
+          "teacherId": {
             "type": "integer",
             "format": "int32"
           },
-          "course": {
+          "teacherName": {
             "type": "string",
             "nullable": true
           },
-          "lessonname": {
+          "teacherSurname": {
             "type": "string",
             "nullable": true
           },
-          "lessondescription": {
+          "teacherPatronymic": {
             "type": "string",
             "nullable": true
-          },
-          "lessoncontent": {
-            "type": "string",
-            "nullable": true
-          },
-          "quantity": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -1253,32 +1481,6 @@
             "nullable": true
           },
           "twoFactorRecoveryCode": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "MyCourseDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "duration": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "imageUrl": {
             "type": "string",
             "nullable": true
           }
@@ -1339,6 +1541,10 @@
           "avatarColor": {
             "type": "string",
             "nullable": true
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1387,6 +1593,36 @@
           "role": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SuperLesson": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id_courses": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lessonname": {
+            "type": "string",
+            "nullable": true
+          },
+          "lessondescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "lessoncontent": {
+            "type": "string",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -1468,24 +1704,6 @@
         },
         "additionalProperties": false
       },
-      "course_categoriescP": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "id_courses": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "id_course_categories": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
       "purchasesP": {
         "type": "object",
         "properties": {
@@ -1498,36 +1716,6 @@
             "format": "int32"
           },
           "id_orders": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "superlesson": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "id_courses": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "lessonname": {
-            "type": "string",
-            "nullable": true
-          },
-          "lessondescription": {
-            "type": "string",
-            "nullable": true
-          },
-          "lessoncontent": {
-            "type": "string",
-            "nullable": true
-          },
-          "quantity": {
             "type": "integer",
             "format": "int32"
           }

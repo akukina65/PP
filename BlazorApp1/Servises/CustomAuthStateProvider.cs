@@ -31,16 +31,27 @@ public class CustomAuthStateProvider : AuthenticationStateProvider
 
     public override async Task<AuthenticationState> GetAuthenticationStateAsync()
     {
-        await LoadAuthenticationStateFromLocalStorage();
+        Console.WriteLine("GetAuthenticationStateAsync called");
 
-        if (!_currentUser.Identity.IsAuthenticated)
+        try
         {
-            await LoadAuthenticationStateFromServer();
+            await LoadAuthenticationStateFromLocalStorage();
+            Console.WriteLine($"User authenticated: {_currentUser.Identity?.IsAuthenticated}");
+
+            if (_currentUser.Identity?.IsAuthenticated != true)
+            {
+                Console.WriteLine("Loading from server...");
+                await LoadAuthenticationStateFromServer();
+            }
+
+            return new AuthenticationState(_currentUser);
         }
-
-        return new AuthenticationState(_currentUser);
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error in GetAuthenticationStateAsync: {ex}");
+            return new AuthenticationState(new ClaimsPrincipal());
+        }
     }
-
     private async Task LoadAuthenticationStateFromLocalStorage()
     {
         var savedState = await _jsRuntime.InvokeAsync<string>("localStorage.getItem", "authState");
@@ -69,6 +80,7 @@ public class CustomAuthStateProvider : AuthenticationStateProvider
                 var profile = await response.Content.ReadFromJsonAsync<ProfileModel>();
                 if (profile != null)
                 {
+                    // Предполагаем, что в ProfileModel есть свойство Role
                     await SetUserAsync(
                         profile.Email,
                         profile.FirstName,
@@ -77,7 +89,8 @@ public class CustomAuthStateProvider : AuthenticationStateProvider
                         profile.AvatarUrl,
                         profile.City,
                         profile.Bio,
-                        profile.AvatarColor // Передаем цвет
+                        profile.AvatarColor,
+                        profile.Role // Передаем роль
                     );
                 }
             }
@@ -138,14 +151,16 @@ public class CustomAuthStateProvider : AuthenticationStateProvider
     }
 
     public async Task SetUserAsync(
-     string email,
-     string name,
-     string surname,
-     string patronymic,
-     string avatarUrl,
-     string city,
-     string bio,
-     string avatarColor)
+        string email,
+        string name,
+        string surname,
+        string patronymic,
+        string avatarUrl,
+        string city,
+        string bio,
+        string avatarColor,
+        string role
+    )
     {
         // Логирование для отладки
         Console.WriteLine($"Setting user with color: {avatarColor}");
@@ -153,19 +168,20 @@ public class CustomAuthStateProvider : AuthenticationStateProvider
         string fullName = $"{surname} {name} {patronymic}".Trim();
 
         var claims = new List<Claim>
-    {
-        new Claim(ClaimTypes.NameIdentifier, Guid.NewGuid().ToString()),
-        new Claim(ClaimTypes.Name, fullName),
-        new Claim(ClaimTypes.GivenName, name),
-        new Claim(ClaimTypes.Surname, surname),
-        new Claim("Patronymic", patronymic ?? ""),
-        new Claim(ClaimTypes.Email, email),
-        new Claim("AvatarUrl", avatarUrl ?? ""),
-        new Claim("city", city ?? ""),
-        new Claim("bio", bio ?? ""),
-        new Claim("AvatarColor", avatarColor ?? "#3498db"), // Используем переданный цвет
-        new Claim(ClaimTypes.AuthenticationMethod, "cookie")
-    };
+        {
+            new Claim(ClaimTypes.NameIdentifier, Guid.NewGuid().ToString()),
+            new Claim(ClaimTypes.Name, fullName),
+            new Claim(ClaimTypes.GivenName, name),
+            new Claim(ClaimTypes.Surname, surname),
+            new Claim("Patronymic", patronymic ?? ""),
+            new Claim(ClaimTypes.Email, email),
+            new Claim("AvatarUrl", avatarUrl ?? ""),
+            new Claim("city", city ?? ""),
+            new Claim("bio", bio ?? ""),
+            new Claim("AvatarColor", avatarColor ?? "#3498db"),
+            new Claim(ClaimTypes.Role, role),
+            new Claim(ClaimTypes.AuthenticationMethod, "cookie")
+        };
 
         var identity = new ClaimsIdentity(claims, "CustomAuth");
         _currentUser = new ClaimsPrincipal(identity);
@@ -226,45 +242,28 @@ public class CustomAuthStateProvider : AuthenticationStateProvider
         string patronymic,
         string avatarUrl,
         string city,
-        string bio)
+        string bio
+    )
     {
         if (_currentUser.Identity?.IsAuthenticated == true)
         {
-            var claims = new List<Claim>();
-
-            foreach (var claim in _currentUser.Claims)
+            var claims = new List<Claim>
             {
-                if (claim.Type != ClaimTypes.Name &&
-                    claim.Type != ClaimTypes.GivenName &&
-                    claim.Type != ClaimTypes.Surname &&
-                    claim.Type != ClaimTypes.Email &&
-                    claim.Type != "Patronymic" &&
-                    claim.Type != "AvatarUrl" &&
-                    claim.Type != "city" &&
-                    claim.Type != "bio" &&
-                    claim.Type != "AvatarColor")
-                {
-                    claims.Add(claim);
-                }
-            }
+                new Claim(ClaimTypes.NameIdentifier, GetClaimValue(ClaimTypes.NameIdentifier)),
+                new Claim(ClaimTypes.Name, $"{surname} {name} {patronymic}".Trim()),
+                new Claim(ClaimTypes.GivenName, name),
+                new Claim(ClaimTypes.Surname, surname),
+                new Claim("Patronymic", patronymic ?? ""),
+                new Claim(ClaimTypes.Email, email),
+                new Claim("AvatarUrl", avatarUrl ?? ""),
+                new Claim("city", city ?? ""),
+                new Claim("bio", bio ?? ""),
+                new Claim("AvatarColor", GetClaimValue("AvatarColor", "#3498db")),
+                new Claim(ClaimTypes.Role, GetClaimValue(ClaimTypes.Role)),
+                new Claim(ClaimTypes.AuthenticationMethod, "cookie")
+            };
 
-            claims.Add(new Claim(ClaimTypes.Name, $"{surname} {name} {patronymic}".Trim()));
-            claims.Add(new Claim(ClaimTypes.GivenName, name));
-            claims.Add(new Claim(ClaimTypes.Surname, surname));
-            claims.Add(new Claim("Patronymic", patronymic ?? ""));
-            claims.Add(new Claim(ClaimTypes.Email, email));
-            claims.Add(new Claim("AvatarUrl", avatarUrl ?? ""));
-            claims.Add(new Claim("city", city ?? ""));
-            claims.Add(new Claim("bio", bio ?? ""));
-
-            // Сохраняем текущий цвет
-            var colorClaim = _currentUser.FindFirst("AvatarColor");
-            var currentColor = colorClaim != null ? colorClaim.Value : "#3498db";
-            claims.Add(new Claim("AvatarColor", currentColor));
-
-            claims.Add(new Claim(ClaimTypes.AuthenticationMethod, "cookie"));
-
-            var identity = new ClaimsIdentity(claims, "CustomAuth");
+            var identity = new ClaimsIdentity(claims, "CustomAuth", ClaimTypes.Name, ClaimTypes.Role);
             _currentUser = new ClaimsPrincipal(identity);
 
             await SaveAuthenticationStateAsync();
@@ -380,5 +379,6 @@ public class CustomAuthStateProvider : AuthenticationStateProvider
         public string Bio { get; set; }
         public string AvatarUrl { get; set; }
         public string AvatarColor { get; set; } = "#3498db";
+        public string Role { get; set; }
     }
 }

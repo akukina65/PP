@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using WebApplication7.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -36,7 +37,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.Cookie.SameSite = SameSiteMode.None;
         options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
         options.Cookie.HttpOnly = true;
-        
+
         options.Events.OnRedirectToLogin = context =>
         {
             context.Response.StatusCode = 401;
@@ -44,12 +45,43 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         };
     });
 // Для работы с Data Protection
+
+builder.Services.AddAuthorizationCore(options =>
+{
+    options.AddPolicy("Authenticated", policy =>
+        policy.RequireAuthenticatedUser());
+
+    options.AddPolicy("Student", policy =>
+        policy.RequireRole("student"));
+
+    options.AddPolicy("Teacher", policy =>
+        policy.RequireRole("teacher"));
+
+
+    options.AddPolicy("Admin", policy =>
+        policy.RequireRole("admin"));
+});
 builder.Services.AddDataProtection()
     .SetApplicationName("BlazorApp")
     .PersistKeysToFileSystem(new DirectoryInfo("./keys"));
 
 var app = builder.Build();
-
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(builder.Environment.ContentRootPath, "wwwroot", "uploads")),
+    RequestPath = "/uploads",
+    OnPrepareResponse = ctx =>
+    {
+        // Проверяем авторизацию для доступа к файлам
+        if (!ctx.Context.User.Identity.IsAuthenticated)
+        {
+            ctx.Context.Response.StatusCode = 401;
+            ctx.Context.Response.ContentLength = 0;
+            ctx.Context.Response.Body = Stream.Null;
+        }
+    }
+});
 app.UseRouting();
 app.UseCors("AllowBlazor"); // ДОЛЖНО БЫТЬ ПЕРЕД UseAuthentication
 app.UseAuthentication();

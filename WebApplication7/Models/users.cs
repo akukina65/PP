@@ -29,17 +29,7 @@ namespace WebApplication7.Models
         public int price { get; set; }
         public string? imageurl { get; set; } // Добавьте это свойство
     }
-    public class teacherP
-    {
-       public int Id { get; set; }
-        public required string surname { get; set; }
-        public string name { get; set; } = string.Empty;
-        public string patronymic { get; set; } = string.Empty;
-        public string telephone { get; set; } = string.Empty;
-        
-
-
-    }
+   
     public class userscoursesP
     {
         public int Id { get; set; }
@@ -78,6 +68,7 @@ namespace WebApplication7.Models
         public string lessondescription { get; set; } = string.Empty;
         public string lessoncontent { get; set; } = string.Empty;
         public int quantity { get; set; }
+        public int Orders { get; set; } // Добавьте поле для порядка уроков
 
 
     }
@@ -119,7 +110,7 @@ namespace WebApplication7.Models
         public int Id { get; set; }
         public int id_users { get; set; } 
         public DateTime order_date { get; set; }
-        public int price { get; set; }
+        
         
 
     }

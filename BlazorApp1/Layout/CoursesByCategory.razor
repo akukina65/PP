@@ -3,54 +3,47 @@
 @inject NavigationManager NavManager
 @inject IJSRuntime JSRuntime
 
+
+<link href="css/CoursesByCategory.css" rel="stylesheet" />
 <div class="category-page">
-    <div class="category-header" style="background: linear-gradient(rgba(0,0,0,0.6), url('/images/category-bg.jpg') center/cover;">
-        <div class="container">
-            <div class="breadcrumbs">
-                <a href="/">Главная</a> / <a href="/courses">Курсы</a> / <span>@CategoryName</span>
-            </div>
+    <div class="category-header">
+        <div class="header-content">
             <h1>@CategoryName</h1>
             <p>Курсы для профессионального роста в выбранной области</p>
+        </div>
+        <div class="header-overlay"></div>
+        <div class="header-shapes">
+            <div class="shape circle"></div>
+            <div class="shape triangle"></div>
+            <div class="shape wave"></div>
         </div>
     </div>
 
     <div class="container">
-        <div class="filters-section">
-            <!-- Фильтры остаются без изменений -->
-        </div>
-
         <div class="courses-section">
-            <div class="sorting-header">
-                <div class="results-count">
-                    Найдено курсов: <strong>@(courses?.Count ?? 0)</strong>
-                </div>
-                <div class="sort-options">
-                    <label>Сортировать:</label>
-                    <select @bind="sortOption">
-                        <option value="popular">По популярности</option>
-                        <option value="new">По новизне</option>
-                        <option value="price-asc">По цене (низкая &gt; высокая)</option>
-                        <option value="price-desc">По цене (высокая &gt; низкая)</option>
-                        <option value="duration">По продолжительности</option>
-                    </select>
-                </div>
-            </div>
-
             @if (isLoading)
             {
                 <div class="loading-courses">
-                    <i class="fas fa-spinner fa-spin"></i> Загрузка курсов...
+                    <div class="spinner">
+                        <div class="double-bounce1"></div>
+                        <div class="double-bounce2"></div>
+                    </div>
+                    <p>Загружаем лучшие курсы для вас...</p>
                 </div>
             }
             else if (courses != null && !courses.Any())
             {
                 <div class="no-courses">
-                    <img src="/images/no-courses.svg" alt="Нет курсов" />
-                    <h3>В этой категории пока нет курсов</h3>
-                    <p>Попробуйте изменить параметры фильтров или посмотреть другие категории</p>
-                    <button class="btn btn-primary" @onclick="NavigateToAllCourses">
-                        Посмотреть все курсы
-                    </button>
+                    <div class="empty-state">
+                        <div class="empty-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>В этой категории пока нет курсов</h3>
+                        <p>Но мы работаем над добавлением новых материалов. Посмотрите другие категории</p>
+                        <button class="btn btn-primary" @onclick="NavigateToAllCourses">
+                            <i class="fas fa-compass"></i> Посмотреть все курсы
+                        </button>
+                    </div>
                 </div>
             }
             else if (courses != null)
@@ -59,19 +52,20 @@
                     @foreach (var course in courses)
                     {
                         <div class="course-card">
-                            <div class="course-image">
-                                <div class="image-overlay"></div>
-                                <img src="@course.ImageUrl"
-                                     onerror="this.onerror=null; this.src='/images/courses/default-course.png'"
-                                     alt="@course.Title" />
-                                @if (course.IsNew)
-                                {
-                                    <div class="course-badge new">NEW</div>
-                                }
-                                @if (course.IsPopular)
-                                {
-                                    <div class="course-badge popular">HOT</div>
-                                }
+                            <div class="card-top">
+                                <div class="course-image">
+                                    <img src="@course.ImageUrl"
+                                         onerror="this.onerror=null; this.src='/images/courses/default-course.png'"
+                                         alt="@course.Title" />
+                                    @if (course.IsNew)
+                                    {
+                                        <div class="course-badge new">NEW</div>
+                                    }
+                                    @if (course.IsPopular)
+                                    {
+                                        <div class="course-badge popular">HOT</div>
+                                    }
+                                </div>
                                 <div class="course-price">
                                     @if (course.DiscountedPrice > 0)
                                     {
@@ -84,23 +78,26 @@
                                     }
                                 </div>
                             </div>
+
                             <div class="course-info">
-                                <div class="course-meta">
-                                    <span><i class="fas fa-star"></i> @course.Rating.ToString("0.0")</span>
-                                    <span><i class="fas fa-user-graduate"></i> @course.EnrolledCount</span>
-                                    <span><i class="fas fa-clock"></i> @course.Duration недель</span>
-                                </div>
                                 <h3>@course.Title</h3>
                                 <p>@course.Description</p>
-                                <div class="course-category">
-                                    <i class="fas fa-tag"></i> @course.Category
+
+                                <div class="course-footer">
+                                    <div class="course-duration">
+                                        <i class="fas fa-clock"></i> @course.Duration недель
+                                    </div>
+                                    <div class="course-category">
+                                        <i class="fas fa-tag"></i> @course.Category
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="course-actions">
-                                <button class="btn-outline" @onclick="() => ViewCourseDetails(course.Id)">
+                                <button class="btn-details" @onclick="() => ViewCourseDetails(course.Id)">
                                     <i class="fas fa-info-circle"></i> Подробнее
                                 </button>
-                                <button class="btn-primary" @onclick="() => AddToCart(course)">
+                                <button class="btn-buy" @onclick="() => AddToCart(course)">
                                     <i class="fas fa-shopping-cart"></i> Купить
                                 </button>
                             </div>
@@ -115,12 +112,9 @@
 @code {
     [Parameter] public int CategoryId { get; set; }
     private string CategoryName { get; set; } = "Категория";
-    private List<CourseDto> courses;
-    private bool showFilters = false;
-    private int priceRangeStart = 0;
-    private int priceRangeEnd = 50000;
-    private string sortOption = "popular";
+    private List<CourseDto> courses = new List<CourseDto>();
     private bool isLoading = true;
+
     // Карта изображений для категорий
     private static readonly Dictionary<string, string> categoryImages = new(StringComparer.OrdinalIgnoreCase)
         {
@@ -130,7 +124,6 @@
             ["разработка"] = "course-dev.png",
             ["маркетинг"] = "course-marketing.png",
             ["наука"] = "course-science.png",
-            // Добавьте другие категории при необходимости
         };
 
     protected override async Task OnInitializedAsync()
@@ -165,8 +158,8 @@
         try
         {
             isLoading = true;
+            StateHasChanged(); // Обновляем UI
 
-            // Получаем список ID курсов для категории
             var courseIds = await Http.GetFromJsonAsync<List<int>>(
                 $"api/Courses/category-course-ids/{CategoryId}") ?? new List<int>();
 
@@ -176,11 +169,9 @@
                 return;
             }
 
-            // Получаем данные курсов с категориями
             courses = await Http.GetFromJsonAsync<List<CourseDto>>(
                 $"api/Courses/by-ids?ids={string.Join(",", courseIds)}") ?? new List<CourseDto>();
 
-            // Устанавливаем URL изображений на основе категории
             foreach (var course in courses)
             {
                 course.ImageUrl = GetCourseImage(course.Category);
@@ -194,48 +185,28 @@
         finally
         {
             isLoading = false;
+            StateHasChanged(); // Обновляем UI после загрузки
         }
     }
 
-   private string GetCourseImage(string category)
-{
-    if (string.IsNullOrWhiteSpace(category))
-        return "/images/courses/default-course.png";
-
-    // Нормализация названия категории
-    var normalizedCategory = category.Trim().ToLower();
-
-    // Попытка найти точное совпадение
-    if (categoryImages.TryGetValue(normalizedCategory, out var imageName))
+    private string GetCourseImage(string category)
     {
-        return $"/images/courses/{imageName}";
-    }
+        if (string.IsNullOrWhiteSpace(category))
+            return "/images/courses/default-course.png";
 
-    // Попытка найти частичное совпадение
-    var partialMatch = categoryImages.Keys.FirstOrDefault(k =>
-        normalizedCategory.Contains(k));
+        var normalizedCategory = category.Trim().ToLower();
 
-    return partialMatch != null
-        ? $"/images/courses/{categoryImages[partialMatch]}"
-        : "/images/courses/default-course.png";
-}
+        if (categoryImages.TryGetValue(normalizedCategory, out var imageName))
+        {
+            return $"/images/courses/{imageName}";
+        }
 
-    private void ToggleFilters()
-    {
-        showFilters = !showFilters;
-    }
+        var partialMatch = categoryImages.Keys.FirstOrDefault(k =>
+            normalizedCategory.Contains(k));
 
-    private void ResetFilters()
-    {
-        priceRangeStart = 0;
-        priceRangeEnd = 50000;
-        sortOption = "popular";
-    }
-
-    private void ApplyFilters()
-    {
-        // Здесь будет логика применения фильтров
-        showFilters = false;
+        return partialMatch != null
+            ? $"/images/courses/{categoryImages[partialMatch]}"
+            : "/images/courses/default-course.png";
     }
 
     private void ViewCourseDetails(int courseId)
@@ -272,591 +243,3 @@
     }
 }
 
-<style>
-    /* Обновленные цвета для лавандовой темы */
-    :root {
-        --lavender-primary: #9678FF;
-        --lavender-hover: #7C6AFF;
-        --lavender-light: #e6e0ff;
-        --lavender-dark: #6C5CE7;
-    }
-
-    .category-page {
-        background-color: #f8fafc;
-        min-height: 100vh;
-        padding-bottom: 3rem;
-    }
-
-    .category-header {
-        padding: 5rem 0 4rem;
-        color: white;
-        text-align: center;
-        position: relative;
-        margin-bottom: 3rem;
-        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-    }
-
-    .breadcrumbs {
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-        display: flex;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-
-        .breadcrumbs a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-            .breadcrumbs a:hover {
-                color: white;
-                text-decoration: underline;
-            }
-
-        .breadcrumbs span {
-            color: white;
-            font-weight: 500;
-        }
-
-    .category-header h1 {
-        font-size: 3rem;
-        font-weight: 800;
-        margin-bottom: 1rem;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    .category-header p {
-        font-size: 1.2rem;
-        max-width: 600px;
-        margin: 0 auto;
-        opacity: 0.9;
-    }
-
-    .filters-card {
-        background: white;
-        border-radius: 16px;
-        box-shadow: 0 6px 20px rgba(108, 99, 255, 0.1);
-        margin-bottom: 2.5rem;
-        overflow: hidden;
-    }
-
-    .filters-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1.5rem;
-        cursor: pointer;
-        transition: background 0.3s;
-    }
-
-        .filters-header:hover {
-            background: #f9f9ff;
-        }
-
-        .filters-header h2 {
-            font-size: 1.3rem;
-            margin: 0;
-            color: var(--lavender-dark);
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-    .btn-filter {
-        background: transparent;
-        color: var(--lavender-primary);
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 2px solid var(--lavender-light);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.3s;
-    }
-
-        .btn-filter:hover {
-            background: var(--lavender-light);
-            transform: rotate(180deg);
-        }
-
-    .filters-content {
-        padding: 0 1.5rem;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease-out;
-    }
-
-        .filters-content.show {
-            max-height: 500px;
-            padding: 0 1.5rem 1.5rem;
-        }
-
-    .filter-group {
-        margin-bottom: 1.8rem;
-    }
-
-        .filter-group h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.8rem;
-            color: #2d3748;
-            font-weight: 600;
-        }
-
-    .filter-options {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
-    .filter-option {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        cursor: pointer;
-        padding: 0.5rem 1rem;
-        background: #f8fafc;
-        border-radius: 30px;
-        transition: all 0.2s;
-        user-select: none;
-    }
-
-        .filter-option:hover {
-            background: var(--lavender-light);
-        }
-
-        .filter-option input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
-            accent-color: var(--lavender-primary);
-        }
-
-    .price-range {
-        padding: 0.5rem 0;
-    }
-
-        .price-range input[type="range"] {
-            width: 100%;
-            height: 6px;
-            margin: 1.5rem 0;
-            background: #e2e8f0;
-            border-radius: 3px;
-            outline: none;
-            -webkit-appearance: none;
-        }
-
-            .price-range input[type="range"]::-webkit-slider-thumb {
-                -webkit-appearance: none;
-                width: 22px;
-                height: 22px;
-                background: var(--lavender-primary);
-                border-radius: 50%;
-                cursor: pointer;
-                border: 3px solid white;
-                box-shadow: 0 2px 6px rgba(108, 99, 255, 0.4);
-            }
-
-    .price-values {
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.9rem;
-        color: #4a5568;
-        font-weight: 500;
-    }
-
-    .filter-actions {
-        display: flex;
-        gap: 1rem;
-        justify-content: flex-end;
-        padding-top: 1rem;
-        margin-top: 1rem;
-    }
-
-    .courses-section {
-        background: white;
-        border-radius: 16px;
-        box-shadow: 0 6px 20px rgba(108, 99, 255, 0.08);
-        padding: 2.5rem;
-    }
-
-    .sorting-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 2rem;
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid #eee;
-    }
-
-    .results-count {
-        font-size: 1.1rem;
-        color: #4a5568;
-        font-weight: 500;
-    }
-
-    .sort-options {
-        display: flex;
-        align-items: center;
-        gap: 0.8rem;
-    }
-
-        .sort-options label {
-            font-size: 0.95rem;
-            color: #4a5568;
-        }
-
-    .custom-select {
-        position: relative;
-        display: inline-block;
-    }
-
-        .custom-select select {
-            padding: 0.6rem 2.5rem 0.6rem 1.2rem;
-            border: 1px solid #e2e8f0;
-            border-radius: 10px;
-            background: white;
-            font-size: 0.95rem;
-            color: #2d3748;
-            outline: none;
-            transition: all 0.3s;
-            appearance: none;
-            cursor: pointer;
-        }
-
-            .custom-select select:focus {
-                border-color: var(--lavender-primary);
-                box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
-            }
-
-        .custom-select i {
-            position: absolute;
-            right: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--lavender-primary);
-            pointer-events: none;
-        }
-
-    .loading-courses {
-        text-align: center;
-        padding: 4rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-    }
-
-    .spinner {
-        width: 50px;
-        height: 50px;
-        border: 4px solid var(--lavender-light);
-        border-top: 4px solid var(--lavender-primary);
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-    }
-
-    @@keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-
-    .no-courses {
-        text-align: center;
-        padding: 3rem;
-    }
-
-    .empty-state {
-        max-width: 500px;
-        margin: 0 auto;
-        padding: 2rem;
-        background: #f8fafc;
-        border-radius: 16px;
-    }
-
-        .empty-state i {
-            font-size: 4rem;
-            color: var(--lavender-light);
-            margin-bottom: 1.5rem;
-        }
-
-        .empty-state h3 {
-            font-size: 1.8rem;
-            margin-bottom: 0.8rem;
-            color: #2d3748;
-        }
-
-        .empty-state p {
-            color: #718096;
-            margin-bottom: 1.8rem;
-            font-size: 1.1rem;
-        }
-
-    .courses-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-        gap: 30px;
-    }
-
-    .course-card {
-        background: white;
-        border-radius: 16px;
-        overflow: hidden;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-        position: relative;
-        z-index: 1;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        border: 1px solid #f1f1f1;
-    }
-
-        .course-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(108, 99, 255, 0.15);
-        }
-
-    .course-image {
-        height: 200px;
-        overflow: hidden;
-        position: relative;
-    }
-
-        .course-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-    .course-card:hover .course-image img {
-        transform: scale(1.05);
-    }
-
-    .image-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-        opacity: 0.6;
-        z-index: 1;
-    }
-
-    .course-badge {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        padding: 6px 12px;
-        border-radius: 20px;
-        font-size: 12px;
-        font-weight: 700;
-        z-index: 2;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-        .course-badge.new {
-            background: #48BB78;
-            color: white;
-        }
-
-        .course-badge.popular {
-            background: #E53E3E;
-            color: white;
-        }
-
-    .course-price {
-        position: absolute;
-        bottom: 15px;
-        left: 15px;
-        background: rgba(255,255,255,0.9);
-        padding: 8px 15px;
-        border-radius: 30px;
-        font-weight: 700;
-        font-size: 18px;
-        color: #2d3748;
-        z-index: 2;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .original-price {
-        text-decoration: line-through;
-        color: #718096;
-        font-size: 14px;
-    }
-
-    .discounted-price {
-        color: #E53E3E;
-    }
-
-    .course-info {
-        padding: 1.8rem;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-    }
-
-        .course-info h3 {
-            margin: 0 0 1rem;
-            font-size: 1.4rem;
-            color: #2d3748;
-            font-weight: 700;
-            line-height: 1.3;
-        }
-
-        .course-info p {
-            margin: 0 0 1.5rem;
-            color: #718096;
-            font-size: 1rem;
-            line-height: 1.6;
-            flex-grow: 1;
-        }
-
-    .course-meta {
-        display: flex;
-        gap: 15px;
-        margin-bottom: 15px;
-        color: #4a5568;
-        font-size: 0.95rem;
-        flex-wrap: wrap;
-    }
-
-        .course-meta span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .course-meta i {
-            color: var(--lavender-primary);
-        }
-
-    .course-category {
-        background: var(--lavender-light);
-        color: var(--lavender-primary);
-        padding: 6px 12px;
-        border-radius: 20px;
-        font-size: 14px;
-        font-weight: 600;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        margin-top: auto;
-        width: fit-content;
-    }
-
-    .course-actions {
-        padding: 0 1.8rem 1.8rem;
-        display: flex;
-        gap: 12px;
-    }
-
-        .course-actions button {
-            flex: 1;
-            padding: 12px;
-            border-radius: 10px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: all 0.3s;
-            cursor: pointer;
-            border: none;
-            font-size: 0.95rem;
-        }
-
-    .btn-outline {
-        background: transparent;
-        border: 2px solid var(--lavender-primary) !important;
-        color: var(--lavender-primary);
-    }
-
-        .btn-outline:hover {
-            background: var(--lavender-light);
-            transform: translateY(-2px);
-        }
-
-    .btn-primary {
-        background: var(--lavender-primary);
-        color: white;
-        box-shadow: 0 4px 12px rgba(108, 99, 255, 0.25);
-    }
-
-        .btn-primary:hover {
-            background: var(--lavender-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(108, 99, 255, 0.35);
-        }
-
-    .btn {
-        padding: 0.8rem 1.5rem;
-        border-radius: 10px;
-        font-weight: 600;
-        transition: all 0.3s;
-        cursor: pointer;
-        border: none;
-        font-size: 1rem;
-    }
-
-    /* Адаптивность */
-    @@media (max-width: 1100px) {
-        .courses-grid {
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        }
-    }
-
-    @@media (max-width: 768px) {
-        .sorting-header {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-
-        .filter-options {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .course-actions {
-            flex-direction: column;
-            gap: 10px;
-        }
-
-            .course-actions button {
-                width: 100%;
-            }
-
-        .category-header {
-            padding: 3rem 0 2.5rem;
-        }
-
-            .category-header h1 {
-                font-size: 2.2rem;
-            }
-    }
-
-    @@media (max-width: 576px) {
-        .courses-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .category-header p {
-            font-size: 1rem;
-        }
-
-        .courses-section {
-            padding: 1.5rem;
-        }
-    }
-</style

@@ -51,5 +51,6 @@ namespace YourProjectNamespace.Models
 
         public string? AvatarUrl { get; set; }
         public string AvatarColor { get; set; } = "";
+        public string Role { get; set; } //  Добавляем Role
     }
 }

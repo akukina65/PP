@@ -24,6 +24,33 @@
                     window.BrowserLink = undefined;
                 }
             </script>
+            <script>
+                window.formatText = function (textarea, before, after) {
+                    const start = textarea.selectionStart;
+                    const end = textarea.selectionEnd;
+                    const selectedText = textarea.value.substring(start, end);
+
+                    const newText = textarea.value.substring(0, start) +
+                        before + selectedText + after +
+                        textarea.value.substring(end);
+
+                    textarea.value = newText;
+
+                    // Устанавливаем позицию курсора
+                    const newCursorPos = start + before.length;
+                    textarea.selectionStart = newCursorPos;
+                    textarea.selectionEnd = newCursorPos + selectedText.length;
+
+                    // Возвращаем фокус
+                    textarea.focus();
+                };
+            </script>
+            <script>
+                window.showToast = function (message, type = 'success') {
+                    // You can use any toast library here, or simple alert
+                    alert(message); // Temporary solution - replace with proper toast
+                };
+            </script>
             <circle r="40%" cx="50%" cy="50%" />
             <circle r="40%" cx="50%" cy="50%" />
         </svg>

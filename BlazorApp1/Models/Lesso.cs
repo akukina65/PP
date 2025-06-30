@@ -1,18 +1,38 @@
 ﻿// BlazorApp1/Models/Superuser.cs
-namespace BlazorApp1.Models
+namespace YourProjectNamespace.Models
 {
-    public class Superuser
+    public class SuperLesson
     {
         public int Id { get; set; }
-        public string surname { get; set; }
-        public string name { get; set; }
-        public string patronymic { get; set; }
-        public string password { get; set; }
-        public string email { get; set; }
-        public string Role { get; set; }
-        public string AvatarUrl { get; set; }
-        public string City { get; set; }
-        public string Bio { get; set; }
-        public string AvatarColor { get; set; }
+        public int id_courses { get; set; }
+        public string lessonname { get; set; } = string.Empty;
+        public string lessondescription { get; set; } = string.Empty;
+        public string lessoncontent { get; set; } = string.Empty;
+        public int quantity { get; set; }
+    }
+
+    public class MyCourseDto
+    {
+        public int Id { get; set; }
+        public string Title { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public int Duration { get; set; }
+        public string ImageUrl { get; set; } = string.Empty;
+    }
+
+    public class CourseDto
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Category { get; set; }
+        public decimal Price { get; set; }
+        public decimal DiscountedPrice { get; set; }
+        public double Rating { get; set; }
+        public int EnrolledCount { get; set; }
+        public int Duration { get; set; }
+        public bool IsNew { get; set; }
+        public bool IsPopular { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

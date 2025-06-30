@@ -154,7 +154,8 @@
                     result.user.avatarUrl,
                     result.user.City,
                     result.user.Bio,
-                    result.user.avatarColor // Добавляем цвет
+                    result.user.avatarColor,
+                    result.user.role   //  Добавляем Role// Добавляем цвет
                 );
 
                 NavigationManager.NavigateTo("/glav");
@@ -185,6 +186,7 @@
             public string Bio { get; set; }
             public string avatarUrl { get; set; }
             public string avatarColor { get; set; } // Добавляем цвет
+            public string role { get; set; } //  Добавляем Role
         }
     }
 
@@ -197,5 +199,6 @@
         public string City { get; set; }       // Важно!
         public string Bio { get; set; }        // Важно!
         public string avatarUrl { get; set; }
+        public string role { get; set; } //  Добавляем Role
     }
 }

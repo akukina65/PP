@@ -32,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XEF2YXRhci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/проект еще раз/PP/BlazorApp1/Layout/Corzina.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XENvcnppbmEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/проект еще раз/PP/BlazorApp1/Layout/CourseGlav.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XENvdXJzZUdsYXYucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,16 +48,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XENvdXJzZXNCeUNhdGVnb3J5LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/проект еще раз/PP/BlazorApp1/Layout/Glav.razor]
-build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XEdsYXYucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/проект еще раз/PP/BlazorApp1/Layout/GlavAvtorizarion.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XEdsYXZBdnRvcml6YXJpb24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/проект еще раз/PP/BlazorApp1/Layout/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XEluZGV4LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/проект еще раз/PP/BlazorApp1/Layout/LesonContentt.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XExlc29uQ29udGVudHQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/проект еще раз/PP/BlazorApp1/Layout/LessonPage.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XExlc3NvblBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/проект еще раз/PP/BlazorApp1/Layout/Loginrazor.razor]

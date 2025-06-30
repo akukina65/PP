@@ -1,0 +1,567 @@
+﻿@page "/course/{courseId:int}/lesson/{lessonId:int}"
+@page "/course/{courseId:int}/lesson/new"
+@layout MainLayout
+@using Microsoft.AspNetCore.Components.Authorization
+@inject HttpClient Http
+@inject NavigationManager NavManager
+@inject IJSRuntime JSRuntime
+@inject AuthenticationStateProvider AuthStateProvider
+@using Markdig
+@using System.Net.Http.Headers
+@using YourProjectNamespace.Models
+
+<link href="css/LessonContent.css?v=3.0" rel="stylesheet" />
+
+<div class="lesson-page">
+    <div class="lesson-header glass-card">
+        <button class="btn-back" @onclick="NavigateBack">
+            <i class="fas fa-arrow-left"></i> Назад к курсу
+        </button>
+
+        @if (isEditMode)
+        {
+            <input type="text" class="lesson-title-input" @bind="lesson.lessonname"
+                   placeholder="Название урока" />
+            <textarea class="lesson-desc-input" @bind="lesson.lessondescription"
+                      placeholder="Описание урока"></textarea>
+        }
+        else
+        {
+            <h1>@lesson?.lessonname</h1>
+            <p>@lesson?.lessondescription</p>
+        }
+    </div>
+
+    <div class="lesson-content-container glass-card">
+        @if (isEditMode)
+        {
+            <div class="lesson-editor">
+                <div class="editor-toolbar">
+                    <button type="button" class="tool-btn" @onclick="FormatBold"
+                            title="Жирный текст (Ctrl+B)">
+                        <i class="fas fa-bold"></i> <span>Жирный</span>
+                    </button>
+
+                    <button type="button" class="tool-btn" @onclick="FormatItalic"
+                            title="Курсив (Ctrl+I)">
+                        <i class="fas fa-italic"></i> <span>Курсив</span>
+                    </button>
+
+                    <button type="button" class="tool-btn" @onclick="FormatList"
+                            title="Маркированный список">
+                        <i class="fas fa-list-ul"></i> <span>Список</span>
+                    </button>
+
+                    <button type="button" class="tool-btn" @onclick="ShowImageModal"
+                            title="Вставить изображение">
+                        <i class="fas fa-image"></i> <span>Изображение</span>
+                    </button>
+
+                    <button type="button" class="tool-btn" @onclick="ShowVideoModal"
+                            title="Вставить видео">
+                        <i class="fas fa-video"></i> <span>Видео</span>
+                    </button>
+
+                    <button type="button" class="tool-btn" @onclick="FormatLink"
+                            title="Добавить ссылку">
+                        <i class="fas fa-link"></i> <span>Ссылка</span>
+                    </button>
+
+                    <button type="button" class="tool-btn" @onclick="FormatCode"
+                            title="Блок кода">
+                        <i class="fas fa-code"></i> <span>Код</span>
+                    </button>
+                </div>
+
+                <textarea class="editor-content" @bind="lesson.lessoncontent"
+                          rows="15" placeholder="Содержимое урока..." @ref="editorTextArea"></textarea>
+
+                <div class="form-group">
+                    <label>Количество занятий:</label>
+                    <input type="number" class="form-control" @bind="lesson.quantity" min="1" />
+                </div>
+            </div>
+
+            @if (showImageModal)
+            {
+                <div class="modal-backdrop show"></div>
+                <div class="modal show" style="display:block">
+                    <div class="modal-dialog">
+                        <div class="modal-content glass-card">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Вставить изображение</h5>
+                                <button type="button" class="btn-close" @onclick="CloseImageModal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label class="form-label">Загрузить изображение</label>
+                                    <InputFile class="form-control" OnChange="HandleImageUpload"
+                                               accept=".jpg,.jpeg,.png,.gif,.webp" />
+                                    @if (isUploadingImage)
+                                    {
+                                        <div class="progress mt-2">
+                                            <div class="progress-bar" role="progressbar"
+                                                 style="width: @uploadProgress%;">
+                                                @uploadProgress%
+                                            </div>
+                                        </div>
+                                    }
+                                    @if (!string.IsNullOrEmpty(uploadedImageUrl))
+                                    {
+                                        <div class="mt-2">
+                                            <img src="@uploadedImageUrl" class="img-thumbnail"
+                                                 style="max-height: 150px;" />
+                                        </div>
+                                    }
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Или вставить ссылку</label>
+                                    <input type="text" class="form-control" @bind="imageUrl"
+                                           placeholder="https://example.com/image.jpg" />
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn-secondary" @onclick="CloseImageModal">Отмена</button>
+                                <button type="button" class="btn-primary" @onclick="InsertImage"
+                                        disabled="@(string.IsNullOrEmpty(uploadedImageUrl) && string.IsNullOrEmpty(imageUrl))">
+                                    Вставить
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @if (showVideoModal)
+            {
+                <div class="modal-backdrop show"></div>
+                <div class="modal show" style="display:block">
+                    <div class="modal-dialog">
+                        <div class="modal-content glass-card">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Вставить видео</h5>
+                                <button type="button" class="btn-close" @onclick="CloseVideoModal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label class="form-label">Загрузить видео (макс. 50MB)</label>
+                                    <InputFile class="form-control" OnChange="HandleVideoUpload"
+                                               accept=".mp4,.mov,.avi,.mkv,.webm" />
+                                    @if (isUploadingVideo)
+                                    {
+                                        <div class="progress mt-2">
+                                            <div class="progress-bar" role="progressbar"
+                                                 style="width: @uploadProgress%;">
+                                                @uploadProgress%
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Или вставить ссылку (YouTube, Vimeo)</label>
+                                    <input type="text" class="form-control" @bind="videoUrl"
+                                           placeholder="https://youtube.com/watch?v=..." />
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn-secondary" @onclick="CloseVideoModal">Отмена</button>
+                                <button type="button" class="btn-primary" @onclick="InsertVideo"
+                                        disabled="@(string.IsNullOrEmpty(uploadedVideoUrl) && string.IsNullOrEmpty(videoUrl))">
+                                    Вставить
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @if (isTeacherOrAdmin)
+            {
+                <div class="editor-actions">
+                    <button class="btn-primary" @onclick="SaveLesson">
+                        <i class="fas fa-save"></i> Сохранить урок
+                    </button>
+                    <button class="btn-secondary" @onclick="CancelEdit">
+                        Отмена
+                    </button>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="lesson-content">
+                @if (lesson == null)
+                {
+                    <div class="loading">
+                        <i class="fas fa-spinner fa-spin"></i> Загрузка урока...
+                    </div>
+                }
+                else
+                {
+                    @((MarkupString)RenderMarkdown(lesson.lessoncontent))
+                }
+            </div>
+
+            @if (isTeacherOrAdmin)
+            {
+                <div class="lesson-actions">
+                    <button class="btn-outline" @onclick="EditLesson">
+                        <i class="fas fa-edit"></i> Редактировать
+                    </button>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter] public int courseId { get; set; }
+    [Parameter] public int lessonId { get; set; }
+
+    private bool isTeacherOrAdmin = false;
+    private SuperLesson lesson = new SuperLesson();
+    private bool isEditMode;
+    private bool isNewLesson => lessonId == 0;
+    private ElementReference editorTextArea;
+
+    // Для загрузки изображений
+    private string imageUrl = "";
+    private string? uploadedImageUrl;
+    private bool showImageModal = false;
+    private bool isUploadingImage = false;
+
+    // Для загрузки видео
+    private string videoUrl = "";
+    private string? uploadedVideoUrl;
+    private bool showVideoModal = false;
+    private bool isUploadingVideo = false;
+
+    // Общие для загрузки
+    private int uploadProgress = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        try
+        {
+            var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            isTeacherOrAdmin = user.IsInRole("teacher") || user.IsInRole("admin");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Ошибка при проверке ролей: {ex.Message}");
+        }
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        try
+        {
+            if (lessonId > 0)
+            {
+                var response = await Http.GetAsync($"api/Lessons/{lessonId}");
+                if (response.IsSuccessStatusCode)
+                {
+                    lesson = await response.Content.ReadFromJsonAsync<SuperLesson>();
+                }
+                else
+                {
+                    var error = await response.Content.ReadAsStringAsync();
+                    await JSRuntime.InvokeVoidAsync("alert", $"Ошибка доступа: {error}");
+                    NavManager.NavigateTo($"/course/{courseId}");
+                }
+            }
+            else
+            {
+                lesson = new SuperLesson
+                    {
+                        id_courses = courseId,
+                        quantity = 1,
+                        lessoncontent = "# Новый урок\n\nНачните писать здесь..."
+                    };
+                isEditMode = true;
+            }
+        }
+        catch (Exception ex)
+        {
+            await JSRuntime.InvokeVoidAsync("alert", $"Ошибка загрузки урока: {ex.Message}");
+            NavManager.NavigateTo("/");
+        }
+    }
+
+    private void NavigateBack()
+    {
+        NavManager.NavigateTo($"/course/{courseId}");
+    }
+
+    private void EditLesson()
+    {
+        if (isTeacherOrAdmin)
+        {
+            isEditMode = true;
+        }
+        else
+        {
+            JSRuntime.InvokeVoidAsync("alert", "У вас нет прав для редактирования");
+        }
+    }
+
+    private void CancelEdit()
+    {
+        if (isNewLesson)
+        {
+            NavigateBack();
+        }
+        else
+        {
+            isEditMode = false;
+        }
+    }
+
+    private async Task SaveLesson()
+    {
+        try
+        {
+            HttpResponseMessage response;
+
+            if (isNewLesson)
+            {
+                response = await Http.PostAsJsonAsync("api/Lessons", lesson);
+            }
+            else
+            {
+                response = await Http.PutAsJsonAsync($"api/Lessons/{lessonId}", lesson);
+            }
+
+            if (response.IsSuccessStatusCode)
+            {
+                if (isNewLesson)
+                {
+                    var createdLesson = await response.Content.ReadFromJsonAsync<SuperLesson>();
+                    NavManager.NavigateTo($"/course/{courseId}/lesson/{createdLesson.Id}");
+                }
+                else
+                {
+                    NavManager.NavigateTo($"/course/{courseId}");
+                }
+            }
+            else
+            {
+                var error = await response.Content.ReadAsStringAsync();
+                await JSRuntime.InvokeVoidAsync("alert", $"Ошибка сохранения: {error}");
+            }
+        }
+        catch (Exception ex)
+        {
+            await JSRuntime.InvokeVoidAsync("alert", $"Ошибка: {ex.Message}");
+        }
+    }
+
+    private Task FormatBold() => FormatText("**", "**");
+    private Task FormatItalic() => FormatText("_", "_");
+    private Task FormatList() => FormatText("\n- ", "");
+    private Task FormatLink() => FormatText("[", "](url)");
+    private Task FormatCode() => FormatText("```\n", "\n```");
+
+    private async Task FormatText(string before, string after)
+    {
+        lesson.lessoncontent = await JSRuntime.InvokeAsync<string>(
+            "formatText",
+            editorTextArea,
+            before,
+            after
+        );
+    }
+
+    private string RenderMarkdown(string markdown)
+    {
+        if (string.IsNullOrEmpty(markdown)) return "";
+
+        var pipeline = new MarkdownPipelineBuilder()
+            .UseAdvancedExtensions()
+            .Build();
+
+        return Markdown.ToHtml(markdown, pipeline);
+    }
+
+    private void ShowImageModal()
+    {
+        showImageModal = true;
+        imageUrl = "";
+        uploadedImageUrl = "";
+    }
+
+    private void CloseImageModal()
+    {
+        showImageModal = false;
+        isUploadingImage = false;
+    }
+
+    private void ShowVideoModal()
+    {
+        showVideoModal = true;
+        videoUrl = "";
+        uploadedVideoUrl = "";
+    }
+
+    private void CloseVideoModal()
+    {
+        showVideoModal = false;
+        isUploadingVideo = false;
+    }
+
+    private async Task InsertImage()
+    {
+        if (!string.IsNullOrEmpty(uploadedImageUrl))
+        {
+            await FormatText($"![]({uploadedImageUrl})", "");
+        }
+        else if (!string.IsNullOrEmpty(imageUrl))
+        {
+            await FormatText($"![]({imageUrl})", "");
+        }
+        CloseImageModal();
+    }
+
+    private async Task InsertVideo()
+    {
+        if (!string.IsNullOrEmpty(uploadedVideoUrl))
+        {
+            var embedCode = GetVideoEmbedCode(uploadedVideoUrl);
+            lesson.lessoncontent += $"\n{embedCode}\n";
+        }
+        else if (!string.IsNullOrEmpty(videoUrl))
+        {
+            var embedCode = GetVideoEmbedCode(videoUrl);
+            lesson.lessoncontent += $"\n{embedCode}\n";
+        }
+
+        CloseVideoModal();
+        StateHasChanged();
+    }
+
+    private string GetVideoEmbedCode(string url)
+    {
+        if (url.Contains("youtube.com/watch") || url.Contains("youtu.be"))
+        {
+            string videoId = GetYouTubeVideoId(url);
+            return $"\n<div class=\"video-container\">" +
+                   $"<iframe src=\"https://www.youtube.com/embed/{videoId}\" " +
+                   "frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div>\n";
+        }
+        else if (url.Contains("vimeo.com"))
+        {
+            string videoId = url.Split('/').Last();
+            return $"\n<div class=\"video-container\">" +
+                   $"<iframe src=\"https://player.vimeo.com/video/{videoId}\" " +
+                   "frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen></iframe></div>\n";
+        }
+
+        return $"\n<div class=\"video-container\">" +
+               $"<video controls width=\"100%\">" +
+               $"<source src=\"{url}\" type=\"video/mp4\">" +
+               "Ваш браузер не поддерживает видео тег</video></div>\n";
+    }
+
+    private string GetYouTubeVideoId(string url)
+    {
+        var uri = new Uri(url);
+        if (uri.Host == "youtu.be")
+        {
+            return uri.Segments.Last();
+        }
+
+        var query = System.Web.HttpUtility.ParseQueryString(uri.Query);
+        return query["v"] ?? uri.Segments.Last();
+    }
+
+    private async Task HandleImageUpload(InputFileChangeEventArgs e)
+    {
+        await UploadFile(e.File, "image", url =>
+        {
+            uploadedImageUrl = url;
+            imageUrl = url;
+        });
+    }
+
+    private async Task HandleVideoUpload(InputFileChangeEventArgs e)
+    {
+        try
+        {
+            isUploadingVideo = true;
+            uploadProgress = 0;
+
+            var content = new MultipartFormDataContent();
+            var fileContent = new StreamContent(e.File.OpenReadStream(50_000_000));
+            fileContent.Headers.ContentType = new MediaTypeHeaderValue(e.File.ContentType);
+            content.Add(fileContent, "file", e.File.Name);
+
+            var progress = new Progress<int>(percent =>
+            {
+                uploadProgress = percent;
+                StateHasChanged();
+            });
+
+            var response = await Http.PostAsync("api/Lessons/upload/video", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                uploadedVideoUrl = await response.Content.ReadAsStringAsync();
+                videoUrl = uploadedVideoUrl;
+                StateHasChanged();
+            }
+            else
+            {
+                var error = await response.Content.ReadAsStringAsync();
+                await JSRuntime.InvokeVoidAsync("alert", $"Ошибка загрузки: {error}");
+            }
+        }
+        catch (Exception ex)
+        {
+            await JSRuntime.InvokeVoidAsync("alert", $"Ошибка: {ex.Message}");
+        }
+        finally
+        {
+            isUploadingVideo = false;
+        }
+    }
+
+    private async Task UploadFile(IBrowserFile file, string type, Action<string> setUrlCallback)
+    {
+        try
+        {
+            var maxSize = type == "image" ? 10_000_000 : 50_000_000;
+            if (file.Size > maxSize)
+            {
+                await JSRuntime.InvokeVoidAsync("alert",
+                    $"Файл слишком большой. Максимальный размер: {maxSize / 1_000_000}MB");
+                return;
+            }
+
+            var content = new MultipartFormDataContent();
+            var fileContent = new StreamContent(file.OpenReadStream(maxSize));
+            fileContent.Headers.ContentType = new MediaTypeHeaderValue(file.ContentType);
+            content.Add(fileContent, "file", file.Name);
+
+            var response = await Http.PostAsync($"api/Lessons/upload/{type}", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var url = await response.Content.ReadAsStringAsync();
+                setUrlCallback(url);
+            }
+            else
+            {
+                var error = await response.Content.ReadAsStringAsync();
+                await JSRuntime.InvokeVoidAsync("alert", $"Ошибка загрузки: {error}");
+            }
+        }
+        catch (Exception ex)
+        {
+            await JSRuntime.InvokeVoidAsync("alert", $"Ошибка: {ex.Message}");
+        }
+    }
+}

@@ -9,6 +9,22 @@
       "PackagePath": "staticwebassets\\emcc-props.json"
     },
     {
+      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\a41c3391-0473-487d-88a8-a3ae0786672d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\images\\a41c3391-0473-487d-88a8-a3ae0786672d.jpg"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\ddd4d7bb-0f42-495e-83c4-72188e721304.jpg",
+      "PackagePath": "staticwebassets\\uploads\\images\\ddd4d7bb-0f42-495e-83c4-72188e721304.jpg"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\e503ac65-a9a1-4f1b-be9b-c97dfd196f05.jpg",
+      "PackagePath": "staticwebassets\\uploads\\images\\e503ac65-a9a1-4f1b-be9b-c97dfd196f05.jpg"
+    },
+    {
+      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\15e1777f-8283-4948-84e9-fb3e5bf10152.mp4",
+      "PackagePath": "staticwebassets\\uploads\\videos\\15e1777f-8283-4948-84e9-fb3e5bf10152.mp4"
+    },
+    {
       "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\web.config",
       "PackagePath": "staticwebassets\\web.config"
     },

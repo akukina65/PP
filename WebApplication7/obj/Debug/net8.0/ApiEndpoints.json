@@ -46,110 +46,22 @@
     ]
   },
   {
-    "ContainingType": "WebApplication7.Controllers.course_categoriesc",
-    "Method": "getAllquizzes",
-    "RelativePath": "api/course_categoriesc",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[WebApplication7.Models.CoursecategoriatWithTRewDTO, \u041A\u043E\u0440\u043F\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u0430\u044F \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "WebApplication7.Controllers.course_categoriesc",
-    "Method": "CreateCourse",
-    "RelativePath": "api/course_categoriesc",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "course",
-        "Type": "WebApplication7.Models.course_categoriescP",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "WebApplication7.Controllers.course_categoriesc",
-    "Method": "Updatecourse",
-    "RelativePath": "api/course_categoriesc",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "updatedCourse",
-        "Type": "WebApplication7.Models.course_categoriescP",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "WebApplication7.Models.course_categoriescP",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "WebApplication7.Controllers.course_categoriesc",
-    "Method": "Deletecourse",
-    "RelativePath": "api/course_categoriesc",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "WebApplication7.Models.course_categoriescP",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "WebApplication7.Controllers.course_categoriesc",
-    "Method": "GetLessonById",
-    "RelativePath": "api/course_categoriesc/{id}",
+    "ContainingType": "WebApplication7.Controllers.CoursesController",
+    "Method": "GetLessonsByCourse",
+    "RelativePath": "api/Courses/{courseId}/lessons",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "courseId",
         "Type": "System.Int32",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "WebApplication7.Models.course_categoriescP",
+        "Type": "System.Collections.Generic.List\u00601[[WebApplication7.Models.SuperLesson, \u041A\u043E\u0440\u043F\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u0430\u044F \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -161,7 +73,33 @@
   },
   {
     "ContainingType": "WebApplication7.Controllers.CoursesController",
-    "Method": "GetAllCourses",
+    "Method": "GetCourse",
+    "RelativePath": "api/Courses/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApplication7.Controllers.CoursesController\u002BCourseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApplication7.Controllers.CoursesController",
+    "Method": "GetAllCoursesForAdmin",
     "RelativePath": "api/Courses/all",
     "HttpMethod": "GET",
     "IsController": true,
@@ -169,7 +107,27 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApplication7.Controllers.CourseDto, \u041A\u043E\u0440\u043F\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u0430\u044F \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApplication7.Controllers.CoursesController\u002BCourseDto, \u041A\u043E\u0440\u043F\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u0430\u044F \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApplication7.Controllers.CoursesController",
+    "Method": "GetAllPublicCourses",
+    "RelativePath": "api/Courses/all-public",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApplication7.Controllers.CoursesController\u002BCourseDto, \u041A\u043E\u0440\u043F\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u0430\u044F \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -195,7 +153,33 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[WebApplication7.Controllers.CourseDto, \u041A\u043E\u0440\u043F\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u0430\u044F \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[WebApplication7.Controllers.CoursesController\u002BCourseDto, \u041A\u043E\u0440\u043F\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u0430\u044F \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApplication7.Controllers.CoursesController",
+    "Method": "GetCoursesByCategory",
+    "RelativePath": "api/Courses/bycategory/{categoryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoryId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApplication7.Controllers.CoursesController\u002BCourseDto, \u041A\u043E\u0440\u043F\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u0430\u044F \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -233,6 +217,32 @@
   },
   {
     "ContainingType": "WebApplication7.Controllers.CoursesController",
+    "Method": "HasAccessToCourse",
+    "RelativePath": "api/Courses/has-access/{courseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApplication7.Controllers.CoursesController",
     "Method": "GetMyCourses",
     "RelativePath": "api/Courses/my-courses",
     "HttpMethod": "GET",
@@ -241,7 +251,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApplication7.Controllers.MyCourseDto, \u041A\u043E\u0440\u043F\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u0430\u044F \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApplication7.Controllers.CoursesController\u002BCourseDto, \u041A\u043E\u0440\u043F\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u0430\u044F \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -252,16 +262,16 @@
     ]
   },
   {
-    "ContainingType": "WebApplication7.Controllers.lessons",
-    "Method": "getAllquizzes",
-    "RelativePath": "api/lessons",
+    "ContainingType": "WebApplication7.Controllers.CoursesController",
+    "Method": "GetMyPurchasedCourses",
+    "RelativePath": "api/Courses/my-purchased",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[WebApplication7.Models.LessonWithTRewDTO, \u041A\u043E\u0440\u043F\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u0430\u044F \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApplication7.Controllers.CoursesController\u002BCourseDto, \u041A\u043E\u0440\u043F\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u0430\u044F \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -272,38 +282,42 @@
     ]
   },
   {
-    "ContainingType": "WebApplication7.Controllers.lessons",
-    "Method": "CreateCourse",
-    "RelativePath": "api/lessons",
+    "ContainingType": "WebApplication7.Controllers.CoursesController",
+    "Method": "GetMyTeachingCourses",
+    "RelativePath": "api/Courses/my-teaching",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApplication7.Controllers.CoursesController\u002BCourseDto, \u041A\u043E\u0440\u043F\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u0430\u044F \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LessonsController",
+    "Method": "CreateLesson",
+    "RelativePath": "api/Lessons",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "course",
-        "Type": "WebApplication7.Models.superlesson",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "WebApplication7.Controllers.lessons",
-    "Method": "Updatecourse",
-    "RelativePath": "api/lessons",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "updatedCourse",
-        "Type": "WebApplication7.Models.superlesson",
+        "Name": "lesson",
+        "Type": "WebApplication7.Models.SuperLesson",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "WebApplication7.Models.superlesson",
+        "Type": "WebApplication7.Models.SuperLesson",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -314,9 +328,9 @@
     ]
   },
   {
-    "ContainingType": "WebApplication7.Controllers.lessons",
-    "Method": "GetLessonById",
-    "RelativePath": "api/lessons/{id}",
+    "ContainingType": "LessonsController",
+    "Method": "GetLesson",
+    "RelativePath": "api/Lessons/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -329,7 +343,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "WebApplication7.Models.superlesson",
+        "Type": "WebApplication7.Models.SuperLesson",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -340,10 +354,10 @@
     ]
   },
   {
-    "ContainingType": "WebApplication7.Controllers.lessons",
-    "Method": "DeleteCourse",
-    "RelativePath": "api/lessons/{id}",
-    "HttpMethod": "DELETE",
+    "ContainingType": "LessonsController",
+    "Method": "UpdateLesson",
+    "RelativePath": "api/Lessons/{id}",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -351,11 +365,32 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      },
+      {
+        "Name": "updatedLesson",
+        "Type": "WebApplication7.Models.SuperLesson",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LessonsController",
+    "Method": "UploadImage",
+    "RelativePath": "api/Lessons/upload/image",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "WebApplication7.Models.superlesson",
+        "Type": "System.String",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -364,6 +399,58 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "LessonsController",
+    "Method": "UploadVideo",
+    "RelativePath": "api/Lessons/upload/video",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "OrdersController",
+    "Method": "CreateOrder",
+    "RelativePath": "api/Orders/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseIds",
+        "Type": "System.Collections.Generic.List\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrdersController",
+    "Method": "GetUserOrders",
+    "RelativePath": "api/Orders/user-orders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "WebApplication7.Controllers.purchases",
@@ -488,6 +575,38 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "YourProjectNamespace.Controllers.UploadController",
+    "Method": "UploadImage",
+    "RelativePath": "api/Upload/image",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YourProjectNamespace.Controllers.UploadController",
+    "Method": "UploadVideo",
+    "RelativePath": "api/Upload/video",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "WebApplication7.Controllers.UserController",

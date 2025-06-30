@@ -3394,6 +3394,11 @@ D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\BlazorApp1.dll
 D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\refint\BlazorApp1.dll
 D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\BlazorApp1.pdb
 D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\ref\BlazorApp1.dll
-D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\mpnezo3ggr-rl63qoo9fr.gz
-D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\kyjy2iuvp1-subivqxbc1.gz
-D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\5jzqasczcu-jjr35zlg4u.gz
+D:\проект еще раз\PP\BlazorApp1\bin\Debug\net8.0\wwwroot\_framework\Markdig.wasm
+D:\проект еще раз\PP\BlazorApp1\bin\Debug\net8.0\wwwroot\_framework\Markdig.wasm.gz
+D:\проект еще раз\PP\BlazorApp1\bin\Debug\net8.0\Markdig.dll
+D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\webcil\Markdig.wasm
+D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\52zykgztsu-2ikys2t64y.gz
+D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\mpnezo3ggr-lyrql7vkb8.gz
+D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\kyjy2iuvp1-4ddb959upk.gz
+D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\5jzqasczcu-uuwhn2f8dt.gz

@@ -124,7 +124,8 @@ namespace WebApplication7.Controllers
                         user.City,
                         user.Bio,
                         avatarUrl = user.AvatarUrl,
-                        avatarColor = avatarColor
+                        avatarColor = avatarColor,
+                        role = user.Role  //  Добавляем Role
                     }
                 });
             }
@@ -175,7 +176,8 @@ namespace WebApplication7.Controllers
                 City = user.City,
                 Bio = user.Bio,
                 AvatarUrl = user.AvatarUrl,
-                AvatarColor = user.AvatarColor // Возвращаем цвет
+                AvatarColor = user.AvatarColor, // Возвращаем цвет
+                Role = user.Role // Добавляем Role
             };
         }
         [HttpPost("update-profile")]

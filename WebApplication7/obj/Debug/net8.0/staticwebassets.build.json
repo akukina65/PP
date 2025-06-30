@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eCxGnqnyJo+fTElIij1DxTHn5xxTVniJ6kc0SB1mmIw=",
+  "Hash": "EBDbiC3ziQ+XLFa44GVAbDRZ/rG6phRU56Za1EiQfDQ=",
   "Source": "Корпоративная платформа обучения",
   "BasePath": "_content/Корпоративная платформа обучения",
   "Mode": "Default",
@@ -57,6 +57,90 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\emcc-props.json"
+    },
+    {
+      "Identity": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\a41c3391-0473-487d-88a8-a3ae0786672d.jpg",
+      "SourceId": "Корпоративная платформа обучения",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\",
+      "BasePath": "_content/Корпоративная платформа обучения",
+      "RelativePath": "uploads/images/a41c3391-0473-487d-88a8-a3ae0786672d#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gwcoj53u5q",
+      "Integrity": "sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\images\\a41c3391-0473-487d-88a8-a3ae0786672d.jpg"
+    },
+    {
+      "Identity": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\ddd4d7bb-0f42-495e-83c4-72188e721304.jpg",
+      "SourceId": "Корпоративная платформа обучения",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\",
+      "BasePath": "_content/Корпоративная платформа обучения",
+      "RelativePath": "uploads/images/ddd4d7bb-0f42-495e-83c4-72188e721304#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gwcoj53u5q",
+      "Integrity": "sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\images\\ddd4d7bb-0f42-495e-83c4-72188e721304.jpg"
+    },
+    {
+      "Identity": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\e503ac65-a9a1-4f1b-be9b-c97dfd196f05.jpg",
+      "SourceId": "Корпоративная платформа обучения",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\",
+      "BasePath": "_content/Корпоративная платформа обучения",
+      "RelativePath": "uploads/images/e503ac65-a9a1-4f1b-be9b-c97dfd196f05#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gwcoj53u5q",
+      "Integrity": "sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\images\\e503ac65-a9a1-4f1b-be9b-c97dfd196f05.jpg"
+    },
+    {
+      "Identity": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\15e1777f-8283-4948-84e9-fb3e5bf10152.mp4",
+      "SourceId": "Корпоративная платформа обучения",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\",
+      "BasePath": "_content/Корпоративная платформа обучения",
+      "RelativePath": "uploads/videos/15e1777f-8283-4948-84e9-fb3e5bf10152#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lpxy3x1ye5",
+      "Integrity": "KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\videos\\15e1777f-8283-4948-84e9-fb3e5bf10152.mp4"
     },
     {
       "Identity": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\web.config",
@@ -6857,6 +6941,334 @@
         {
           "Name": "integrity",
           "Value": "sha256-EDndcUl06UUgbB5x0DTQqfgwLv4TZo64Ka6aUqdbGTs="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/images/a41c3391-0473-487d-88a8-a3ae0786672d.gwcoj53u5q.jpg",
+      "AssetFile": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\a41c3391-0473-487d-88a8-a3ae0786672d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173957"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 19:25:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gwcoj53u5q"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/images/a41c3391-0473-487d-88a8-a3ae0786672d.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/images/a41c3391-0473-487d-88a8-a3ae0786672d.jpg",
+      "AssetFile": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\a41c3391-0473-487d-88a8-a3ae0786672d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173957"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 19:25:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/images/ddd4d7bb-0f42-495e-83c4-72188e721304.gwcoj53u5q.jpg",
+      "AssetFile": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\ddd4d7bb-0f42-495e-83c4-72188e721304.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173957"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 19:24:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gwcoj53u5q"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/images/ddd4d7bb-0f42-495e-83c4-72188e721304.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/images/ddd4d7bb-0f42-495e-83c4-72188e721304.jpg",
+      "AssetFile": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\ddd4d7bb-0f42-495e-83c4-72188e721304.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173957"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 19:24:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/images/e503ac65-a9a1-4f1b-be9b-c97dfd196f05.gwcoj53u5q.jpg",
+      "AssetFile": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\e503ac65-a9a1-4f1b-be9b-c97dfd196f05.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173957"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 19:40:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gwcoj53u5q"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/images/e503ac65-a9a1-4f1b-be9b-c97dfd196f05.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/images/e503ac65-a9a1-4f1b-be9b-c97dfd196f05.jpg",
+      "AssetFile": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\e503ac65-a9a1-4f1b-be9b-c97dfd196f05.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173957"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 19:40:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/videos/15e1777f-8283-4948-84e9-fb3e5bf10152.lpxy3x1ye5.mp4",
+      "AssetFile": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\15e1777f-8283-4948-84e9-fb3e5bf10152.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "339025"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 19:45:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lpxy3x1ye5"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/videos/15e1777f-8283-4948-84e9-fb3e5bf10152.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/videos/15e1777f-8283-4948-84e9-fb3e5bf10152.mp4",
+      "AssetFile": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\15e1777f-8283-4948-84e9-fb3e5bf10152.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "339025"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 19:45:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY="
         }
       ]
     },

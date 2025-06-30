@@ -1,136 +1,173 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 using WebApplication7.Models;
+using Microsoft.EntityFrameworkCore; // Для методов расширения EF Core
+using System.Linq;
 
-namespace WebApplication7.Controllers
+[ApiController]
+[Route("api/[controller]")]
+[Authorize]
+public class LessonsController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class lessons : ControllerBase
+    private readonly DataContext _context;
+
+    public LessonsController(DataContext context)
     {
-        private readonly DataContext _context;
+        _context = context;
+    }
 
-        public lessons(DataContext context)
+    [HttpGet("{id}")]
+    public async Task<ActionResult<SuperLesson>> GetLesson(int id)
+    {
+        var lesson = await _context.superlessons.FindAsync(id);
+        if (lesson == null) return NotFound();
+
+        var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+        var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
+
+        // Админы видят все
+        if (userRole == "admin") return lesson;
+
+        // Учителя видят свои курсы
+        if (userRole == "teacher")
         {
-            _context = context;
-        }
-        [HttpGet]
-        public async Task<ActionResult<List<LessonWithTRewDTO>>> getAllquizzes()
-        {
-            var courses = await (from c in _context.superlessons
-                                 join t in _context.supercourse on c.id_courses equals t.Id
-                                 select new LessonWithTRewDTO
-                                 {
-                                     Id = c.Id,
-                                     Course = t.title,
-                                     lessonname = c.lessonname,
-                                     lessondescription = c.lessondescription,
-                                     lessoncontent = c.lessoncontent,
-                                     quantity = c.quantity,
-                                 }).ToListAsync();
-
-            return Ok(courses);
-        }
-        //[HttpGet("{id}")]
-
-        //public async Task<ActionResult<List<lessonsP>>> getquizzes(int id)
-        //{
-
-
-        //    var course = await _context.superlessons.FindAsync(id);
-        //    if (course == null)
-        //        return BadRequest("Тест не найден");
-        //    return Ok(course);
-        //}
-        [HttpPost]
-        public async Task<IActionResult> CreateCourse(superlesson course)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            try
-            {
-                _context.superlessons.Add(course);
-                await _context.SaveChangesAsync();
-
-                return CreatedAtAction(nameof(GetLessonById), new { id = course.Id }, course);
-            }
-            catch (Exception ex)
-            {
-                // Log the exception (use a proper logging framework in production)
-                return StatusCode(500, "Внутренняя ошибка сервера");
-            }
-        }
-        [HttpGet("{id}")]
-        public async Task<ActionResult<superlesson>> GetLessonById(int id)
-        {
-            var lesson = await _context.superlessons.FindAsync(id);
-
-            if (lesson == null)
-            {
-                return NotFound();
-            }
-
-            return lesson;
+            var isOwner = await _context.supercourse
+                .AnyAsync(c => c.Id == lesson.id_courses && c.id_teacher == userId);
+            if (isOwner) return lesson;
         }
 
+        // Студенты видят купленные курсы
+        var hasAccess = await _context.superpurchases
+            .AnyAsync(p => p.id_courses == lesson.id_courses &&
+                         _context.superorders.Any(o => o.Id == p.id_orders && o.id_users == userId));
 
-        //[HttpPost]
-        //public async Task<ActionResult<List<lessonsP>>> Addquizzes(lessonsP quizzes)
-        //{
+        return hasAccess ? Ok(lesson) : Forbid();
+    }
 
+    [HttpPost]
+    [Authorize(Roles = "teacher,admin")]
+    public async Task<ActionResult<SuperLesson>> CreateLesson(SuperLesson lesson)
+    {
+        var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+        var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
 
-        //    _context.superlessons.Add(quizzes);
-        //    await _context.SaveChangesAsync();
-
-        //    return Ok(await _context.superlessons.ToListAsync());
-        //}
-        [HttpPut]
-        public async Task<ActionResult<superlesson>> Updatecourse(superlesson updatedCourse)
+        // Для админа не проверяем владение курсом
+        if (userRole != "admin")
         {
+            // Проверка существования курса и принадлежности преподавателю
+            var courseExists = await _context.supercourse
+                .AnyAsync(c => c.Id == lesson.id_courses && c.id_teacher == userId);
 
-
-            var dbcourse = await _context.superlessons.FindAsync(updatedCourse.Id);
-            if (dbcourse == null)
-                return NotFound("Урок не найден");
-            dbcourse.id_courses = updatedCourse.id_courses;
-            dbcourse.lessonname = updatedCourse.lessonname;
-            dbcourse.lessondescription = updatedCourse.lessondescription;
-            dbcourse.lessoncontent = updatedCourse.lessoncontent;
-            dbcourse.quantity = updatedCourse.quantity;
-            await _context.SaveChangesAsync();
-            return NoContent();
+            if (!courseExists)
+                return Forbid();
         }
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<superlesson>> DeleteCourse(int id)
+
+        _context.superlessons.Add(lesson);
+        await _context.SaveChangesAsync();
+
+        return CreatedAtAction(nameof(GetLesson), new { id = lesson.Id }, lesson);
+    }
+
+    [HttpPut("{id}")]
+    [Authorize(Roles = "teacher,admin")]
+    public async Task<IActionResult> UpdateLesson(int id, SuperLesson updatedLesson)
+    {
+        var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+        var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
+
+        // Получаем существующий урок
+        var existingLesson = await _context.superlessons.FindAsync(id);
+        if (existingLesson == null)
+            return NotFound();
+
+        // Для админа не проверяем владение курсом
+        if (userRole != "admin")
         {
-            var course = await _context.superlessons.FindAsync(id);
+            // Проверяем принадлежность курса преподавателю
+            var courseBelongsToTeacher = await _context.supercourse
+                .AnyAsync(c => c.Id == existingLesson.id_courses && c.id_teacher == userId);
 
-            if (course == null)
-            {
-                return NotFound(); // Return 404 Not Found if the course doesn't exist
-            }
-
-            try
-            {
-                _context.superlessons.Remove(course);
-                await _context.SaveChangesAsync();
-                return NoContent(); // Return 204 No Content to indicate successful deletion
-            }
-            catch (DbUpdateConcurrencyException ex)
-            {
-                // Handle concurrency exceptions (e.g., optimistic concurrency)
-                // Log the exception and return a 409 Conflict response
-                return Conflict("Конфликт данных. Урок был изменен.");
-            }
-            catch (Exception ex)
-            {
-                // Log other exceptions (use a proper logging framework)
-                return StatusCode(500, "Внутренняя ошибка сервера");
-            }
+            if (!courseBelongsToTeacher)
+                return Forbid();
         }
+
+        // Обновляем поля
+        existingLesson.lessonname = updatedLesson.lessonname;
+        existingLesson.lessondescription = updatedLesson.lessondescription;
+        existingLesson.lessoncontent = updatedLesson.lessoncontent;
+        existingLesson.quantity = updatedLesson.quantity;
+
+        await _context.SaveChangesAsync();
+
+        return NoContent();
+    }
+
+    [HttpPost("upload/image")]
+    [Authorize(Roles = "teacher,admin")]
+    [RequestSizeLimit(10_000_000)] // 10MB
+    public async Task<ActionResult<string>> UploadImage(IFormFile file)
+    {
+        if (file == null || file.Length == 0)
+            return BadRequest("Файл не выбран");
+
+        // Проверка типа файла
+        var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".webp" };
+        var fileExtension = Path.GetExtension(file.FileName).ToLower();
+        if (!allowedExtensions.Contains(fileExtension))
+            return BadRequest("Недопустимый формат изображения");
+
+        try
+        {
+            // Создаем папку для изображений, если ее нет
+            var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "images");
+            if (!Directory.Exists(uploadsFolder))
+                Directory.CreateDirectory(uploadsFolder);
+
+            // Генерируем уникальное имя файла
+            var uniqueFileName = Guid.NewGuid().ToString() + fileExtension;
+            var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+            // Сохраняем файл
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+
+            // Возвращаем URL для доступа к файлу
+            return Ok($"/uploads/images/{uniqueFileName}");
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, $"Ошибка при загрузке изображения: {ex.Message}");
+        }
+    }
+
+    [HttpPost("upload/video")]
+    [Authorize(Roles = "teacher,admin")]
+    [RequestSizeLimit(50_000_000)] // 50MB
+    public async Task<ActionResult<string>> UploadVideo(IFormFile file)
+    {
+        if (file == null || file.Length == 0)
+            return BadRequest("Файл не выбран");
+
+        var allowedExtensions = new[] { ".mp4", ".mov", ".avi", ".mkv", ".webm" };
+        var fileExtension = Path.GetExtension(file.FileName).ToLower();
+        if (!allowedExtensions.Contains(fileExtension))
+            return BadRequest("Недопустимый формат видео");
+
+        var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "videos");
+        if (!Directory.Exists(uploadsFolder))
+            Directory.CreateDirectory(uploadsFolder);
+
+        var uniqueFileName = Guid.NewGuid().ToString() + fileExtension;
+        var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+        using (var stream = new FileStream(filePath, FileMode.Create))
+        {
+            await file.CopyToAsync(stream);
+        }
+
+        return Ok($"/uploads/videos/{uniqueFileName}");
     }
 }

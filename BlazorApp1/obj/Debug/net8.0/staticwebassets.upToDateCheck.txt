@@ -2,8 +2,12 @@ wwwroot\css\app.css
 wwwroot\css\Avatar.css
 wwwroot\css\bootstrap\bootstrap.min.css
 wwwroot\css\bootstrap\bootstrap.min.css.map
+wwwroot\css\CourseGlav.css
 wwwroot\css\courses.css
+wwwroot\css\CoursesByCategory.css
 wwwroot\css\glav.css
+wwwroot\css\LesonPage.css
+wwwroot\css\LessonContent.css
 wwwroot\css\Login.css
 wwwroot\css\Profil.css
 wwwroot\css\register.css

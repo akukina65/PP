@@ -4,10 +4,8 @@
 @inject AuthenticationStateProvider AuthStateProvider
 @inject HttpClient Http
 @inject NavigationManager NavManager
-@using System.Security.Claims
 
 <link href="css/courses.css" rel="stylesheet" />
-
 <CascadingAuthenticationState>
     <AuthorizeView>
         <Authorized>
@@ -21,6 +19,14 @@
 
                 <div class="courses-header">
                     <h1><i class="fas fa-book"></i> Мои курсы</h1>
+                    @if (isAdmin)
+                    {
+                        <span class="badge badge-admin">Режим администратора</span>
+                    }
+                    else if (isTeacher)
+                    {
+                        <span class="badge badge-teacher">Режим преподавателя</span>
+                    }
                 </div>
 
                 @if (isLoading)
@@ -33,8 +39,11 @@
                 {
                     <div class="no-courses">
                         <img src="/images/empty-courses.png" alt="Нет курсов" />
-                        <h3>У вас пока нет созданных курсов</h3>
-                        <p>Обратитесь к администратору, чтобы добавить курсы</p>
+                        <h3>@(isStudent ? "У вас пока нет купленных курсов" : "У вас пока нет созданных курсов")</h3>
+                        <p>@(isStudent ? "Посетите каталог курсов, чтобы выбрать интересующие вас курсы" : "Создайте новый курс")</p>
+                        <button class="btn btn-primary" @onclick="NavigateToCatalog">
+                            @(isStudent ? "Перейти в каталог" : "Создать курс")
+                        </button>
                     </div>
                 }
                 else
@@ -47,7 +56,7 @@
                                     <div class="image-overlay"></div>
                                     <img src="@course.ImageUrl" alt="@course.Title" />
                                     <div class="course-badge">
-                                        <i class="fas fa-graduation-cap"></i>
+                                        <i class="fas @(isAdmin ? "fa-shield-alt" : isTeacher ? "fa-chalkboard-teacher" : "fa-graduation-cap")"></i>
                                     </div>
                                 </div>
                                 <div class="course-info">
@@ -55,13 +64,18 @@
                                     <p>@course.Description</p>
                                     <div class="course-meta">
                                         <span><i class="fas fa-clock"></i> @course.Duration недель</span>
-                                        <span><i class="fas fa-user"></i> @(new Random().Next(15, 150)) студентов</span>
+                                        <span><i class="fas fa-user"></i> @course.StudentsCount студентов</span>
+                                        @if (isAdmin || isTeacher)
+                                        {
+                                            <span><i class="fas fa-star"></i> @course.Rating/5</span>
+                                        }
                                     </div>
                                 </div>
                                 <div class="course-actions">
                                     <button class="btn-outline" @onclick="() => OpenCourse(course.Id)">
                                         <i class="fas fa-door-open"></i> Перейти к курсу
                                     </button>
+                                   
                                 </div>
                             </div>
                         }
@@ -79,9 +93,12 @@
 </CascadingAuthenticationState>
 
 @code {
-    private List<MyCourseDto> courses = new();
+    private List<CourseDto> courses = new();
     private bool isLoading = true;
     private string errorMessage;
+    private bool isStudent = true;
+    private bool isTeacher = false;
+    private bool isAdmin = false;
 
     protected override async Task OnInitializedAsync()
     {
@@ -92,33 +109,39 @@
 
             if (user.Identity?.IsAuthenticated == true)
             {
-                await LoadCourses();
-            }
-            else
-            {
-                errorMessage = "Пользователь не аутентифицирован";
-            }
-        }
-        catch (Exception ex)
-        {
-            errorMessage = $"Ошибка инициализации: {ex.Message}";
-        }
-        finally
-        {
-            isLoading = false;
-        }
-    }
+                isStudent = user.IsInRole("student");
+                isTeacher = user.IsInRole("teacher");
+                isAdmin = user.IsInRole("admin");
 
-    private async Task LoadCourses()
-    {
-        try
-        {
-            isLoading = true;
-            courses = await Http.GetFromJsonAsync<List<MyCourseDto>>("api/Courses/my-courses");
+                Console.WriteLine($"Roles - Student: {isStudent}, Teacher: {isTeacher}, Admin: {isAdmin}");
+
+                string endpoint = isAdmin ? "api/Courses/all" :
+                                  isTeacher ? "api/Courses/my-teaching" :
+                                  "api/Courses/my-purchased";
+
+                Console.WriteLine($"Using endpoint: {endpoint}");
+
+                var request = new HttpRequestMessage(HttpMethod.Get, endpoint);
+                request.Headers.Add("X-Requested-With", "XMLHttpRequest");
+
+                var response = await Http.SendAsync(request);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    courses = await response.Content.ReadFromJsonAsync<List<CourseDto>>();
+                    Console.WriteLine($"Received {courses?.Count ?? 0} courses");
+                }
+                else
+                {
+                    errorMessage = $"Ошибка: {response.StatusCode}";
+                    Console.WriteLine(errorMessage);
+                }
+            }
         }
         catch (Exception ex)
         {
-            errorMessage = $"Ошибка загрузки курсов: {ex.Message}";
+            errorMessage = ex.Message;
+            Console.WriteLine($"Exception: {ex}");
         }
         finally
         {
@@ -131,17 +154,37 @@
         NavManager.NavigateTo("/login");
     }
 
+    private void NavigateToCatalog()
+    {
+        NavManager.NavigateTo(isStudent ? "/courses" : "/courses/new");
+    }
+
     private void OpenCourse(int courseId)
     {
         NavManager.NavigateTo($"/course/{courseId}");
     }
 
-    public class MyCourseDto
+    private void EditCourse(int courseId)
+    {
+        NavManager.NavigateTo($"/courses/edit/{courseId}");
+    }
+
+    public class CourseDto
     {
         public int Id { get; set; }
-        public string Title { get; set; } = string.Empty;
-        public string Description { get; set; } = string.Empty;
+        public string Title { get; set; }
+        public string Description { get; set; }
         public int Duration { get; set; }
-        public string ImageUrl { get; set; } = string.Empty;
+        public string ImageUrl { get; set; }
+        public int StudentsCount { get; set; }
+        public double Rating { get; set; }
+        public int TeacherId { get; set; }
+        public string TeacherName { get; set; }
+    }
+
+    public class UserDto
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }
