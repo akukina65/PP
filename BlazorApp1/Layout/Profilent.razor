@@ -12,17 +12,18 @@
 
 <link href="css/Profil.css?v=3.0" rel="stylesheet" />
 
-
 <CascadingAuthenticationState>
     <AuthorizeView>
         <Authorized>
+            <!-- Добавленная кнопка "На главную" в стиле примера -->
+            <button class="btn-home" @onclick="NavigateToHome">
+                <i class="fas fa-home"></i> На главную
+            </button>
+
             <div class="profile-container">
                 <!-- Заголовок с градиентом -->
                 <div class="profile-header bg-gradient">
                     <h1><i class="fas fa-user-cog"></i> Настройки автора</h1>
-                    <div class="back-link" @onclick="NavigateToHome">
-                        <i class="fas fa-arrow-left"></i> На главную
-                    </div>
                 </div>
 
                 <!-- Уведомление -->
@@ -162,10 +163,63 @@
     </AuthorizeView>
 </CascadingAuthenticationState>
 
+<style>
+    /* Стили для кнопки "На главную" как в примере */
+    .btn-home {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        padding: 10px 15px;
+        background-color: #4e73df;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        z-index: 100;
+    }
 
+        .btn-home:hover {
+            background-color: #2e59d9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .btn-home:active {
+            transform: translateY(0);
+        }
+
+    /* Адаптивность для мобильных */
+
+
+    {
+        top: 10px;
+        left: 10px;
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    }
+
+    /* Остальные существующие стили */
+    .profile-container {
+        /* ... */
+    }
+
+    .profile-header {
+        /* ... */
+    }
+
+    /* ... и так далее ... */
+</style>
 
 @code {
-  
     private string fullName = "";
     private string email = "";
     private string avatarUrl = "";
@@ -201,7 +255,6 @@
 
         if (user.Identity?.IsAuthenticated == true)
         {
-            // Загружаем цвет из claims
             avatarColor = user.FindFirst("AvatarColor")?.Value ?? "#3498db";
 
             profileModel = new ProfileModel
@@ -221,8 +274,6 @@
         }
     }
 
-
-
     private string GetInitials(string fullName)
     {
         if (string.IsNullOrEmpty(fullName)) return "??";
@@ -232,8 +283,6 @@
 
         string first = parts[0][0].ToString();
         string last = parts.Length > 1 ? parts[^1][0].ToString() : "";
-
-        // Добавляем инициал отчества, если есть
         string patronymicInitial = parts.Length > 2 ? parts[1][0].ToString() : "";
 
         return $"{first}{last}{patronymicInitial}".ToUpper();
@@ -278,7 +327,7 @@
             ShowNotification($"Ошибка: {ex.Message}", false);
         }
     }
-    // Обновленный класс для десериализации ответа
+
     private class UpdateResult
     {
         public string message { get; set; }
@@ -288,7 +337,7 @@
         {
             public string name { get; set; }
             public string surname { get; set; }
-            public string patronymic { get; set; } // Добавлено
+            public string patronymic { get; set; }
             public string email { get; set; }
             public string City { get; set; }
             public string Bio { get; set; }
@@ -302,7 +351,6 @@
         isSuccess = success;
         showNotification = true;
 
-        // Автоматическое скрытие через 3 секунды
         Task.Delay(3000).ContinueWith(_ =>
         {
             showNotification = false;
@@ -312,7 +360,6 @@
 
     private void CancelEditing()
     {
-        // Восстанавливаем оригинальные значения
         var nameParts = fullName.Split(' ', 2);
         string firstName = nameParts.Length > 0 ? nameParts[0] : "";
         string lastName = nameParts.Length > 1 ? nameParts[1] : "";

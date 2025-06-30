@@ -21,7 +21,7 @@
                     <nav class="nav">
                         <NavLink href="/glav" class="nav-link active">Главная</NavLink>
                         <NavLink href="/courses" class="nav-link">Курсы</NavLink>
-                        <NavLink href="/shop" class="nav-link">Магазин</NavLink>
+                        
                         <NavLink href="/cart" class="nav-link">Корзина</NavLink>
                     </nav>
 
@@ -123,7 +123,7 @@
                         </div>
                         <div class="mobile-menu-item" @onclick="NavigateToProfile">Мой профиль</div>
                         <div class="mobile-menu-item" @onclick="NavigateToAvatarSettings">Настройка аватара</div>
-                        <div class="mobile-menu-item" @onclick="NavigateToGoals">Цели и достижения</div>
+                        
                         <div class="mobile-menu-divider"></div>
                         <div class="mobile-menu-item logout" @onclick="Logout">Выход</div>
                     </div>
@@ -192,7 +192,7 @@
     <div class="container">
         <div class="section-header">
             <h2>Выбери любимый курс по категориям</h2>
-            <a href="/categories" class="link-more">Все категории <span class="icon">→</span></a>
+           
         </div>
 
         <div class="categories-grid">
@@ -219,79 +219,7 @@
     </div>
 </div>
 
-<div class="section bg-light">
-    <div class="container">
-        <div class="section-header">
-            <h2>Популярные курсы</h2>
-            <a href="/courses" class="link-more">Все курсы <span class="icon">→</span></a>
-        </div>
 
-        <div class="courses-grid">
-            <div class="course-card">
-                <div class="course-badge">Хит</div>
-                <div class="course-image">
-                    <img src="/images/web-dev.png" alt="Веб-разработка" />
-                </div>
-                <div class="course-info">
-                    <div class="course-meta">
-                        <span class="level">Начальный</span>
-                        <span class="rating">
-                            <span class="icon">★</span> 4.8
-                        </span>
-                    </div>
-                    <h3>Веб-разработка</h3>
-                    <p>Создание современных веб-приложений</p>
-                    <div class="course-footer">
-                        <span class="duration">12 недель</span>
-                        <span class="price">18 900 ₽</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div class="course-badge">Новинка</div>
-                <div class="course-image">
-                    <img src="/images/data-science.png" alt="Анализ данных" />
-                </div>
-                <div class="course-info">
-                    <div class="course-meta">
-                        <span class="level">Средний</span>
-                        <span class="rating">
-                            <span class="icon">★</span> 4.7
-                        </span>
-                    </div>
-                    <h3>Анализ данных</h3>
-                    <p>Работа с большими данными и визуализация</p>
-                    <div class="course-footer">
-                        <span class="duration">10 недель</span>
-                        <span class="price">21 500 ₽</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div class="course-badge">Рекомендуем</div>
-                <div class="course-image">
-                    <img src="/images/design.png" alt="UI/UX Дизайн" />
-                </div>
-                <div class="course-info">
-                    <div class="course-meta">
-                        <span class="level">Начальный</span>
-                        <span class="rating">
-                            <span class="icon">★</span> 4.9
-                        </span>
-                    </div>
-                    <h3>UI/UX Дизайн</h3>
-                    <p>Создание удобных интерфейсов</p>
-                    <div class="course-footer">
-                        <span class="duration">8 недель</span>
-                        <span class="price">16 800 ₽</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="section">
     <div class="container">

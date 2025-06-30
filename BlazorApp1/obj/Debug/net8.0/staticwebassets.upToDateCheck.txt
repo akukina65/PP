@@ -33,6 +33,7 @@ wwwroot\images\courses\course-dev.png
 wwwroot\images\courses\course-language.png
 wwwroot\images\courses\course-marketing.png
 wwwroot\images\courses\course-science.png
+wwwroot\images\empty-cart.png
 wwwroot\images\image1.png
 wwwroot\images\student.png
 wwwroot\index.html

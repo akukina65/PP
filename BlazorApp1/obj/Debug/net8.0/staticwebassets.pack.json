@@ -149,6 +149,10 @@
       "PackagePath": "staticwebassets\\images\\courses\\course-science.png"
     },
     {
+      "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\empty-cart.png",
+      "PackagePath": "staticwebassets\\images\\empty-cart.png"
+    },
+    {
       "Id": "D:\\проект еще раз\\PP\\BlazorApp1\\wwwroot\\images\\image1.png",
       "PackagePath": "staticwebassets\\images\\image1.png"
     },

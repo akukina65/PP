@@ -64,16 +64,23 @@ builder.Services.AddAuthorizationCore(options =>
 builder.Services.AddDataProtection()
     .SetApplicationName("BlazorApp")
     .PersistKeysToFileSystem(new DirectoryInfo("./keys"));
-
+builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
 var app = builder.Build();
+app.UseStaticFiles();
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(
-        Path.Combine(builder.Environment.ContentRootPath, "wwwroot", "uploads")),
+        Path.Combine(builder.Environment.WebRootPath, "uploads")),
     RequestPath = "/uploads",
     OnPrepareResponse = ctx =>
     {
-        // Проверяем авторизацию для доступа к файлам
+        // Для разработки разрешаем доступ без аутентификации
+        if (builder.Environment.IsDevelopment())
+        {
+            return;
+        }
+
+        // На продакшене проверяем аутентификацию
         if (!ctx.Context.User.Identity.IsAuthenticated)
         {
             ctx.Context.Response.StatusCode = 401;

@@ -1,5 +1,4 @@
-﻿
-@page "/cart"
+﻿@page "/cart"
 @layout MainLayout
 @using Microsoft.AspNetCore.Components.Authorization
 @inject AuthenticationStateProvider AuthStateProvider
@@ -7,71 +6,110 @@
 @inject HttpClient Http
 @inject NavigationManager NavManager
 @inject IJSRuntime JSRuntime
-<CascadingAuthenticationState>
-<AuthorizeView>
-    <Authorized>
-        <div class="cart-container">
-            <h2><i class="fas fa-shopping-cart"></i> Ваша корзина</h2>
 
-            @if (ShoppingCart.Items.Count == 0)
-            {
-                <div class="empty-cart">
-                    <img src="/images/empty-cart.png" alt="Корзина пуста" />
-                    <h3>Ваша корзина пуста</h3>
-                    <p>Добавьте курсы из каталога</p>
-                    <button class="btn btn-primary" @onclick="NavigateToCourses">
-                        Перейти к курсам
-                    </button>
+<CascadingAuthenticationState>
+    <AuthorizeView>
+        <Authorized>
+            <div class="cart-container">
+                <!-- Кнопка "На главную" -->
+                <button class="home-button" @onclick="NavigateToHome">
+                    <i class="fas fa-home"></i> На главную
+                </button>
+
+                <div class="cart-header">
+                    <h2><i class="fas fa-shopping-cart"></i> Ваша корзина</h2>
+                    <div class="cart-count">@ShoppingCart.Items.Count @GetItemsCountText(ShoppingCart.Items.Count)</div>
                 </div>
-            }
-            else
-            {
-                <div class="cart-items">
-                    @foreach (var item in ShoppingCart.Items)
-                    {
-                        <div class="cart-item">
-                            <div class="item-image">
-                                <img src="@item.ImageUrl" alt="@item.Title" />
-                            </div>
-                            <div class="item-info">
-                                <h3>@item.Title</h3>
-                                <p>@item.Description</p>
-                                <div class="item-meta">
-                                    <span><i class="fas fa-clock"></i> @item.Duration недель</span>
-                                    <span class="price">@item.DiscountedPrice.ToString("N0") ₽</span>
+
+                @if (ShoppingCart.Items.Count == 0)
+                {
+                    <div class="empty-cart">
+                        <img src="/images/empty-cart.png" alt="Корзина пуста" class="empty-cart-img" />
+                        <h3>Ваша корзина пуста</h3>
+                        <p>Начните обучение - добавьте курсы из каталога</p>
+                        <button class="btn btn-primary btn-catalog" @onclick="NavigateToCourses">
+                            <i class="fas fa-book-open"></i> Перейти к курсам
+                        </button>
+                    </div>
+                }
+                else
+                {
+                    <div class="cart-items">
+                        @foreach (var item in ShoppingCart.Items)
+                        {
+                            <div class="cart-item card-hover">
+                                <div class="item-image">
+                                    <img src="@item.ImageUrl" alt="@item.Title" />
+                                    <div class="item-badge">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="item-info">
+                                    <h3>@item.Title</h3>
+                                    <p class="item-description">@item.Description</p>
+                                    <div class="item-meta">
+                                        <span class="duration"><i class="fas fa-clock"></i> @item.Duration недель</span>
+                                        <div class="price-container">
+                                            @if (item.DiscountedPrice < item.Price)
+                                            {
+                                                <span class="original-price">@($"{item.Price.ToString("N0")} руб.")</span>
+                                            }
+                                            <span class="price">@($"{item.DiscountedPrice.ToString("N0")} руб.")</span>
+                                        </div>
+                                    </div>
+                                </div>
                                 <button class="remove-btn" @onclick="() => RemoveItem(item.Id)" title="Удалить из корзины">
                                     <i class="fas fa-trash"></i>
-                                    <span class="remove-text">Удалить</span>
                                 </button>
-                        </div>
-                    }
-                </div>
-
-                <div class="cart-summary">
-                    <div class="total">
-                        <span>Итого:</span>
-                        <span class="total-price">@ShoppingCart.Items.Sum(i => i.DiscountedPrice).ToString("N0") ₽</span>
+                            </div>
+                        }
                     </div>
-                    <button class="btn btn-primary checkout-btn" @onclick="Checkout">
-                        Оформить заказ
+
+                    <div class="cart-summary">
+                        <div class="summary-card">
+                            <div class="summary-row">
+                                <span>Товары (@ShoppingCart.Items.Count)</span>
+                                <span>@($"{ShoppingCart.Items.Sum(i => i.Price).ToString("N0")} руб.")</span>
+                            </div>
+                            <div class="summary-row discount">
+                                <span>Скидка</span>
+                                <span>-@($"{ShoppingCart.Items.Sum(i => i.Price - i.DiscountedPrice).ToString("N0")} руб.")</span>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="summary-row total">
+                                <span>Итого</span>
+                                <span class="total-price">@($"{ShoppingCart.Items.Sum(i => i.DiscountedPrice).ToString("N0")} руб.")</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary checkout-btn" @onclick="Checkout">
+                            <i class="fas fa-credit-card"></i> Оформить заказ
+                        </button>
+                        <div class="secure-payment">
+                            <i class="fas fa-lock"></i>
+                            <span>Безопасная оплата</span>
+                        </div>
+                    </div>
+                }
+            </div>
+        </Authorized>
+        <NotAuthorized>
+            <div class="auth-required">
+                <div class="auth-card">
+                    <i class="fas fa-lock auth-icon"></i>
+                    <h3>Для оформления заказа необходимо войти в систему</h3>
+                    <p>Войдите, чтобы увидеть свои курсы и продолжить обучение</p>
+                    <button class="btn btn-primary" @onclick="NavigateToLogin">
+                        <i class="fas fa-sign-in-alt"></i> Войти
                     </button>
+                    <div class="auth-links">
+                        <a href="/register">Ещё нет аккаунта? Зарегистрируйтесь</a>
+                    </div>
                 </div>
-            }
-        </div>
-
-    </Authorized>
-    <NotAuthorized>
-        <div class="auth-required">
-            <h3>Для оформления заказа необходимо войти в систему</h3>
-            <button class="btn btn-primary" @onclick="NavigateToLogin">Войти</button>
-        </div>
-
-
-    </NotAuthorized>
-</AuthorizeView>
+            </div>
+        </NotAuthorized>
+    </AuthorizeView>
 </CascadingAuthenticationState>
+
 @code {
     protected override void OnInitialized()
     {
@@ -82,8 +120,14 @@
     {
         ShoppingCart.OnChange -= StateHasChanged;
     }
-    
-    
+
+    private string GetItemsCountText(int count)
+    {
+        if (count % 10 == 1 && count % 100 != 11) return "товар";
+        if (count % 10 >= 2 && count % 10 <= 4 && (count % 100 < 10 || count % 100 >= 20)) return "товара";
+        return "товаров";
+    }
+
     private void RemoveItem(int courseId)
     {
         ShoppingCart.RemoveFromCart(courseId);
@@ -103,7 +147,7 @@
             if (result)
             {
                 await JSRuntime.InvokeVoidAsync("alert", "Заказ оформлен!");
-                NavManager.NavigateTo("/orders");
+                
             }
             else
             {
@@ -117,6 +161,11 @@
         }
     }
 
+    private void NavigateToHome()
+    {
+        NavManager.NavigateTo("/");
+    }
+
     private void NavigateToCourses()
     {
         NavManager.NavigateTo("/courses");
@@ -128,139 +177,380 @@
     }
 }
 
-
-        <style>
+<style>
+    /* Основные стили */
     .cart-container {
-        max-width: 800px;
+        max-width: 1000px;
         margin: 0 auto;
-        padding: 20px;
+        padding: 2rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .empty-cart {
-        text-align: center;
-        padding: 40px 0;
-    }
-
-        .empty-cart img {
-            max-width: 200px;
-            margin-bottom: 20px;
-        }
-
-    .remove-btn {
-        background: #ffebee;
-        border: 1px solid #ef9a9a;
-        color: #c62828;
+    /* Кнопка "На главную" */
+    .home-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        padding: 0.75rem 1.25rem;
+        background-color: #4e73df;
+        color: white;
+        border: none;
+        border-radius: 50px;
         cursor: pointer;
-        padding: 8px 12px;
-        border-radius: 4px;
         font-size: 14px;
-        transition: all 0.3s ease;
-        position: absolute;
-        right: 15px;
-        top: 15px;
+        font-weight: 500;
         display: flex;
         align-items: center;
-        gap: 6px;
+        gap: 8px;
+        box-shadow: 0 2px 10px rgba(78, 115, 223, 0.3);
+        transition: all 0.3s ease;
+        z-index: 100;
     }
 
-        .remove-btn:hover {
-            background: #ef9a9a;
-            color: white;
+        .home-button:hover {
+            background-color: #2e59d9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(78, 115, 223, 0.4);
         }
 
-        .remove-btn .remove-text {
-            display: inline-block;
+    /* Заголовок корзины */
+    .cart-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+        .cart-header h2 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .remove-btn i {
-            font-size: 16px;
-        }
+    .cart-count {
+        background-color: #4e73df;
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    /* Пустая корзина */
+    .empty-cart {
+        text-align: center;
+        padding: 3rem 0;
+        background-color: #f9fafc;
+        border-radius: 12px;
+        margin-top: 2rem;
+    }
+
+    .empty-cart-img {
+        max-width: 250px;
+        margin-bottom: 1.5rem;
+        opacity: 0.8;
+    }
+
+    .empty-cart h3 {
+        font-size: 1.5rem;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+    }
+
+    .empty-cart p {
+        color: #7f8c8d;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-catalog {
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+        border-radius: 50px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* Элементы корзины */
     .cart-items {
-        margin-bottom: 30px;
+        margin-bottom: 2rem;
     }
 
     .cart-item {
         display: flex;
-        padding: 15px;
-        border: 1px solid #eee;
-        border-radius: 8px;
-        margin-bottom: 15px;
+        padding: 1.5rem;
+        background-color: white;
+        border-radius: 12px;
+        margin-bottom: 1rem;
         position: relative;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .card-hover:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
     .item-image {
-        width: 120px;
-        height: 80px;
-        margin-right: 15px;
+        width: 160px;
+        height: 100px;
+        margin-right: 1.5rem;
+        position: relative;
+        flex-shrink: 0;
+        border-radius: 8px;
+        overflow: hidden;
     }
 
         .item-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 4px;
         }
+
+    .item-badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 40px;
+        height: 40px;
+        background-color: #4e73df;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
 
     .item-info {
         flex-grow: 1;
     }
 
         .item-info h3 {
-            margin-top: 0;
-            margin-bottom: 5px;
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+            color: #2c3e50;
         }
 
-        .item-info p {
-            margin: 0;
-            color: #666;
-            font-size: 14px;
-        }
+    .item-description {
+        margin: 0 0 1rem 0;
+        color: #7f8c8d;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
 
     .item-meta {
-        margin-top: 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
+    .duration {
+        font-size: 0.9rem;
+        color: #7f8c8d;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .price-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .original-price {
+        text-decoration: line-through;
+        color: #95a5a6;
+        font-size: 0.9rem;
+    }
+
     .price {
         font-weight: bold;
+        font-size: 1.1rem;
         color: #2c3e50;
     }
 
     .remove-btn {
+        position: absolute;
+        right: 1.5rem;
+        top: 1.5rem;
         background: none;
         border: none;
         color: #e74c3c;
         cursor: pointer;
-        position: absolute;
-        right: 15px;
-        top: 15px;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
     }
 
+        .remove-btn:hover {
+            background-color: #ffebee;
+            transform: scale(1.1);
+        }
+
+    /* Итоговая сумма */
     .cart-summary {
-        border-top: 1px solid #eee;
-        padding-top: 20px;
-        text-align: right;
+        background-color: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .summary-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .summary-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        font-size: 0.95rem;
+    }
+
+    .discount {
+        color: #27ae60;
+    }
+
+    .divider {
+        height: 1px;
+        background-color: #f0f0f0;
+        margin: 0.5rem 0;
     }
 
     .total {
-        font-size: 18px;
-        margin-bottom: 20px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 0.75rem 0;
     }
 
     .total-price {
-        font-weight: bold;
-        margin-left: 10px;
+        font-size: 1.3rem;
+        color: #2c3e50;
     }
 
     .checkout-btn {
-        padding: 10px 30px;
-        font-size: 16px;
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition: all 0.3s ease;
     }
 
-    .auth-required {
-        text-align: center;
-        padding: 40px 0;
+        .checkout-btn:hover {
+            transform: translateY(-2px);
+        }
+
+    .secure-payment {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 1rem;
+        color: #7f8c8d;
+        font-size: 0.9rem;
     }
-        </style>
+
+    /* Не авторизован */
+    .auth-required {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60vh;
+    }
+
+    .auth-card {
+        background-color: white;
+        border-radius: 12px;
+        padding: 2.5rem;
+        text-align: center;
+        max-width: 500px;
+        width: 100%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .auth-icon {
+        font-size: 3rem;
+        color: #4e73df;
+        margin-bottom: 1.5rem;
+    }
+
+    .auth-card h3 {
+        font-size: 1.5rem;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+    }
+
+    .auth-card p {
+        color: #7f8c8d;
+        margin-bottom: 1.5rem;
+    }
+
+    .auth-links {
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+        .auth-links a {
+            color: #4e73df;
+            text-decoration: none;
+        }
+
+            .auth-links a:hover {
+                text-decoration: underline;
+            }
+
+    /* Адаптивность */
+
+
+    {
+        .cart-container
+
+    {
+        padding: 1rem;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .item-image {
+        width: 100%;
+        height: 180px;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .remove-btn {
+        top: 1rem;
+        right: 1rem;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 5px;
+    }
+
+    .home-button {
+        top: 10px;
+        left: 10px;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    }
+</style>

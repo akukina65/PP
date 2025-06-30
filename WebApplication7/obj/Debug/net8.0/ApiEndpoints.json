@@ -376,6 +376,22 @@
   },
   {
     "ContainingType": "LessonsController",
+    "Method": "DeleteLesson",
+    "RelativePath": "api/Lessons/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LessonsController",
     "Method": "UploadImage",
     "RelativePath": "api/Lessons/upload/image",
     "HttpMethod": "POST",

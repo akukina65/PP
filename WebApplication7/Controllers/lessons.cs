@@ -170,4 +170,31 @@ public class LessonsController : ControllerBase
 
         return Ok($"/uploads/videos/{uniqueFileName}");
     }
+    [HttpDelete("{id}")]
+    [Authorize(Roles = "teacher,admin")]
+    public async Task<IActionResult> DeleteLesson(int id)
+    {
+        var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+        var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
+
+        var lesson = await _context.superlessons.FindAsync(id);
+        if (lesson == null)
+            return NotFound();
+
+        // Для админа не проверяем владение курсом
+        if (userRole != "admin")
+        {
+            // Проверяем принадлежность курса преподавателю
+            var courseBelongsToTeacher = await _context.supercourse
+                .AnyAsync(c => c.Id == lesson.id_courses && c.id_teacher == userId);
+
+            if (!courseBelongsToTeacher)
+                return Forbid();
+        }
+
+        _context.superlessons.Remove(lesson);
+        await _context.SaveChangesAsync();
+
+        return NoContent();
+    }
 }

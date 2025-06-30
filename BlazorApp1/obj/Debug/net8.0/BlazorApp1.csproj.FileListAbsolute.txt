@@ -3399,6 +3399,6 @@ D:\проект еще раз\PP\BlazorApp1\bin\Debug\net8.0\wwwroot\_framework\
 D:\проект еще раз\PP\BlazorApp1\bin\Debug\net8.0\Markdig.dll
 D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\webcil\Markdig.wasm
 D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\52zykgztsu-2ikys2t64y.gz
-D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\mpnezo3ggr-lyrql7vkb8.gz
-D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\kyjy2iuvp1-4ddb959upk.gz
-D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\5jzqasczcu-uuwhn2f8dt.gz
+D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\mpnezo3ggr-rx9xnl9upm.gz
+D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\kyjy2iuvp1-2fl6y5h16i.gz
+D:\проект еще раз\PP\BlazorApp1\obj\Debug\net8.0\compressed\5jzqasczcu-5j85ax78ih.gz

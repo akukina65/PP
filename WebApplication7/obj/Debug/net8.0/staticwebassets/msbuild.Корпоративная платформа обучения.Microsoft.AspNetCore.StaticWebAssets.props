@@ -36,6 +36,204 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\emcc-props.json'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\05fabf88-56a0-4c13-a531-606494cc778a.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/05fabf88-56a0-4c13-a531-606494cc778a.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>35g6kr1vwt</Fingerprint>
+      <Integrity>ybguyl4DRdXzd337z6J8lK7m24Qoes+GNWMTidlTd6w=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\05fabf88-56a0-4c13-a531-606494cc778a.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\06380571-aa7b-41dd-953a-7d99d48fdbbc.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/06380571-aa7b-41dd-953a-7d99d48fdbbc.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lwyo72h3jd</Fingerprint>
+      <Integrity>tUWcBx1HqB8ODVkLkLBL20xQSH81d/6ZFyovXOA5t1A=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\06380571-aa7b-41dd-953a-7d99d48fdbbc.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\17da0b1d-856f-4654-8881-71a18f8b5bc6.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/17da0b1d-856f-4654-8881-71a18f8b5bc6.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gwcoj53u5q</Fingerprint>
+      <Integrity>sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\17da0b1d-856f-4654-8881-71a18f8b5bc6.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\24168b86-d5b3-4855-8517-c9fdfdd2416b.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/24168b86-d5b3-4855-8517-c9fdfdd2416b.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gwcoj53u5q</Fingerprint>
+      <Integrity>sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\24168b86-d5b3-4855-8517-c9fdfdd2416b.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\2965865a-7977-410a-8b48-76fbe7e36678.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/2965865a-7977-410a-8b48-76fbe7e36678.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gwcoj53u5q</Fingerprint>
+      <Integrity>sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\2965865a-7977-410a-8b48-76fbe7e36678.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\6cbfd071-789c-4a1d-8049-5a944a3440e2.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/6cbfd071-789c-4a1d-8049-5a944a3440e2.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gwcoj53u5q</Fingerprint>
+      <Integrity>sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\6cbfd071-789c-4a1d-8049-5a944a3440e2.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\730bb96a-b85e-4e4a-9ad9-88c9f9a953b6.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/730bb96a-b85e-4e4a-9ad9-88c9f9a953b6.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>35g6kr1vwt</Fingerprint>
+      <Integrity>ybguyl4DRdXzd337z6J8lK7m24Qoes+GNWMTidlTd6w=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\730bb96a-b85e-4e4a-9ad9-88c9f9a953b6.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\7a80f1e0-bed6-4c7c-8223-89aa1c38f1ab.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/7a80f1e0-bed6-4c7c-8223-89aa1c38f1ab.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lwyo72h3jd</Fingerprint>
+      <Integrity>tUWcBx1HqB8ODVkLkLBL20xQSH81d/6ZFyovXOA5t1A=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\7a80f1e0-bed6-4c7c-8223-89aa1c38f1ab.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\81a8ff89-2234-4ad2-a446-b3804160700f.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/81a8ff89-2234-4ad2-a446-b3804160700f.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gwcoj53u5q</Fingerprint>
+      <Integrity>sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\81a8ff89-2234-4ad2-a446-b3804160700f.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\854f7653-cd17-4363-873a-e4e21c3f3705.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/854f7653-cd17-4363-873a-e4e21c3f3705.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gwcoj53u5q</Fingerprint>
+      <Integrity>sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\854f7653-cd17-4363-873a-e4e21c3f3705.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\96478190-6291-4dbe-850c-29b403cd7470.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/96478190-6291-4dbe-850c-29b403cd7470.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gwcoj53u5q</Fingerprint>
+      <Integrity>sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\96478190-6291-4dbe-850c-29b403cd7470.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\a41c3391-0473-487d-88a8-a3ae0786672d.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Корпоративная платформа обучения</SourceId>
@@ -53,6 +251,132 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\a41c3391-0473-487d-88a8-a3ae0786672d.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\b109062a-b928-458b-9663-749c886fcc60.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/b109062a-b928-458b-9663-749c886fcc60.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gwcoj53u5q</Fingerprint>
+      <Integrity>sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\b109062a-b928-458b-9663-749c886fcc60.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\b44a2d02-9ed6-42dc-a262-30f212df1e5f.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/b44a2d02-9ed6-42dc-a262-30f212df1e5f.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gwcoj53u5q</Fingerprint>
+      <Integrity>sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\b44a2d02-9ed6-42dc-a262-30f212df1e5f.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\b52c6e7c-e9f1-41a8-b167-a2b6812e3a33.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/b52c6e7c-e9f1-41a8-b167-a2b6812e3a33.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gwcoj53u5q</Fingerprint>
+      <Integrity>sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\b52c6e7c-e9f1-41a8-b167-a2b6812e3a33.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\bd61f000-7aaa-4979-9f63-8d18d61f49d7.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/bd61f000-7aaa-4979-9f63-8d18d61f49d7.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gwcoj53u5q</Fingerprint>
+      <Integrity>sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\bd61f000-7aaa-4979-9f63-8d18d61f49d7.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\d3bc7215-2264-4dbe-a19e-248d3375c666.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/d3bc7215-2264-4dbe-a19e-248d3375c666.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gwcoj53u5q</Fingerprint>
+      <Integrity>sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\d3bc7215-2264-4dbe-a19e-248d3375c666.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\d749c50b-1a0d-4a54-a15d-8cce25052f88.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/d749c50b-1a0d-4a54-a15d-8cce25052f88.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gwcoj53u5q</Fingerprint>
+      <Integrity>sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\d749c50b-1a0d-4a54-a15d-8cce25052f88.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\dcd2c6df-2883-4f6b-99e5-8e7bf5763af1.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/dcd2c6df-2883-4f6b-99e5-8e7bf5763af1.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>35g6kr1vwt</Fingerprint>
+      <Integrity>ybguyl4DRdXzd337z6J8lK7m24Qoes+GNWMTidlTd6w=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\dcd2c6df-2883-4f6b-99e5-8e7bf5763af1.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\ddd4d7bb-0f42-495e-83c4-72188e721304.jpg'))">
       <SourceType>Package</SourceType>
@@ -72,6 +396,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\ddd4d7bb-0f42-495e-83c4-72188e721304.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\e4cc5011-fa6f-464e-9528-8786dc9bee76.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/e4cc5011-fa6f-464e-9528-8786dc9bee76.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>wxzjk8e5qp</Fingerprint>
+      <Integrity>TO+DzOPms6jGUwZPsA00HRcb5Wad1Fj66FzWAB8mYgQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\e4cc5011-fa6f-464e-9528-8786dc9bee76.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\e503ac65-a9a1-4f1b-be9b-c97dfd196f05.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Корпоративная платформа обучения</SourceId>
@@ -90,6 +432,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\e503ac65-a9a1-4f1b-be9b-c97dfd196f05.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\f5fd543e-04d3-463c-a1b1-75ea65026f94.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/f5fd543e-04d3-463c-a1b1-75ea65026f94.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gwcoj53u5q</Fingerprint>
+      <Integrity>sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\f5fd543e-04d3-463c-a1b1-75ea65026f94.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\15e1777f-8283-4948-84e9-fb3e5bf10152.mp4'))">
       <SourceType>Package</SourceType>
       <SourceId>Корпоративная платформа обучения</SourceId>
@@ -107,6 +467,276 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\15e1777f-8283-4948-84e9-fb3e5bf10152.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\1d22d93f-8947-4544-8677-1e4f475e4d60.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/videos/1d22d93f-8947-4544-8677-1e4f475e4d60.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lpxy3x1ye5</Fingerprint>
+      <Integrity>KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\1d22d93f-8947-4544-8677-1e4f475e4d60.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\30cfaae7-be9c-473f-96bc-11d330eab9fb.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/videos/30cfaae7-be9c-473f-96bc-11d330eab9fb.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lpxy3x1ye5</Fingerprint>
+      <Integrity>KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\30cfaae7-be9c-473f-96bc-11d330eab9fb.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\3a44bf8d-f3c2-4884-9ffc-726cf0ded777.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/videos/3a44bf8d-f3c2-4884-9ffc-726cf0ded777.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lpxy3x1ye5</Fingerprint>
+      <Integrity>KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\3a44bf8d-f3c2-4884-9ffc-726cf0ded777.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\549463c0-f14e-4220-a8a7-73ac6a3dd8be.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/videos/549463c0-f14e-4220-a8a7-73ac6a3dd8be.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lpxy3x1ye5</Fingerprint>
+      <Integrity>KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\549463c0-f14e-4220-a8a7-73ac6a3dd8be.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\5c3b2fc6-1ea3-470b-8843-458e6c231c10.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/videos/5c3b2fc6-1ea3-470b-8843-458e6c231c10.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lpxy3x1ye5</Fingerprint>
+      <Integrity>KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\5c3b2fc6-1ea3-470b-8843-458e6c231c10.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\6380b6ef-559c-4931-b09a-007e5106bb01.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/videos/6380b6ef-559c-4931-b09a-007e5106bb01.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lpxy3x1ye5</Fingerprint>
+      <Integrity>KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\6380b6ef-559c-4931-b09a-007e5106bb01.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\69c1c7fb-4cd0-48ad-8165-daec6bb65ba3.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/videos/69c1c7fb-4cd0-48ad-8165-daec6bb65ba3.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lpxy3x1ye5</Fingerprint>
+      <Integrity>KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\69c1c7fb-4cd0-48ad-8165-daec6bb65ba3.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\830fa804-0eb7-4153-8a53-719c314fd21a.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/videos/830fa804-0eb7-4153-8a53-719c314fd21a.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lpxy3x1ye5</Fingerprint>
+      <Integrity>KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\830fa804-0eb7-4153-8a53-719c314fd21a.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\91ac6059-9bbe-4746-83ff-8e4b0f123bfd.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/videos/91ac6059-9bbe-4746-83ff-8e4b0f123bfd.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lpxy3x1ye5</Fingerprint>
+      <Integrity>KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\91ac6059-9bbe-4746-83ff-8e4b0f123bfd.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\972eca98-a4e5-4bc6-a063-be2a07ec5469.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/videos/972eca98-a4e5-4bc6-a063-be2a07ec5469.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lpxy3x1ye5</Fingerprint>
+      <Integrity>KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\972eca98-a4e5-4bc6-a063-be2a07ec5469.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\9ad73767-e06b-42b4-bbe6-ec445a475313.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/videos/9ad73767-e06b-42b4-bbe6-ec445a475313.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lpxy3x1ye5</Fingerprint>
+      <Integrity>KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\9ad73767-e06b-42b4-bbe6-ec445a475313.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\c3a1822a-251e-45a1-a995-5f7c6a314dda.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/videos/c3a1822a-251e-45a1-a995-5f7c6a314dda.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lpxy3x1ye5</Fingerprint>
+      <Integrity>KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\c3a1822a-251e-45a1-a995-5f7c6a314dda.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\d25143c1-abf5-4914-aed8-86039c7419f8.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/videos/d25143c1-abf5-4914-aed8-86039c7419f8.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lpxy3x1ye5</Fingerprint>
+      <Integrity>KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\d25143c1-abf5-4914-aed8-86039c7419f8.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\ed978445-5a80-4e87-9c1b-373844f9275d.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/videos/ed978445-5a80-4e87-9c1b-373844f9275d.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lpxy3x1ye5</Fingerprint>
+      <Integrity>KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\ed978445-5a80-4e87-9c1b-373844f9275d.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\f57f5e26-ff45-40cc-9f0d-9e527000c71f.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/videos/f57f5e26-ff45-40cc-9f0d-9e527000c71f.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lpxy3x1ye5</Fingerprint>
+      <Integrity>KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\f57f5e26-ff45-40cc-9f0d-9e527000c71f.mp4'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\web.config'))">
       <SourceType>Package</SourceType>

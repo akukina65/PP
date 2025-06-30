@@ -51,6 +51,38 @@
                     alert(message); // Temporary solution - replace with proper toast
                 };
             </script>
+
+            <script>
+                function applyTextFormatting(textarea, before, after) {
+                    const start = textarea.selectionStart;
+                    const end = textarea.selectionEnd;
+                    const selectedText = textarea.value.substring(start, end);
+                    const newText = textarea.value.substring(0, start) +
+                        before + selectedText + after +
+                        textarea.value.substring(end);
+
+                    textarea.value = newText;
+
+                    // Устанавливаем курсор после вставленного текста
+                    const newCursorPos = start + before.length;
+                    textarea.setSelectionRange(newCursorPos, newCursorPos + selectedText.length);
+                    textarea.focus();
+
+                    return newText;
+                }
+            </script>
+            <!-- Remove duplicate blazor.webassembly.js script -->
+            <script src="_framework/blazor.webassembly.js" autostart="false"></script>
+            <script>
+                Blazor.start({
+                    configureSignalR: function (builder) {
+                        builder.withUrl("/_blazor", {
+                            skipNegotiation: true,
+                            transport: 1
+                        });
+                    }
+                });
+            </script>
             <circle r="40%" cx="50%" cy="50%" />
             <circle r="40%" cx="50%" cy="50%" />
         </svg>
