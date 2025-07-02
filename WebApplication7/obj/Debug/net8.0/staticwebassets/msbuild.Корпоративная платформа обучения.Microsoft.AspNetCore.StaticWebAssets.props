@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>oyz0vx2fzb</Fingerprint>
-      <Integrity>EDndcUl06UUgbB5x0DTQqfgwLv4TZo64Ka6aUqdbGTs=</Integrity>
+      <Fingerprint>tyxbtxtujh</Fingerprint>
+      <Integrity>S845DPxuVr+TnU5ZZdWzz4L4aBqNAgYPN4YlNfTzYDk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\emcc-props.json'))</OriginalItemSpec>
@@ -125,6 +125,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\2965865a-7977-410a-8b48-76fbe7e36678.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\2dbb8255-4553-410f-964a-e908c2887dd4.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/2dbb8255-4553-410f-964a-e908c2887dd4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gwcoj53u5q</Fingerprint>
+      <Integrity>sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\2dbb8255-4553-410f-964a-e908c2887dd4.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\6cbfd071-789c-4a1d-8049-5a944a3440e2.jpg'))">
       <SourceType>Package</SourceType>
@@ -396,6 +414,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\ddd4d7bb-0f42-495e-83c4-72188e721304.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\de23317d-8afe-46bb-86f7-f6a1f80d655b.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/images/de23317d-8afe-46bb-86f7-f6a1f80d655b.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gwcoj53u5q</Fingerprint>
+      <Integrity>sNGcSJeYrADuwypf7kVOaEGwR24LIp1FJxQhr5HZIG4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\de23317d-8afe-46bb-86f7-f6a1f80d655b.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\e4cc5011-fa6f-464e-9528-8786dc9bee76.png'))">
       <SourceType>Package</SourceType>
       <SourceId>Корпоративная платформа обучения</SourceId>
@@ -485,6 +521,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\1d22d93f-8947-4544-8677-1e4f475e4d60.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\200d0d99-ec83-4fc1-85ef-5ec346066a12.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/videos/200d0d99-ec83-4fc1-85ef-5ec346066a12.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lpxy3x1ye5</Fingerprint>
+      <Integrity>KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\200d0d99-ec83-4fc1-85ef-5ec346066a12.mp4'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\30cfaae7-be9c-473f-96bc-11d330eab9fb.mp4'))">
       <SourceType>Package</SourceType>
@@ -702,6 +756,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\d25143c1-abf5-4914-aed8-86039c7419f8.mp4'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\e5cb7c19-5893-4170-8420-82c75d08f944.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Корпоративная платформа обучения</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Корпоративная платформа обучения</BasePath>
+      <RelativePath>uploads/videos/e5cb7c19-5893-4170-8420-82c75d08f944.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lpxy3x1ye5</Fingerprint>
+      <Integrity>KXZanB3EXF9rDl25MAaffVUUAe2qRaZZbErL79EYtXY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\e5cb7c19-5893-4170-8420-82c75d08f944.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\videos\ed978445-5a80-4e87-9c1b-373844f9275d.mp4'))">
       <SourceType>Package</SourceType>
       <SourceId>Корпоративная платформа обучения</SourceId>
@@ -750,8 +822,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>4us24no5yt</Fingerprint>
-      <Integrity>hAHsz8WG6PKM5RDe0IOjASzr3zijOky7KHcjf1QnyHI=</Integrity>
+      <Fingerprint>dg0fpmy5dw</Fingerprint>
+      <Integrity>DeG5ub2wfjQdL3YOBAf6hxOJqBcqauiPr+TE8PPt//w=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\web.config'))</OriginalItemSpec>
@@ -1035,7 +1107,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\BCrypt.Net-Next.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\BCrypt.Net-Next.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>vdxc1byp1v</Fingerprint>
@@ -1053,7 +1125,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\BCrypt.Net-Next.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\BCrypt.Net-Next.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>cn5i2zrbo9</Fingerprint>
@@ -1089,7 +1161,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\blazor.boot.json</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\blazor.boot.json</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>c4helaot8b</Fingerprint>
@@ -1107,7 +1179,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\blazor.boot.json</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\blazor.boot.json</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>p9lo1vf3e8</Fingerprint>
@@ -1143,7 +1215,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\blazor.webassembly.js</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\blazor.webassembly.js</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>4bdidk25ub</Fingerprint>
@@ -1161,7 +1233,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\blazor.webassembly.js</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\blazor.webassembly.js</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>bw0dyto955</Fingerprint>
@@ -1197,7 +1269,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\BlazorApp1.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\BlazorApp1.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>rjnhnwps78</Fingerprint>
@@ -1215,7 +1287,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\BlazorApp1.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\BlazorApp1.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>3h1apyf0sm</Fingerprint>
@@ -1251,7 +1323,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\DevOne.Security.Cryptography.BCrypt.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\DevOne.Security.Cryptography.BCrypt.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>q5xfcbbsib</Fingerprint>
@@ -1269,7 +1341,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\DevOne.Security.Cryptography.BCrypt.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\DevOne.Security.Cryptography.BCrypt.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>33kwqnlvxh</Fingerprint>
@@ -1305,7 +1377,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.js</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.js</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>uyf2ior0p8</Fingerprint>
@@ -1323,7 +1395,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.js</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.js</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>rau7s8y4g1</Fingerprint>
@@ -1344,8 +1416,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ic1b84is8h</Fingerprint>
-      <Integrity>bmwWKPhT4tyxVG146RbANowGgqF6hDTpY1vvwDj1/ZU=</Integrity>
+      <Fingerprint>g9j9yw84sa</Fingerprint>
+      <Integrity>PNRXHuHeDK6diGcci0ZiGSTjYX+tBUgJbbQp5GmcIWE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\wwwroot\_framework\dotnet.js'))</OriginalItemSpec>
@@ -1359,7 +1431,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.native.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.native.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>k2s7el7dnw</Fingerprint>
@@ -1377,7 +1449,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.native.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.native.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>am4cq3bezh</Fingerprint>
@@ -1395,7 +1467,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.native.js</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.native.js</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>vcm8ys79c8</Fingerprint>
@@ -1413,7 +1485,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.native.js</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.native.js</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>989u2xpaoi</Fingerprint>
@@ -1467,7 +1539,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.runtime.js</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.runtime.js</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>jhldj43upm</Fingerprint>
@@ -1485,7 +1557,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.runtime.js</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\dotnet.runtime.js</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>y25sb7ie98</Fingerprint>
@@ -1506,8 +1578,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>x2muqfwqyq</Fingerprint>
-      <Integrity>t76BRXwt7ie+t1popBz8/uUmIQCWeGU9XALjF0psLNw=</Integrity>
+      <Fingerprint>jm342wylf6</Fingerprint>
+      <Integrity>Ww39KS5Un2RIVzBsjXgno97Eg2yQXy0nfZw3BvB+mhU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\wwwroot\_framework\dotnet.runtime.js'))</OriginalItemSpec>
@@ -1521,7 +1593,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\icudt_CJK.dat</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\icudt_CJK.dat</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>o8qervr8hr</Fingerprint>
@@ -1539,7 +1611,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\icudt_CJK.dat</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\icudt_CJK.dat</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>ffu5aujli6</Fingerprint>
@@ -1575,7 +1647,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\icudt_EFIGS.dat</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\icudt_EFIGS.dat</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>knwfjrwxq6</Fingerprint>
@@ -1593,7 +1665,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\icudt_EFIGS.dat</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\icudt_EFIGS.dat</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>kcp4n5gllp</Fingerprint>
@@ -1629,7 +1701,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\icudt_no_CJK.dat</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\icudt_no_CJK.dat</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>mf93qtgf1s</Fingerprint>
@@ -1647,7 +1719,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\icudt_no_CJK.dat</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\icudt_no_CJK.dat</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>m3twp0zama</Fingerprint>
@@ -1683,7 +1755,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Antiforgery.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Antiforgery.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>wi66cri56x</Fingerprint>
@@ -1701,7 +1773,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Antiforgery.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Antiforgery.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>ujx8w4qafj</Fingerprint>
@@ -1737,7 +1809,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Authorization.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Authorization.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>mwplm0k9u0</Fingerprint>
@@ -1755,7 +1827,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Authorization.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Authorization.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>kj763s4ibj</Fingerprint>
@@ -1791,7 +1863,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>e9bci4b7eb</Fingerprint>
@@ -1809,7 +1881,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>qd5azeyt0b</Fingerprint>
@@ -1845,7 +1917,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>su06whsdwr</Fingerprint>
@@ -1863,7 +1935,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>dqywj6a5cm</Fingerprint>
@@ -1899,7 +1971,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>ob5i206n9n</Fingerprint>
@@ -1917,7 +1989,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>0rge5goojy</Fingerprint>
@@ -1953,7 +2025,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>dkx0f9cmta</Fingerprint>
@@ -1971,7 +2043,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>big290n3ue</Fingerprint>
@@ -2007,7 +2079,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>n3sdi6y35n</Fingerprint>
@@ -2025,7 +2097,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>1wps12hq9z</Fingerprint>
@@ -2061,7 +2133,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Cryptography.Internal.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Cryptography.Internal.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>brnzgzp5ju</Fingerprint>
@@ -2079,7 +2151,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Cryptography.Internal.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Cryptography.Internal.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>do9961tbpu</Fingerprint>
@@ -2115,7 +2187,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.DataProtection.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.DataProtection.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>kp6rj9k76k</Fingerprint>
@@ -2133,7 +2205,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.DataProtection.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.DataProtection.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>n2kwgtkp8h</Fingerprint>
@@ -2169,7 +2241,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.DataProtection.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.DataProtection.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>l5uecckpo1</Fingerprint>
@@ -2187,7 +2259,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.DataProtection.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.DataProtection.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>6jkglqx4co</Fingerprint>
@@ -2223,7 +2295,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Hosting.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Hosting.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>ooeo7mdl2m</Fingerprint>
@@ -2241,7 +2313,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Hosting.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Hosting.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>2zn51erson</Fingerprint>
@@ -2277,7 +2349,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Hosting.Server.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Hosting.Server.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>j4x3el60vu</Fingerprint>
@@ -2295,7 +2367,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Hosting.Server.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Hosting.Server.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>122vc8ifjg</Fingerprint>
@@ -2331,7 +2403,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Http.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Http.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>gangd7bez7</Fingerprint>
@@ -2349,7 +2421,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Http.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Http.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>nna9t3i1av</Fingerprint>
@@ -2385,7 +2457,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Http.Extensions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Http.Extensions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>t2tvcdrueh</Fingerprint>
@@ -2403,7 +2475,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Http.Extensions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Http.Extensions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>pwbeg96snu</Fingerprint>
@@ -2439,7 +2511,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Http.Features.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Http.Features.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>e087g2dw0w</Fingerprint>
@@ -2457,7 +2529,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Http.Features.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Http.Features.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>nk4se5lroo</Fingerprint>
@@ -2493,7 +2565,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Metadata.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Metadata.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>1566mvvpvu</Fingerprint>
@@ -2511,7 +2583,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Metadata.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.Metadata.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>btp3g7rjx6</Fingerprint>
@@ -2547,7 +2619,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>8478hq4wyo</Fingerprint>
@@ -2565,7 +2637,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>8b7v8rg46d</Fingerprint>
@@ -2601,7 +2673,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.EntityFrameworkCore.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.EntityFrameworkCore.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>vi3eccxp69</Fingerprint>
@@ -2619,7 +2691,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.EntityFrameworkCore.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.EntityFrameworkCore.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>k0fwr6jqlu</Fingerprint>
@@ -2655,7 +2727,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.EntityFrameworkCore.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.EntityFrameworkCore.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>246w1u22le</Fingerprint>
@@ -2673,7 +2745,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.EntityFrameworkCore.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.EntityFrameworkCore.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>iufsznc6yt</Fingerprint>
@@ -2709,7 +2781,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Caching.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Caching.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>j4qzsst4vl</Fingerprint>
@@ -2727,7 +2799,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Caching.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Caching.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>y9r8gwttjs</Fingerprint>
@@ -2763,7 +2835,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Caching.Memory.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Caching.Memory.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>nc9hno9n3i</Fingerprint>
@@ -2781,7 +2853,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Caching.Memory.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Caching.Memory.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>5h1kouxcy8</Fingerprint>
@@ -2817,7 +2889,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Configuration.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Configuration.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>7rh6on47bh</Fingerprint>
@@ -2835,7 +2907,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Configuration.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Configuration.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>5mmmgx5ria</Fingerprint>
@@ -2871,7 +2943,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Configuration.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Configuration.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>t7ddssxbgl</Fingerprint>
@@ -2889,7 +2961,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Configuration.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Configuration.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>9m6oqnsw5a</Fingerprint>
@@ -2925,7 +2997,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Configuration.Json.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Configuration.Json.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>eks8gu8ear</Fingerprint>
@@ -2943,7 +3015,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Configuration.Json.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Configuration.Json.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>cpwhfc4fux</Fingerprint>
@@ -2979,7 +3051,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>lzdpiq123i</Fingerprint>
@@ -2997,7 +3069,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>f8na7gu9we</Fingerprint>
@@ -3033,7 +3105,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>726y5hq8r3</Fingerprint>
@@ -3051,7 +3123,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>rrgxq7dl00</Fingerprint>
@@ -3087,7 +3159,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.FileProviders.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.FileProviders.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>ve5wdz8mwp</Fingerprint>
@@ -3105,7 +3177,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.FileProviders.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.FileProviders.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>vrpgpxfx0s</Fingerprint>
@@ -3141,7 +3213,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Logging.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Logging.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>1qgytw6h5w</Fingerprint>
@@ -3159,7 +3231,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Logging.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Logging.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>8rzq5aj0ab</Fingerprint>
@@ -3195,7 +3267,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Logging.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Logging.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>sbpqdskqeh</Fingerprint>
@@ -3213,7 +3285,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Logging.Abstractions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Logging.Abstractions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>04o0059h53</Fingerprint>
@@ -3249,7 +3321,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.ObjectPool.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.ObjectPool.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>8p8x0gnimz</Fingerprint>
@@ -3267,7 +3339,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.ObjectPool.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.ObjectPool.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>lxxs590xzz</Fingerprint>
@@ -3303,7 +3375,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Options.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Options.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>xspuq7e7kb</Fingerprint>
@@ -3321,7 +3393,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Options.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Options.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>ko0tbdr0oo</Fingerprint>
@@ -3357,7 +3429,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Primitives.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Primitives.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>xtn7g28948</Fingerprint>
@@ -3375,7 +3447,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Primitives.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Extensions.Primitives.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>r3p27fi5if</Fingerprint>
@@ -3411,7 +3483,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.JSInterop.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.JSInterop.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>yxyv3mm2do</Fingerprint>
@@ -3429,7 +3501,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.JSInterop.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.JSInterop.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>q2wwglxak1</Fingerprint>
@@ -3465,7 +3537,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.JSInterop.WebAssembly.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.JSInterop.WebAssembly.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>p49x3s552q</Fingerprint>
@@ -3483,7 +3555,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.JSInterop.WebAssembly.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.JSInterop.WebAssembly.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>ei43w2hfvx</Fingerprint>
@@ -3519,7 +3591,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Net.Http.Headers.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Net.Http.Headers.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>xvbfbl8m04</Fingerprint>
@@ -3537,7 +3609,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Net.Http.Headers.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Net.Http.Headers.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>wrhmuubt7k</Fingerprint>
@@ -3573,7 +3645,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Win32.Registry.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Win32.Registry.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>sxrcz52c6d</Fingerprint>
@@ -3591,7 +3663,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Win32.Registry.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\Microsoft.Win32.Registry.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>47w8gi7s19</Fingerprint>
@@ -3627,7 +3699,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\mscorlib.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\mscorlib.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>u9qtk5hmhv</Fingerprint>
@@ -3645,7 +3717,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\mscorlib.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\mscorlib.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>c4zmxxpjoh</Fingerprint>
@@ -3681,7 +3753,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\netstandard.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\netstandard.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>8g18chqy8v</Fingerprint>
@@ -3699,7 +3771,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\netstandard.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\netstandard.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>o6c3x251fj</Fingerprint>
@@ -3735,7 +3807,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>61ok4kbafi</Fingerprint>
@@ -3753,7 +3825,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>qkm10mtw0z</Fingerprint>
@@ -3789,7 +3861,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Buffers.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Buffers.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>xrujhagshg</Fingerprint>
@@ -3807,7 +3879,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Buffers.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Buffers.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>yxix2fsgov</Fingerprint>
@@ -3843,7 +3915,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>26389kokmh</Fingerprint>
@@ -3861,7 +3933,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>cvqbmgc74s</Fingerprint>
@@ -3897,7 +3969,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.Concurrent.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.Concurrent.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>c5qamhtx10</Fingerprint>
@@ -3915,7 +3987,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.Concurrent.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.Concurrent.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>8y8pay58s4</Fingerprint>
@@ -3951,7 +4023,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.Immutable.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.Immutable.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>9ro70xirtx</Fingerprint>
@@ -3969,7 +4041,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.Immutable.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.Immutable.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>yt7qxuuyum</Fingerprint>
@@ -4005,7 +4077,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.NonGeneric.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.NonGeneric.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>u189i9frfa</Fingerprint>
@@ -4023,7 +4095,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.NonGeneric.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.NonGeneric.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>hq4fds5wms</Fingerprint>
@@ -4059,7 +4131,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.Specialized.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.Specialized.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>h7nw4uzey6</Fingerprint>
@@ -4077,7 +4149,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.Specialized.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Collections.Specialized.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>nel798jv1t</Fingerprint>
@@ -4113,7 +4185,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>075qtl54zg</Fingerprint>
@@ -4131,7 +4203,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>0bxnowgg1m</Fingerprint>
@@ -4167,7 +4239,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.Annotations.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.Annotations.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>1snz2f7cdv</Fingerprint>
@@ -4185,7 +4257,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.Annotations.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.Annotations.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>u5g5ym4sxj</Fingerprint>
@@ -4221,7 +4293,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.Primitives.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.Primitives.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>b9gcbx4z40</Fingerprint>
@@ -4239,7 +4311,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.Primitives.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.Primitives.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>0e78ms2jpp</Fingerprint>
@@ -4275,7 +4347,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.TypeConverter.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.TypeConverter.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>gmtekuay4n</Fingerprint>
@@ -4293,7 +4365,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.TypeConverter.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ComponentModel.TypeConverter.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>z8l4ouf7bc</Fingerprint>
@@ -4329,7 +4401,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Console.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Console.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>hqb1lme30p</Fingerprint>
@@ -4347,7 +4419,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Console.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Console.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>1yxjpu0920</Fingerprint>
@@ -4383,7 +4455,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Diagnostics.DiagnosticSource.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Diagnostics.DiagnosticSource.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>s132d9t66f</Fingerprint>
@@ -4401,7 +4473,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Diagnostics.DiagnosticSource.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Diagnostics.DiagnosticSource.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>7tvng3wna9</Fingerprint>
@@ -4437,7 +4509,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Diagnostics.Tracing.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Diagnostics.Tracing.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>uanpbaozvi</Fingerprint>
@@ -4455,7 +4527,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Diagnostics.Tracing.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Diagnostics.Tracing.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>eygnyur8cg</Fingerprint>
@@ -4491,7 +4563,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Formats.Asn1.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Formats.Asn1.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>wv0e7byagx</Fingerprint>
@@ -4509,7 +4581,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Formats.Asn1.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Formats.Asn1.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>bsxe603esh</Fingerprint>
@@ -4545,7 +4617,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Linq.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Linq.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>gtcy2uq2ms</Fingerprint>
@@ -4563,7 +4635,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Linq.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Linq.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>j4nwvnm2gr</Fingerprint>
@@ -4599,7 +4671,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Linq.Expressions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Linq.Expressions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>khy91fvvq9</Fingerprint>
@@ -4617,7 +4689,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Linq.Expressions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Linq.Expressions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>jkanu4n6ef</Fingerprint>
@@ -4653,7 +4725,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Linq.Queryable.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Linq.Queryable.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>g6bpjq6hg3</Fingerprint>
@@ -4671,7 +4743,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Linq.Queryable.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Linq.Queryable.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>1kmncjnthw</Fingerprint>
@@ -4707,7 +4779,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Memory.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Memory.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>7ru25w7s8a</Fingerprint>
@@ -4725,7 +4797,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Memory.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Memory.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>60zt9zywej</Fingerprint>
@@ -4761,7 +4833,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.Http.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.Http.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>078yuxczz4</Fingerprint>
@@ -4779,7 +4851,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.Http.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.Http.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>vbgrjbuym9</Fingerprint>
@@ -4815,7 +4887,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.Http.Json.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.Http.Json.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>0tlh6g4u2n</Fingerprint>
@@ -4833,7 +4905,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.Http.Json.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.Http.Json.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>g3zjs2fjgu</Fingerprint>
@@ -4869,7 +4941,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.NetworkInformation.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.NetworkInformation.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>chbydrejg2</Fingerprint>
@@ -4887,7 +4959,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.NetworkInformation.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.NetworkInformation.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>wg6hw8z8t8</Fingerprint>
@@ -4923,7 +4995,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.Primitives.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.Primitives.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>4rqupcf26a</Fingerprint>
@@ -4941,7 +5013,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.Primitives.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.Primitives.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>fwabd2878k</Fingerprint>
@@ -4977,7 +5049,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.WebSockets.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.WebSockets.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>zxs425upm6</Fingerprint>
@@ -4995,7 +5067,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.WebSockets.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Net.WebSockets.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>2q9qdewy92</Fingerprint>
@@ -5031,7 +5103,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ObjectModel.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ObjectModel.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>sgjko791zv</Fingerprint>
@@ -5049,7 +5121,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ObjectModel.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.ObjectModel.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>rm9b7eqco7</Fingerprint>
@@ -5085,7 +5157,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.CoreLib.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.CoreLib.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>utt48gww2s</Fingerprint>
@@ -5103,7 +5175,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.CoreLib.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.CoreLib.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>f29mgrkd4z</Fingerprint>
@@ -5139,7 +5211,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.Uri.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.Uri.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>65q7l1pvdg</Fingerprint>
@@ -5157,7 +5229,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.Uri.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.Uri.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>n1wl49wgza</Fingerprint>
@@ -5193,7 +5265,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.Xml.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.Xml.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>6frxg7ecfj</Fingerprint>
@@ -5211,7 +5283,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.Xml.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.Xml.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>lrerar69do</Fingerprint>
@@ -5247,7 +5319,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.Xml.Linq.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.Xml.Linq.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>05c1avjr8i</Fingerprint>
@@ -5265,7 +5337,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.Xml.Linq.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Private.Xml.Linq.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>l8fuoscq8a</Fingerprint>
@@ -5301,7 +5373,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>1jqt1q09g5</Fingerprint>
@@ -5319,7 +5391,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>q32v8tdkjd</Fingerprint>
@@ -5355,7 +5427,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.InteropServices.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.InteropServices.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>fhfjy1ohip</Fingerprint>
@@ -5373,7 +5445,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.InteropServices.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.InteropServices.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>gaxkzo4re0</Fingerprint>
@@ -5409,7 +5481,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.InteropServices.JavaScript.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.InteropServices.JavaScript.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>u3cv3ia18l</Fingerprint>
@@ -5427,7 +5499,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.InteropServices.JavaScript.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.InteropServices.JavaScript.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>mqmszw5h2c</Fingerprint>
@@ -5463,7 +5535,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.Numerics.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.Numerics.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>jxko5u8le9</Fingerprint>
@@ -5481,7 +5553,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.Numerics.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.Numerics.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>ozhu4rnk31</Fingerprint>
@@ -5517,7 +5589,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.Serialization.Primitives.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.Serialization.Primitives.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>0r1p3k0kor</Fingerprint>
@@ -5535,7 +5607,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.Serialization.Primitives.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Runtime.Serialization.Primitives.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>dipd91065f</Fingerprint>
@@ -5571,7 +5643,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.AccessControl.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.AccessControl.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>q24ggvwuxj</Fingerprint>
@@ -5589,7 +5661,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.AccessControl.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.AccessControl.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>mu27d6vlto</Fingerprint>
@@ -5625,7 +5697,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Claims.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Claims.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>sqvliv58mf</Fingerprint>
@@ -5643,7 +5715,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Claims.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Claims.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>tomyfryif5</Fingerprint>
@@ -5679,7 +5751,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>emmc8nzkq5</Fingerprint>
@@ -5697,7 +5769,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>8zlvw2ejep</Fingerprint>
@@ -5733,7 +5805,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Algorithms.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Algorithms.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>6ccdvj2sdq</Fingerprint>
@@ -5751,7 +5823,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Algorithms.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Algorithms.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>nq779eiw3i</Fingerprint>
@@ -5787,7 +5859,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Pkcs.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Pkcs.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>hk6anfeixx</Fingerprint>
@@ -5805,7 +5877,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Pkcs.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Pkcs.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>mvkpevilek</Fingerprint>
@@ -5841,7 +5913,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Primitives.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Primitives.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>6jacj50d6n</Fingerprint>
@@ -5859,7 +5931,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Primitives.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Primitives.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>tblilkpgas</Fingerprint>
@@ -5895,7 +5967,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Xml.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Xml.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>1nlr7pml84</Fingerprint>
@@ -5913,7 +5985,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Xml.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Cryptography.Xml.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>e8onhi74ao</Fingerprint>
@@ -5949,7 +6021,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Principal.Windows.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Principal.Windows.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>llpdlbfy55</Fingerprint>
@@ -5967,7 +6039,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Principal.Windows.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Security.Principal.Windows.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>9bgphn5g3a</Fingerprint>
@@ -6003,7 +6075,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.Encoding.Extensions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.Encoding.Extensions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>0k7nvsxh8m</Fingerprint>
@@ -6021,7 +6093,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.Encoding.Extensions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.Encoding.Extensions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>7nzr1arxzs</Fingerprint>
@@ -6057,7 +6129,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.Encodings.Web.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.Encodings.Web.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>ws5fwpmssm</Fingerprint>
@@ -6075,7 +6147,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.Encodings.Web.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.Encodings.Web.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>jwt0dhe2wj</Fingerprint>
@@ -6111,7 +6183,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.Json.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.Json.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>nlrtywobb5</Fingerprint>
@@ -6129,7 +6201,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.Json.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.Json.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>544hyb1he2</Fingerprint>
@@ -6165,7 +6237,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.RegularExpressions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.RegularExpressions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>tsxplp9rgy</Fingerprint>
@@ -6183,7 +6255,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.RegularExpressions.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Text.RegularExpressions.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>gl1avf9sc2</Fingerprint>
@@ -6219,7 +6291,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Threading.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Threading.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>l846mtsjba</Fingerprint>
@@ -6237,7 +6309,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Threading.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Threading.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>15rquy77at</Fingerprint>
@@ -6273,7 +6345,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Threading.Thread.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Threading.Thread.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>w86fwtca0y</Fingerprint>
@@ -6291,7 +6363,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Threading.Thread.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Threading.Thread.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>gtrrib1sfz</Fingerprint>
@@ -6327,7 +6399,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Transactions.Local.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Transactions.Local.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>yp8u6j1y6l</Fingerprint>
@@ -6345,7 +6417,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Transactions.Local.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Transactions.Local.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>95gyqc1oqf</Fingerprint>
@@ -6381,7 +6453,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Xml.Linq.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Xml.Linq.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>br</AssetTraitValue>
       <Fingerprint>w7f95grv5o</Fingerprint>
@@ -6399,7 +6471,7 @@
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Alternative</AssetRole>
-      <RelatedAsset>D:\проект еще раз\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Xml.Linq.wasm</RelatedAsset>
+      <RelatedAsset>D:\78\PP\WebApplication7\wwwroot\wwwroot\_framework\System.Xml.Linq.wasm</RelatedAsset>
       <AssetTraitName>Content-Encoding</AssetTraitName>
       <AssetTraitValue>gzip</AssetTraitValue>
       <Fingerprint>zaazjaol1l</Fingerprint>

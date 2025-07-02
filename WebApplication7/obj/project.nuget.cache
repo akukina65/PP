@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wosKdOkvdwg=",
+  "dgSpecHash": "6VodyrRjbwA=",
   "success": true,
-  "projectFilePath": "D:\\проект еще раз\\PP\\WebApplication7\\Корпоративная платформа обучения.csproj",
+  "projectFilePath": "D:\\78\\PP\\WebApplication7\\Корпоративная платформа обучения.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nastya\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Nastya\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

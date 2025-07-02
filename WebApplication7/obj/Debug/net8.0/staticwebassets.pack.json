@@ -1,1431 +1,1447 @@
 {
   "Files": [
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\BlazorApp1.staticwebassets.endpoints.json",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\BlazorApp1.staticwebassets.endpoints.json",
       "PackagePath": "staticwebassets\\BlazorApp1.staticwebassets.endpoints.json"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\emcc-props.json",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\emcc-props.json",
       "PackagePath": "staticwebassets\\emcc-props.json"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\05fabf88-56a0-4c13-a531-606494cc778a.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\05fabf88-56a0-4c13-a531-606494cc778a.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\05fabf88-56a0-4c13-a531-606494cc778a.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\06380571-aa7b-41dd-953a-7d99d48fdbbc.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\06380571-aa7b-41dd-953a-7d99d48fdbbc.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\06380571-aa7b-41dd-953a-7d99d48fdbbc.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\17da0b1d-856f-4654-8881-71a18f8b5bc6.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\17da0b1d-856f-4654-8881-71a18f8b5bc6.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\17da0b1d-856f-4654-8881-71a18f8b5bc6.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\24168b86-d5b3-4855-8517-c9fdfdd2416b.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\24168b86-d5b3-4855-8517-c9fdfdd2416b.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\24168b86-d5b3-4855-8517-c9fdfdd2416b.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\2965865a-7977-410a-8b48-76fbe7e36678.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\2965865a-7977-410a-8b48-76fbe7e36678.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\2965865a-7977-410a-8b48-76fbe7e36678.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\6cbfd071-789c-4a1d-8049-5a944a3440e2.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\2dbb8255-4553-410f-964a-e908c2887dd4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\images\\2dbb8255-4553-410f-964a-e908c2887dd4.jpg"
+    },
+    {
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\6cbfd071-789c-4a1d-8049-5a944a3440e2.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\6cbfd071-789c-4a1d-8049-5a944a3440e2.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\730bb96a-b85e-4e4a-9ad9-88c9f9a953b6.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\730bb96a-b85e-4e4a-9ad9-88c9f9a953b6.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\730bb96a-b85e-4e4a-9ad9-88c9f9a953b6.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\7a80f1e0-bed6-4c7c-8223-89aa1c38f1ab.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\7a80f1e0-bed6-4c7c-8223-89aa1c38f1ab.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\7a80f1e0-bed6-4c7c-8223-89aa1c38f1ab.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\81a8ff89-2234-4ad2-a446-b3804160700f.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\81a8ff89-2234-4ad2-a446-b3804160700f.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\81a8ff89-2234-4ad2-a446-b3804160700f.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\854f7653-cd17-4363-873a-e4e21c3f3705.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\854f7653-cd17-4363-873a-e4e21c3f3705.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\854f7653-cd17-4363-873a-e4e21c3f3705.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\96478190-6291-4dbe-850c-29b403cd7470.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\96478190-6291-4dbe-850c-29b403cd7470.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\96478190-6291-4dbe-850c-29b403cd7470.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\a41c3391-0473-487d-88a8-a3ae0786672d.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\a41c3391-0473-487d-88a8-a3ae0786672d.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\a41c3391-0473-487d-88a8-a3ae0786672d.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\b109062a-b928-458b-9663-749c886fcc60.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\b109062a-b928-458b-9663-749c886fcc60.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\b109062a-b928-458b-9663-749c886fcc60.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\b44a2d02-9ed6-42dc-a262-30f212df1e5f.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\b44a2d02-9ed6-42dc-a262-30f212df1e5f.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\b44a2d02-9ed6-42dc-a262-30f212df1e5f.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\b52c6e7c-e9f1-41a8-b167-a2b6812e3a33.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\b52c6e7c-e9f1-41a8-b167-a2b6812e3a33.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\b52c6e7c-e9f1-41a8-b167-a2b6812e3a33.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\bd61f000-7aaa-4979-9f63-8d18d61f49d7.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\bd61f000-7aaa-4979-9f63-8d18d61f49d7.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\bd61f000-7aaa-4979-9f63-8d18d61f49d7.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\d3bc7215-2264-4dbe-a19e-248d3375c666.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\d3bc7215-2264-4dbe-a19e-248d3375c666.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\d3bc7215-2264-4dbe-a19e-248d3375c666.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\d749c50b-1a0d-4a54-a15d-8cce25052f88.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\d749c50b-1a0d-4a54-a15d-8cce25052f88.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\d749c50b-1a0d-4a54-a15d-8cce25052f88.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\dcd2c6df-2883-4f6b-99e5-8e7bf5763af1.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\dcd2c6df-2883-4f6b-99e5-8e7bf5763af1.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\dcd2c6df-2883-4f6b-99e5-8e7bf5763af1.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\ddd4d7bb-0f42-495e-83c4-72188e721304.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\ddd4d7bb-0f42-495e-83c4-72188e721304.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\ddd4d7bb-0f42-495e-83c4-72188e721304.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\e4cc5011-fa6f-464e-9528-8786dc9bee76.png",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\de23317d-8afe-46bb-86f7-f6a1f80d655b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\images\\de23317d-8afe-46bb-86f7-f6a1f80d655b.jpg"
+    },
+    {
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\e4cc5011-fa6f-464e-9528-8786dc9bee76.png",
       "PackagePath": "staticwebassets\\uploads\\images\\e4cc5011-fa6f-464e-9528-8786dc9bee76.png"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\e503ac65-a9a1-4f1b-be9b-c97dfd196f05.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\e503ac65-a9a1-4f1b-be9b-c97dfd196f05.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\e503ac65-a9a1-4f1b-be9b-c97dfd196f05.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\images\\f5fd543e-04d3-463c-a1b1-75ea65026f94.jpg",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\images\\f5fd543e-04d3-463c-a1b1-75ea65026f94.jpg",
       "PackagePath": "staticwebassets\\uploads\\images\\f5fd543e-04d3-463c-a1b1-75ea65026f94.jpg"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\15e1777f-8283-4948-84e9-fb3e5bf10152.mp4",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\15e1777f-8283-4948-84e9-fb3e5bf10152.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\15e1777f-8283-4948-84e9-fb3e5bf10152.mp4"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\1d22d93f-8947-4544-8677-1e4f475e4d60.mp4",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\1d22d93f-8947-4544-8677-1e4f475e4d60.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\1d22d93f-8947-4544-8677-1e4f475e4d60.mp4"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\30cfaae7-be9c-473f-96bc-11d330eab9fb.mp4",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\200d0d99-ec83-4fc1-85ef-5ec346066a12.mp4",
+      "PackagePath": "staticwebassets\\uploads\\videos\\200d0d99-ec83-4fc1-85ef-5ec346066a12.mp4"
+    },
+    {
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\30cfaae7-be9c-473f-96bc-11d330eab9fb.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\30cfaae7-be9c-473f-96bc-11d330eab9fb.mp4"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\3a44bf8d-f3c2-4884-9ffc-726cf0ded777.mp4",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\3a44bf8d-f3c2-4884-9ffc-726cf0ded777.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\3a44bf8d-f3c2-4884-9ffc-726cf0ded777.mp4"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\549463c0-f14e-4220-a8a7-73ac6a3dd8be.mp4",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\549463c0-f14e-4220-a8a7-73ac6a3dd8be.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\549463c0-f14e-4220-a8a7-73ac6a3dd8be.mp4"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\5c3b2fc6-1ea3-470b-8843-458e6c231c10.mp4",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\5c3b2fc6-1ea3-470b-8843-458e6c231c10.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\5c3b2fc6-1ea3-470b-8843-458e6c231c10.mp4"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\6380b6ef-559c-4931-b09a-007e5106bb01.mp4",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\6380b6ef-559c-4931-b09a-007e5106bb01.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\6380b6ef-559c-4931-b09a-007e5106bb01.mp4"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\69c1c7fb-4cd0-48ad-8165-daec6bb65ba3.mp4",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\69c1c7fb-4cd0-48ad-8165-daec6bb65ba3.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\69c1c7fb-4cd0-48ad-8165-daec6bb65ba3.mp4"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\830fa804-0eb7-4153-8a53-719c314fd21a.mp4",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\830fa804-0eb7-4153-8a53-719c314fd21a.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\830fa804-0eb7-4153-8a53-719c314fd21a.mp4"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\91ac6059-9bbe-4746-83ff-8e4b0f123bfd.mp4",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\91ac6059-9bbe-4746-83ff-8e4b0f123bfd.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\91ac6059-9bbe-4746-83ff-8e4b0f123bfd.mp4"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\972eca98-a4e5-4bc6-a063-be2a07ec5469.mp4",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\972eca98-a4e5-4bc6-a063-be2a07ec5469.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\972eca98-a4e5-4bc6-a063-be2a07ec5469.mp4"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\9ad73767-e06b-42b4-bbe6-ec445a475313.mp4",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\9ad73767-e06b-42b4-bbe6-ec445a475313.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\9ad73767-e06b-42b4-bbe6-ec445a475313.mp4"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\c3a1822a-251e-45a1-a995-5f7c6a314dda.mp4",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\c3a1822a-251e-45a1-a995-5f7c6a314dda.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\c3a1822a-251e-45a1-a995-5f7c6a314dda.mp4"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\d25143c1-abf5-4914-aed8-86039c7419f8.mp4",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\d25143c1-abf5-4914-aed8-86039c7419f8.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\d25143c1-abf5-4914-aed8-86039c7419f8.mp4"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\ed978445-5a80-4e87-9c1b-373844f9275d.mp4",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\e5cb7c19-5893-4170-8420-82c75d08f944.mp4",
+      "PackagePath": "staticwebassets\\uploads\\videos\\e5cb7c19-5893-4170-8420-82c75d08f944.mp4"
+    },
+    {
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\ed978445-5a80-4e87-9c1b-373844f9275d.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\ed978445-5a80-4e87-9c1b-373844f9275d.mp4"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\f57f5e26-ff45-40cc-9f0d-9e527000c71f.mp4",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\uploads\\videos\\f57f5e26-ff45-40cc-9f0d-9e527000c71f.mp4",
       "PackagePath": "staticwebassets\\uploads\\videos\\f57f5e26-ff45-40cc-9f0d-9e527000c71f.mp4"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\web.config",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\web.config",
       "PackagePath": "staticwebassets\\web.config"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\BlazorApp1.styles.css",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\BlazorApp1.styles.css",
       "PackagePath": "staticwebassets\\wwwroot\\BlazorApp1.styles.css"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\BCrypt.Net-Next.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\BCrypt.Net-Next.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\BCrypt.Net-Next.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\BCrypt.Net-Next.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\BCrypt.Net-Next.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\BCrypt.Net-Next.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\BCrypt.Net-Next.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\BCrypt.Net-Next.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\BCrypt.Net-Next.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\BlazorApp1.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\BlazorApp1.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\BlazorApp1.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\BlazorApp1.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\BlazorApp1.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\BlazorApp1.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\BlazorApp1.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\BlazorApp1.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\BlazorApp1.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\DevOne.Security.Cryptography.BCrypt.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\DevOne.Security.Cryptography.BCrypt.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\DevOne.Security.Cryptography.BCrypt.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\DevOne.Security.Cryptography.BCrypt.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\DevOne.Security.Cryptography.BCrypt.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\DevOne.Security.Cryptography.BCrypt.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\DevOne.Security.Cryptography.BCrypt.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\DevOne.Security.Cryptography.BCrypt.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\DevOne.Security.Cryptography.BCrypt.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Antiforgery.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Antiforgery.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Antiforgery.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Antiforgery.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Antiforgery.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Antiforgery.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Antiforgery.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Antiforgery.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Antiforgery.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.Internal.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.Internal.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.Internal.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.Internal.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.Internal.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.Internal.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.Internal.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.Internal.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Cryptography.Internal.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.DataProtection.Abstractions.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.DataProtection.Abstractions.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.DataProtection.Abstractions.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.DataProtection.Abstractions.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.DataProtection.Abstractions.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.DataProtection.Abstractions.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.DataProtection.Abstractions.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.DataProtection.Abstractions.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.DataProtection.Abstractions.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.DataProtection.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.DataProtection.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.DataProtection.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.DataProtection.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.DataProtection.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.DataProtection.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.DataProtection.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.DataProtection.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.DataProtection.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Abstractions.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Abstractions.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Abstractions.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Abstractions.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Abstractions.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Abstractions.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Abstractions.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Abstractions.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Abstractions.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Server.Abstractions.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Server.Abstractions.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Server.Abstractions.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Server.Abstractions.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Server.Abstractions.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Server.Abstractions.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Server.Abstractions.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Server.Abstractions.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Server.Abstractions.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Abstractions.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Abstractions.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Abstractions.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Abstractions.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Abstractions.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Abstractions.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Abstractions.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Abstractions.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Abstractions.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Extensions.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Extensions.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Extensions.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Extensions.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Extensions.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Extensions.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Extensions.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Extensions.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Extensions.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Features.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Features.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Features.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Features.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Features.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Features.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Features.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Features.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Features.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.Abstractions.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.Abstractions.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.Abstractions.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.Abstractions.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.Abstractions.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.Abstractions.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.Abstractions.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.Abstractions.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.Abstractions.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Abstractions.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Abstractions.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Abstractions.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Abstractions.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Abstractions.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Abstractions.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Abstractions.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Abstractions.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Abstractions.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Memory.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Memory.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Memory.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Memory.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Memory.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Memory.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Memory.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Memory.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Caching.Memory.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Abstractions.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Abstractions.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Abstractions.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Abstractions.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Abstractions.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Abstractions.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Abstractions.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Abstractions.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Abstractions.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Json.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Json.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Json.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Json.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Json.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Json.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Json.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Json.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Json.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.FileProviders.Abstractions.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.FileProviders.Abstractions.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.FileProviders.Abstractions.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.FileProviders.Abstractions.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.FileProviders.Abstractions.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.FileProviders.Abstractions.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.FileProviders.Abstractions.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.FileProviders.Abstractions.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.FileProviders.Abstractions.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Logging.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Logging.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Logging.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Logging.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Logging.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Logging.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Logging.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Logging.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Logging.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.ObjectPool.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.ObjectPool.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.ObjectPool.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.ObjectPool.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.ObjectPool.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.ObjectPool.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.ObjectPool.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.ObjectPool.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.ObjectPool.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Options.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Options.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Options.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Options.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Options.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Options.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Options.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Options.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Options.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.JSInterop.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.JSInterop.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.JSInterop.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.JSInterop.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.JSInterop.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.JSInterop.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.JSInterop.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.JSInterop.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.JSInterop.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Win32.Registry.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Win32.Registry.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Win32.Registry.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Win32.Registry.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Win32.Registry.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Win32.Registry.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Win32.Registry.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\Microsoft.Win32.Registry.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\Microsoft.Win32.Registry.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Buffers.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Buffers.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Buffers.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Buffers.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Buffers.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Buffers.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Buffers.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Buffers.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Buffers.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.Concurrent.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.Concurrent.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Collections.Concurrent.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.Concurrent.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.Concurrent.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Collections.Concurrent.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.Concurrent.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.Concurrent.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Collections.Concurrent.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.Immutable.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.Immutable.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Collections.Immutable.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.Immutable.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.Immutable.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Collections.Immutable.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.Immutable.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.Immutable.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Collections.Immutable.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.NonGeneric.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.NonGeneric.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Collections.NonGeneric.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.NonGeneric.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.NonGeneric.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Collections.NonGeneric.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.NonGeneric.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.NonGeneric.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Collections.NonGeneric.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.Specialized.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.Specialized.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Collections.Specialized.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.Specialized.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.Specialized.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Collections.Specialized.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.Specialized.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.Specialized.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Collections.Specialized.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Collections.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Collections.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Collections.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Collections.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.Annotations.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.Annotations.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.ComponentModel.Annotations.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.Annotations.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.Annotations.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.ComponentModel.Annotations.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.Annotations.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.Annotations.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.ComponentModel.Annotations.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.Primitives.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.Primitives.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.ComponentModel.Primitives.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.Primitives.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.Primitives.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.ComponentModel.Primitives.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.Primitives.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.Primitives.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.ComponentModel.Primitives.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.TypeConverter.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.TypeConverter.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.ComponentModel.TypeConverter.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.TypeConverter.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.TypeConverter.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.ComponentModel.TypeConverter.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.TypeConverter.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.TypeConverter.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.ComponentModel.TypeConverter.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.ComponentModel.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.ComponentModel.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ComponentModel.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.ComponentModel.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Console.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Console.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Console.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Console.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Console.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Console.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Console.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Console.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Console.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Diagnostics.DiagnosticSource.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Diagnostics.DiagnosticSource.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Diagnostics.DiagnosticSource.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Diagnostics.DiagnosticSource.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Diagnostics.DiagnosticSource.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Diagnostics.DiagnosticSource.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Diagnostics.DiagnosticSource.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Diagnostics.DiagnosticSource.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Diagnostics.DiagnosticSource.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Diagnostics.Tracing.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Diagnostics.Tracing.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Diagnostics.Tracing.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Diagnostics.Tracing.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Diagnostics.Tracing.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Diagnostics.Tracing.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Diagnostics.Tracing.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Diagnostics.Tracing.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Diagnostics.Tracing.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Formats.Asn1.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Formats.Asn1.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Formats.Asn1.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Formats.Asn1.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Formats.Asn1.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Formats.Asn1.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Formats.Asn1.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Formats.Asn1.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Formats.Asn1.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Linq.Expressions.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Linq.Expressions.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Linq.Expressions.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Linq.Expressions.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Linq.Expressions.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Linq.Expressions.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Linq.Expressions.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Linq.Expressions.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Linq.Expressions.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Linq.Queryable.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Linq.Queryable.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Linq.Queryable.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Linq.Queryable.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Linq.Queryable.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Linq.Queryable.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Linq.Queryable.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Linq.Queryable.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Linq.Queryable.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Linq.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Linq.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Linq.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Linq.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Linq.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Linq.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Linq.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Linq.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Linq.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Memory.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Memory.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Memory.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Memory.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Memory.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Memory.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Memory.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Memory.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Memory.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.Http.Json.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.Http.Json.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Net.Http.Json.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.Http.Json.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.Http.Json.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Net.Http.Json.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.Http.Json.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.Http.Json.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Net.Http.Json.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.Http.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.Http.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Net.Http.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.Http.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.Http.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Net.Http.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.Http.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.Http.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Net.Http.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.NetworkInformation.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.NetworkInformation.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Net.NetworkInformation.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.NetworkInformation.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.NetworkInformation.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Net.NetworkInformation.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.NetworkInformation.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.NetworkInformation.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Net.NetworkInformation.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.Primitives.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.Primitives.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Net.Primitives.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.Primitives.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.Primitives.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Net.Primitives.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.Primitives.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.Primitives.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Net.Primitives.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.WebSockets.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.WebSockets.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Net.WebSockets.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.WebSockets.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.WebSockets.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Net.WebSockets.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.WebSockets.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Net.WebSockets.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Net.WebSockets.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ObjectModel.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ObjectModel.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.ObjectModel.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ObjectModel.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ObjectModel.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.ObjectModel.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ObjectModel.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.ObjectModel.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.ObjectModel.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.CoreLib.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.CoreLib.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Private.CoreLib.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.CoreLib.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.CoreLib.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Private.CoreLib.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.CoreLib.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.CoreLib.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Private.CoreLib.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.Uri.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.Uri.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Private.Uri.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.Uri.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.Uri.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Private.Uri.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.Uri.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.Uri.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Private.Uri.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.Xml.Linq.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.Xml.Linq.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Private.Xml.Linq.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.Xml.Linq.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.Xml.Linq.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Private.Xml.Linq.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.Xml.Linq.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.Xml.Linq.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Private.Xml.Linq.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.Xml.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.Xml.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Private.Xml.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.Xml.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.Xml.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Private.Xml.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.Xml.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Private.Xml.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Private.Xml.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.InteropServices.JavaScript.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.InteropServices.JavaScript.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Runtime.InteropServices.JavaScript.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.InteropServices.JavaScript.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.InteropServices.JavaScript.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Runtime.InteropServices.JavaScript.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.InteropServices.JavaScript.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.InteropServices.JavaScript.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Runtime.InteropServices.JavaScript.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.InteropServices.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.InteropServices.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Runtime.InteropServices.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.InteropServices.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.InteropServices.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Runtime.InteropServices.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.InteropServices.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.InteropServices.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Runtime.InteropServices.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.Numerics.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.Numerics.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Runtime.Numerics.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.Numerics.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.Numerics.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Runtime.Numerics.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.Numerics.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.Numerics.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Runtime.Numerics.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.Serialization.Primitives.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.Serialization.Primitives.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Runtime.Serialization.Primitives.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.Serialization.Primitives.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.Serialization.Primitives.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Runtime.Serialization.Primitives.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.Serialization.Primitives.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.Serialization.Primitives.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Runtime.Serialization.Primitives.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Runtime.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Runtime.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Runtime.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Runtime.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.AccessControl.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.AccessControl.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.AccessControl.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.AccessControl.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.AccessControl.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.AccessControl.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.AccessControl.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.AccessControl.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.AccessControl.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Claims.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Claims.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Claims.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Claims.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Claims.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Claims.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Claims.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Claims.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Claims.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Algorithms.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Algorithms.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Cryptography.Algorithms.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Algorithms.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Algorithms.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Cryptography.Algorithms.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Algorithms.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Algorithms.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Cryptography.Algorithms.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Pkcs.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Pkcs.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Cryptography.Pkcs.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Pkcs.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Pkcs.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Cryptography.Pkcs.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Pkcs.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Pkcs.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Cryptography.Pkcs.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Primitives.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Primitives.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Cryptography.Primitives.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Primitives.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Primitives.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Cryptography.Primitives.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Primitives.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Primitives.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Cryptography.Primitives.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Xml.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Xml.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Cryptography.Xml.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Xml.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Xml.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Cryptography.Xml.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Xml.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.Xml.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Cryptography.Xml.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Cryptography.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Cryptography.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Cryptography.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Cryptography.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Principal.Windows.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Principal.Windows.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Principal.Windows.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Principal.Windows.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Principal.Windows.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Principal.Windows.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Principal.Windows.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Security.Principal.Windows.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Security.Principal.Windows.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.Encoding.Extensions.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.Encoding.Extensions.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Text.Encoding.Extensions.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.Encoding.Extensions.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.Encoding.Extensions.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Text.Encoding.Extensions.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.Encoding.Extensions.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.Encoding.Extensions.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Text.Encoding.Extensions.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.Encodings.Web.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.Encodings.Web.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Text.Encodings.Web.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.Encodings.Web.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.Encodings.Web.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Text.Encodings.Web.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.Encodings.Web.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.Encodings.Web.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Text.Encodings.Web.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.Json.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.Json.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Text.Json.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.Json.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.Json.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Text.Json.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.Json.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.Json.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Text.Json.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.RegularExpressions.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.RegularExpressions.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Text.RegularExpressions.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.RegularExpressions.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.RegularExpressions.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Text.RegularExpressions.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.RegularExpressions.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Text.RegularExpressions.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Text.RegularExpressions.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Threading.Thread.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Threading.Thread.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Threading.Thread.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Threading.Thread.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Threading.Thread.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Threading.Thread.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Threading.Thread.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Threading.Thread.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Threading.Thread.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Threading.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Threading.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Threading.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Threading.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Threading.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Threading.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Threading.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Threading.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Threading.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Transactions.Local.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Transactions.Local.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Transactions.Local.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Transactions.Local.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Transactions.Local.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Transactions.Local.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Transactions.Local.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Transactions.Local.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Transactions.Local.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Xml.Linq.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Xml.Linq.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Xml.Linq.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Xml.Linq.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Xml.Linq.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Xml.Linq.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Xml.Linq.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.Xml.Linq.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.Xml.Linq.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\System.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\System.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\blazor.boot.json",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\blazor.boot.json",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\blazor.boot.json"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\blazor.boot.json.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\blazor.boot.json.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\blazor.boot.json.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\blazor.boot.json.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\blazor.boot.json.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\blazor.boot.json.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\blazor.webassembly.js.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\blazor.webassembly.js.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\blazor.webassembly.js.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\blazor.webassembly.js.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\blazor.webassembly.js.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.js",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.js",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\dotnet.js"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.js.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.js.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\dotnet.js.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.js.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.js.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\dotnet.js.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.native.js",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.native.js",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\dotnet.native.js"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.native.js.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.native.js.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\dotnet.native.js.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.native.js.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.native.js.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\dotnet.native.js.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.native.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.native.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\dotnet.native.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.native.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.native.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\dotnet.native.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.native.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.native.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\dotnet.native.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.runtime.js",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.runtime.js",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\dotnet.runtime.js"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.runtime.js.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.runtime.js.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\dotnet.runtime.js.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.runtime.js.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\dotnet.runtime.js.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\dotnet.runtime.js.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\icudt_CJK.dat",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\icudt_CJK.dat",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\icudt_CJK.dat"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\icudt_CJK.dat.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\icudt_CJK.dat.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\icudt_CJK.dat.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\icudt_CJK.dat.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\icudt_CJK.dat.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\icudt_CJK.dat.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\icudt_EFIGS.dat",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\icudt_EFIGS.dat",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\icudt_EFIGS.dat"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\icudt_EFIGS.dat.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\icudt_EFIGS.dat.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\icudt_EFIGS.dat.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\icudt_EFIGS.dat.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\icudt_EFIGS.dat.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\icudt_EFIGS.dat.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\icudt_no_CJK.dat",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\icudt_no_CJK.dat",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\icudt_no_CJK.dat"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\icudt_no_CJK.dat.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\icudt_no_CJK.dat.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\icudt_no_CJK.dat.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\icudt_no_CJK.dat.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\icudt_no_CJK.dat.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\icudt_no_CJK.dat.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\mscorlib.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\mscorlib.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\mscorlib.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\mscorlib.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\mscorlib.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\mscorlib.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\mscorlib.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\mscorlib.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\mscorlib.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\netstandard.wasm",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\netstandard.wasm",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\netstandard.wasm"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\netstandard.wasm.br",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\netstandard.wasm.br",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\netstandard.wasm.br"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\netstandard.wasm.gz",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\_framework\\netstandard.wasm.gz",
       "PackagePath": "staticwebassets\\wwwroot\\_framework\\netstandard.wasm.gz"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\css\\Login.css",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\css\\Login.css",
       "PackagePath": "staticwebassets\\wwwroot\\css\\Login.css"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\css\\app.css",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\wwwroot\\css\\app.css"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\css\\glav.css",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\css\\glav.css",
       "PackagePath": "staticwebassets\\wwwroot\\css\\glav.css"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\css\\register.css",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\css\\register.css",
       "PackagePath": "staticwebassets\\wwwroot\\css\\register.css"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\favicon.png",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\wwwroot\\favicon.png"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\icon-192.png",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\wwwroot\\icon-192.png"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\images\\12.png",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\images\\12.png",
       "PackagePath": "staticwebassets\\wwwroot\\images\\12.png"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\images\\13.png",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\images\\13.png",
       "PackagePath": "staticwebassets\\wwwroot\\images\\13.png"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\images\\image1.png",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\images\\image1.png",
       "PackagePath": "staticwebassets\\wwwroot\\images\\image1.png"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\images\\student.png",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\images\\student.png",
       "PackagePath": "staticwebassets\\wwwroot\\images\\student.png"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\index.html",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\wwwroot\\index.html"
     },
     {
-      "Id": "D:\\проект еще раз\\PP\\WebApplication7\\wwwroot\\wwwroot\\sample-data\\weather.json",
+      "Id": "D:\\78\\PP\\WebApplication7\\wwwroot\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\wwwroot\\sample-data\\weather.json"
     },
     {
